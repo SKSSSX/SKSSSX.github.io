@@ -1,91 +1,86 @@
 
-
-
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="loading">
 <head>
-  <meta charset="UTF-8">
-  <title>Archives [ 盛克思的博客 ]</title>
-  
-    <!-- stylesheets list from config.yml -->
-    
-      <link rel="stylesheet" href="/css/marmot.css">
-    
-  
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>盛克思的博客 - 盛克思前端技术分享</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="对于VUE、NodeJS、angular1、webpack、gulp 等相关技术的实战经验分享,概述如果VUE权限控制问题困扰着你，那么这篇文章将拯救你。关于VUE的前台路由控制和视图控制是大家最需要的前端技术解决方案。前端的权限控制实质上就是用于展示，让操作变得更加友好，真正的安全实际上是由,"> 
+    <meta name="author" content="shengkesi"> 
+    <link rel="alternative" href="atom.xml" title="盛克思的博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
 </head>
-<body>
 
-<div id="menu-outer">
-  <div id="menu-inner">
+<body class="loading">
+    <div id="loader"></div>
     
-      <a href="/">Home</a>
-    
-      <a href="/about">About</a>
-    
-      <a href="/contact">Contact</a>
-    
-      <a href="/archives">Archives</a>
-    
-  </div>
-</div>
-
-<div id="content-outer">
-  <div id="content-inner">
-    
-
-
-
-  <div id="archive">
-
-    <h1>Archives</h1>
-
-    
-
-    <aside>
-      <h2>Categories</h2>
-      
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/VUE/">VUE</a></li></ul>
-      
-    </aside>
-    <br>
-
-    <aside>
-      <h2>Tags</h2>
-      
-        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/permission/">permission</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a></li></ul>
-      
-    </aside>
-    <br>
-
-    <aside>
-      <h2>Archives</h2>
-      
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li></ul>
-      
-    </aside>
-
-  </div>
-
-
-
-  </div>
-</div>
-
-<div id="bottom-outer">
-  <div id="bottom-inner">
-    Site by shengkesi using
-    <a href="http://hexo.io">hexo blog framework</a>.
-    <br>
-    <a href="/">Home</a>
-  </div>
-</div>
-
-
-  <!-- scripts list from theme config.yml -->
-  
-    <script src="/js/marmot.js"></script>
-  
-
-
 </body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 </html>
