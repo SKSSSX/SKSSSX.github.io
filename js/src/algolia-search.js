@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   var algoliaSettings = CONFIG.algolia;
-  algoliaSettings.appId = 'HRORNW2LY2';
+  algoliaSettings.appId = 'HRORNW2LY2'
   var isAlgoliaSettingsValid = algoliaSettings.appId
                             && algoliaSettings.apiKey
                             && algoliaSettings.indexName;
