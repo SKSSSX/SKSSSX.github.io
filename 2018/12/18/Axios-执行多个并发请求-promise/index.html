@@ -82,7 +82,7 @@
     root: '/',
     scheme: 'Muse',
     version: '6.6.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="盛克思的博客">
 <meta property="og:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  利用js回调嵌套的方式1234567891011121314151617181920212223242526// 异步接口1: 科室列表function getDepartmentsList(callback)&amp;#123;    //模拟实现    var onlineP">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-18T05:33:10.000Z">
+<meta property="og:updated_time" content="2019-01-23T14:09:07.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Axios 执行多个并发请求(使用Promise解决多层异步调用)">
 <meta name="twitter:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  利用js回调嵌套的方式1234567891011121314151617181920212223242526// 异步接口1: 科室列表function getDepartmentsList(callback)&amp;#123;    //模拟实现    var onlineP">
@@ -180,7 +180,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/SKSSSX" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -255,6 +255,40 @@
         
         
           
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-archives">
 
     
@@ -266,6 +300,23 @@
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
 
   </li>
 
@@ -395,12 +446,24 @@
                 
               
 
-              <time title="创建时间：2018-12-18 08:21:43 / 修改时间：13:33:10" itemprop="dateCreated datePublished" datetime="2018-12-18T08:21:43+08:00">2018-12-18</time>
+              <time title="创建时间：2018-12-18 08:21:43" itemprop="dateCreated datePublished" datetime="2018-12-18T08:21:43+08:00">2018-12-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-23 22:09:07" itemprop="dateModified" datetime="2019-01-23T22:09:07+08:00">2019-01-23</time>
               
             
           </span>
@@ -467,17 +530,18 @@
       
         <h2 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h2><blockquote><p>场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,<br>需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法</p>
 </blockquote>
-<h2 id="利用js回调嵌套的方式"><a href="#利用js回调嵌套的方式" class="headerlink" title="利用js回调嵌套的方式"></a>利用js回调嵌套的方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 异步接口1: 科室列表</span><br><span class="line">function getDepartmentsList(callback)&#123;</span><br><span class="line">    //模拟实现</span><br><span class="line">    var onlinePerson = Math.ceil(Math.random()*1000)</span><br><span class="line">    setTimeout(function()&#123;</span><br><span class="line">        callback(onlinePerson)</span><br><span class="line">    &#125;,Math.random()*1000)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 异步接口2: 级别列表</span><br><span class="line">function getLevelList(callback)&#123;</span><br><span class="line">    //模拟实现</span><br><span class="line">    var RegPerson = Math.ceil(Math.random()*1000)+1000</span><br><span class="line">    setTimeout(function()&#123;</span><br><span class="line">        callback(RegPerson)</span><br><span class="line">    &#125;,Math.random()*1000)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//异步接口，列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span><br><span class="line">function calOnlinePercent(onlinePerson,RegPerson,callback)&#123;</span><br><span class="line">    //模拟实现</span><br><span class="line">    var percent = Math.ceil(onlinePerson/RegPerson*100)</span><br><span class="line">    setTimeout(function()&#123;</span><br><span class="line">        callback(percent)</span><br><span class="line">    &#125;,Math.random()*1000)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="利用js回调嵌套的方式"><a href="#利用js回调嵌套的方式" class="headerlink" title="利用js回调嵌套的方式"></a>利用js回调嵌套的方式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步接口1: 科室列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDepartmentsList</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> onlinePerson = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(onlinePerson)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 异步接口2: 级别列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLevelList</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> RegPerson = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)+<span class="number">1000</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(RegPerson)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步接口，列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calOnlinePercent</span>(<span class="params">onlinePerson,RegPerson,callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> percent = <span class="built_in">Math</span>.ceil(onlinePerson/RegPerson*<span class="number">100</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(percent)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
 <h2 id="利用es6的promise解决回调地狱问题"><a href="#利用es6的promise解决回调地狱问题" class="headerlink" title="利用es6的promise解决回调地狱问题"></a>利用es6的promise解决回调地狱问题</h2><h3 id="《ES6标准入门》对Promise的描述"><a href="#《ES6标准入门》对Promise的描述" class="headerlink" title="《ES6标准入门》对Promise的描述"></a>《ES6标准入门》对Promise的描述</h3><p>所谓Promise，就是一个对象，用来传递异步操作的消息。它代表了某个未来才会知道的结果的事件（通常是一个异步操作），并且这个事件提供统一的API，可供进一步处理。</p>
 <h3 id="MDN对Promise的描述："><a href="#MDN对Promise的描述：" class="headerlink" title="MDN对Promise的描述："></a>MDN对Promise的描述：</h3><blockquote><p>Promise 对象是一个代理对象（代理一个值），被代理的值在Promise对象创建时可能是未知的。它允许你为异步操作的成功和失败分别绑定相应的处理方法（handlers）。 这让异步方法可以像同步方法那样返回值，但并不是立即返回最终执行结果，而是一个能代表未来出现的结果的promise对象</p>
 <p>当时看到Promise最头疼的，就是初学者看起来匪夷所思，也是最被js程序员广为称道的特性：then函数调用链。<br>then函数调用链，从其本质上而言，就是对多个异步过程的依次调用，本文就从这一点着手，对Promise这一特性进行研究和学习。<br>Promise的相关知识，请参阅 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8" target="_blank" rel="noopener">Promise的链式调用</a></p>
 </blockquote>
 <blockquote><p>基于以上对Promise的了解，我们知道可以使用它来解决多层回调嵌套后的代码蠢笨难以维护的问题。下面请看具体代码：</p>
 </blockquote>
-<h3 id="每个异步接口-返回一个promise对象"><a href="#每个异步接口-返回一个promise对象" class="headerlink" title="每个异步接口 返回一个promise对象"></a>每个异步接口 返回一个promise对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// 异步接口1: 科室列表</span><br><span class="line">function getDepartmentsList()&#123;</span><br><span class="line">    //模拟</span><br><span class="line">    return new Promise(function(resolve,reject)&#123;</span><br><span class="line">        var onlinePerson = Math.ceil(Math.random()*1000)</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">            resolve(onlinePerson)</span><br><span class="line">        &#125;,Math.random()*1000)</span><br><span class="line">    &#125;)</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line">// 异步接口2: 级别列表</span><br><span class="line">function getLevelList()&#123;</span><br><span class="line">    return new Promise(function(resolve,reject)&#123;</span><br><span class="line">            var RegPerson = Math.ceil(Math.random()*1000)+1000</span><br><span class="line">            setTimeout(function()&#123;</span><br><span class="line">                resolve(RegPerson)</span><br><span class="line">            &#125;,Math.random()*1000)</span><br><span class="line">            &#125;)</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line">// 异步接口, 列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span><br><span class="line">function calOnlinePercent(onlinePerson,RegPerson)&#123;</span><br><span class="line">    return new Promise(function(resolve,reject)&#123; </span><br><span class="line">        var percent = Math.ceil(onlinePerson/RegPerson*100)</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">            resolve(percent)</span><br><span class="line">        &#125;,Math.random()*1000)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="利用promise-all方法保证接口数据成功返回再执行操作"><a href="#利用promise-all方法保证接口数据成功返回再执行操作" class="headerlink" title="利用promise.all方法保证接口数据成功返回再执行操作"></a>利用promise.all方法保证接口数据成功返回再执行操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Promise.all([getDepartmentsList(),getLevelList()]).then(function([onlinePerson,RegPerson])&#123;</span><br><span class="line">    //这里写等这两个ajax都成功返回数据才执行的业务逻辑</span><br><span class="line">     calOnlinePercent(onlinePerson,RegPerson).then(function(percent)&#123;</span><br><span class="line">        console.log(percent)</span><br><span class="line">     &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="Axios-解决方案-VUE"><a href="#Axios-解决方案-VUE" class="headerlink" title="Axios 解决方案(VUE)"></a>Axios 解决方案(VUE)</h2><h3 id="每个异步接口-返回一个axios对象"><a href="#每个异步接口-返回一个axios对象" class="headerlink" title="每个异步接口 返回一个axios对象"></a>每个异步接口 返回一个axios对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 异步接口1: 科室列表</span><br><span class="line">getDepartmentsList () &#123;</span><br><span class="line">    return axios.get(process.env.BASE_API_WAP + &apos;category/2&apos;);</span><br><span class="line">&#125;,</span><br><span class="line">// 异步接口2: 级别列表</span><br><span class="line">getLevelList () &#123;</span><br><span class="line">    return axios.get(process.env.BASE_API_WAP + &apos;category/3&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="利用axios-all方法执行多个并发请求"><a href="#利用axios-all方法执行多个并发请求" class="headerlink" title="利用axios.all方法执行多个并发请求"></a>利用axios.all方法执行多个并发请求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">// 过滤数据函数</span><br><span class="line">filterData (targetArray) &#123;</span><br><span class="line">    targetArray.forEach(item =&gt; &#123;</span><br><span class="line">        if (typeof item.meetingTime === &apos;number&apos;) &#123;</span><br><span class="line">            item.meetingTime = util.timestampFilter(item.meetingTime);</span><br><span class="line">        &#125;</span><br><span class="line">        for (let key in this.departmentsList) &#123;</span><br><span class="line">            if (Number(item.departments) === this.departmentsList[key].id) &#123;</span><br><span class="line">                item.departments = this.departmentsList[key].name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for (let key in this.levelList) &#123;</span><br><span class="line">            if (Number(item.level) === this.levelList[key].id) &#123;</span><br><span class="line">                item.level = this.levelList[key].name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 初始化</span><br><span class="line">init () &#123;</span><br><span class="line">    this.title = &apos;&apos;;</span><br><span class="line">    registrationList(this.current, this.pageSize, this.title).then(data =&gt; &#123;</span><br><span class="line">        this.data = data.content;</span><br><span class="line">        // 过滤数据</span><br><span class="line">        this.filterData(this.data);</span><br><span class="line">        this.totalSize = data.total;</span><br><span class="line">        this.pages = data.pages;</span><br><span class="line">    &#125;).catch(error =&gt; &#123;</span><br><span class="line">        console.log(error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mounted () &#123;</span><br><span class="line">    // 执行多个并发请求, 列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span><br><span class="line">    let _this = this;</span><br><span class="line">    axios.all([this.getDepartmentsList(), this.getLevelList()])</span><br><span class="line">        .then(axios.spread(function (list1, list2) &#123;</span><br><span class="line">            _this.departmentsList = list1.data;</span><br><span class="line">            _this.levelList = list2.data;</span><br><span class="line">            // 两个请求现在都执行完成</span><br><span class="line">            _this.init();</span><br><span class="line">        &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="每个异步接口-返回一个promise对象"><a href="#每个异步接口-返回一个promise对象" class="headerlink" title="每个异步接口 返回一个promise对象"></a>每个异步接口 返回一个promise对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步接口1: 科室列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDepartmentsList</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> onlinePerson = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            resolve(onlinePerson)</span><br><span class="line">        &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 异步接口2: 级别列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLevelList</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> RegPerson = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)+<span class="number">1000</span></span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                resolve(RegPerson)</span><br><span class="line">            &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">            &#125;)</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 异步接口, 列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">calOnlinePercent</span>(<span class="params">onlinePerson,RegPerson</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123; </span><br><span class="line">        <span class="keyword">var</span> percent = <span class="built_in">Math</span>.ceil(onlinePerson/RegPerson*<span class="number">100</span>)</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            resolve(percent)</span><br><span class="line">        &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="利用promise-all方法保证接口数据成功返回再执行操作"><a href="#利用promise-all方法保证接口数据成功返回再执行操作" class="headerlink" title="利用promise.all方法保证接口数据成功返回再执行操作"></a>利用promise.all方法保证接口数据成功返回再执行操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([getDepartmentsList(),getLevelList()]).then(<span class="function"><span class="keyword">function</span>(<span class="params">[onlinePerson,RegPerson]</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//这里写等这两个ajax都成功返回数据才执行的业务逻辑</span></span><br><span class="line">     calOnlinePercent(onlinePerson,RegPerson).then(<span class="function"><span class="keyword">function</span>(<span class="params">percent</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(percent)</span><br><span class="line">     &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="Axios-解决方案-VUE"><a href="#Axios-解决方案-VUE" class="headerlink" title="Axios 解决方案(VUE)"></a>Axios 解决方案(VUE)</h2><h3 id="每个异步接口-返回一个axios对象"><a href="#每个异步接口-返回一个axios对象" class="headerlink" title="每个异步接口 返回一个axios对象"></a>每个异步接口 返回一个axios对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步接口1: 科室列表</span></span><br><span class="line">getDepartmentsList () &#123;</span><br><span class="line">    <span class="keyword">return</span> axios.get(process.env.BASE_API_WAP + <span class="string">'category/2'</span>);</span><br><span class="line">&#125;,</span><br><span class="line"><span class="comment">// 异步接口2: 级别列表</span></span><br><span class="line">getLevelList () &#123;</span><br><span class="line">    <span class="keyword">return</span> axios.get(process.env.BASE_API_WAP + <span class="string">'category/3'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="利用axios-all方法执行多个并发请求"><a href="#利用axios-all方法执行多个并发请求" class="headerlink" title="利用axios.all方法执行多个并发请求"></a>利用axios.all方法执行多个并发请求</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 过滤数据函数</span></span><br><span class="line">filterData (targetArray) &#123;</span><br><span class="line">    targetArray.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> item.meetingTime === <span class="string">'number'</span>) &#123;</span><br><span class="line">            item.meetingTime = util.timestampFilter(item.meetingTime);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> <span class="keyword">this</span>.departmentsList) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">Number</span>(item.departments) === <span class="keyword">this</span>.departmentsList[key].id) &#123;</span><br><span class="line">                item.departments = <span class="keyword">this</span>.departmentsList[key].name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> <span class="keyword">this</span>.levelList) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">Number</span>(item.level) === <span class="keyword">this</span>.levelList[key].id) &#123;</span><br><span class="line">                item.level = <span class="keyword">this</span>.levelList[key].name;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line">init () &#123;</span><br><span class="line">    <span class="keyword">this</span>.title = <span class="string">''</span>;</span><br><span class="line">    registrationList(<span class="keyword">this</span>.current, <span class="keyword">this</span>.pageSize, <span class="keyword">this</span>.title).then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data.content;</span><br><span class="line">        <span class="comment">// 过滤数据</span></span><br><span class="line">        <span class="keyword">this</span>.filterData(<span class="keyword">this</span>.data);</span><br><span class="line">        <span class="keyword">this</span>.totalSize = data.total;</span><br><span class="line">        <span class="keyword">this</span>.pages = data.pages;</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mounted () &#123;</span><br><span class="line">    <span class="comment">// 执行多个并发请求, 列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span></span><br><span class="line">    <span class="keyword">let</span> _this = <span class="keyword">this</span>;</span><br><span class="line">    axios.all([<span class="keyword">this</span>.getDepartmentsList(), <span class="keyword">this</span>.getLevelList()])</span><br><span class="line">        .then(axios.spread(<span class="function"><span class="keyword">function</span> (<span class="params">list1, list2</span>) </span>&#123;</span><br><span class="line">            _this.departmentsList = list1.data;</span><br><span class="line">            _this.levelList = list2.data;</span><br><span class="line">            <span class="comment">// 两个请求现在都执行完成</span></span><br><span class="line">            _this.init();</span><br><span class="line">        &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <p>前端解决异步的问题时常都会遇到，Promise给前端程序员带来了新的解决思路，在它基础之上的promise的工具库（如Axios），也是在此上的封装。只要明白了其中的原理，在什么开发框架下都能灵活运用。</p>
 
@@ -509,7 +573,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>Donate comment here</div>
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
@@ -566,6 +630,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/" rel="prev" title="vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）">
+                vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -649,7 +717,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -664,7 +732,7 @@
                     
                     <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
-                  
+                  </a>
                 </div>
               
 
@@ -672,7 +740,7 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -689,9 +757,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
-                  
+                  </a>
                 </div>
               
             </nav>
@@ -700,10 +770,50 @@
           
 
           
-
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/SKSSSX" title="GitHub &rarr; https://github.com/SKSSSX" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1270256946@qq.com" title="E-Mail &rarr; mailto:1270256946@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
           
 
           
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.91h5.cc/" title="https://www.91h5.cc/" rel="noopener" target="_blank">沈立洋博客</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -744,7 +854,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -816,6 +926,12 @@
 
 
 
+
+  
+    
+      
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
