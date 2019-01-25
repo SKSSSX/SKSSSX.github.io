@@ -121,7 +121,8 @@
 <meta property="og:description" content="引语在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错  12345678// 权限指令Vue.directive(&apos;has&apos;, &amp;#123;    bind: function (el, binding) &amp;#123;        if (el.parentNode &amp;amp;&amp;amp; !Vue.prototype.$_has(binding.valu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.shengkesi.cn/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png">
-<meta property="og:updated_time" content="2019-01-23T15:36:46.337Z">
+<meta property="og:image" content="https://www.shengkesi.cn/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/test.png">
+<meta property="og:updated_time" content="2019-01-25T04:15:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）">
 <meta name="twitter:description" content="引语在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错  12345678// 权限指令Vue.directive(&apos;has&apos;, &amp;#123;    bind: function (el, binding) &amp;#123;        if (el.parentNode &amp;amp;&amp;amp; !Vue.prototype.$_has(binding.valu">
@@ -458,12 +459,24 @@
                 
               
 
-              <time title="创建时间：2019-01-23 12:20:59 / 修改时间：23:36:46" itemprop="dateCreated datePublished" datetime="2019-01-23T12:20:59+08:00">2019-01-23</time>
+              <time title="创建时间：2019-01-23 12:20:59" itemprop="dateCreated datePublished" datetime="2019-01-23T12:20:59+08:00">2019-01-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-25 12:15:50" itemprop="dateModified" datetime="2019-01-25T12:15:50+08:00">2019-01-25</time>
               
             
           </span>
@@ -489,6 +502,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -520,34 +543,18 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="https://www.shengkesi.cn/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png" rel="gallery_cjr9da9a9000becwfedfr6zq9"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://www.shengkesi.cn/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
 
       
         <h2 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h2><blockquote><p>在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 权限指令</span></span><br><span class="line">Vue.directive(<span class="string">'has'</span>, &#123;</span><br><span class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (el.parentNode &amp;&amp; !Vue.prototype.$_has(binding.value)) &#123;</span><br><span class="line">            el.parentNode.removeChild(el)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote><p>只要刷新页面会出现如下问题：<br><img src="null-error.png" alt="刷新页面报错展示" title="刷新页面报错"></p>
+<blockquote><p>只要刷新页面会出现如下问题：<br><img src="/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png" alt="刷新页面报错展示" title="刷新页面报错"></p>
 </blockquote>
 <a id="more"></a> 
 <h2 id="猜测并寻找出现报错的原因"><a href="#猜测并寻找出现报错的原因" class="headerlink" title="猜测并寻找出现报错的原因"></a>猜测并寻找出现报错的原因</h2><blockquote><p>看到这样的报错就顺藤摸瓜到这个VUE指令中，初步猜想是 函数中 el 元素未找到，但实际则是 el 元素的父节点 el.parentNode 未找到，值为 null，于是写如下代码验证自己的猜测</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 权限指令</span></span><br><span class="line">Vue.directive(<span class="string">'has'</span>, &#123;</span><br><span class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(el.parentNode)</span><br><span class="line">        <span class="keyword">if</span> (el.parentNode &amp;&amp; !Vue.prototype.$_has(binding.value)) &#123;</span><br><span class="line">            el.parentNode.removeChild(el)</span><br><span class="line">        &#125;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(el.parentNode)</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote><p>结果是这样的：<br><img src="test.png" alt="测试结果展示" title="测试结果"></p>
+<blockquote><p>结果是这样的：<br><img src="/2019/01/23/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/test.png" alt="测试结果展示" title="测试结果"></p>
 <p>进而验证了我的猜测</p>
 </blockquote>
 <h2 id="寻找解决方案"><a href="#寻找解决方案" class="headerlink" title="寻找解决方案"></a>寻找解决方案</h2><blockquote><p>经过百度查阅资料，终于恍然大悟，这篇文章说到点上了<br><a href="https://segmentfault.com/a/1190000015860475" target="_blank" rel="noopener">vue指令与$nextTick 操作DOM的不同之处</a><br>或许这篇文章跟我要解决的不是一个问题，但是已经写的很明了，把关键的地方摘抄到这：</p>
@@ -685,6 +692,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -847,7 +858,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.91h5.cc/" title="https://www.91h5.cc/" rel="noopener" target="_blank">沈立洋博客</a>
+                    <a href="https://www.shenliyang.com" title="https://www.shenliyang.com" rel="noopener" target="_blank">沈立洋博客</a>
                   </li>
                 
               </ul>
@@ -991,12 +1002,6 @@
 
 
 
-  
-    
-      
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
 
 
 
@@ -1067,6 +1072,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'sgCCneH9wY92eX2UEB9Wrl4g-gzGzoHsz',
+        appKey: 'NOA0dKCDe3V0INrgD42m9Muf',
+        placeholder: '留言',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
