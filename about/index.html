@@ -57,6 +57,32 @@
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
@@ -90,7 +116,7 @@
     root: '/',
     scheme: 'Muse',
     version: '6.6.0',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     fastclick: false,
     lazyload: false,
@@ -101,7 +127,7 @@
       apiKey: 'ded44ecb6cb09def6a2a97166489710c',
       indexName: 'blog',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      labels: {"input_placeholder":"在博客内搜索","hits_empty":"没有找到与 「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
     }
   };
 </script>
@@ -120,7 +146,7 @@
 <meta property="og:site_name" content="盛克思的博客">
 <meta property="og:description" content="盛克思简介  About me13年3月从事前端开发至今  现研究方向现研究mock.js(模拟接口请求)，eslint + prettier(语法检查和格式化工具)，来辅助vue-cli3项目的开发项目还在努力维护中，为保证功能完善，给大家铺路。  2019自己决定重新调整自己在前端领域的发展方向，这些年总是跟着新技术往前看（这个宗旨是没什么问题），但是前端最基础的知识点，时间过去很久，已经记忆">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-25T04:51:44.000Z">
+<meta property="og:updated_time" content="2019-01-26T14:40:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="盛克思的博客">
 <meta name="twitter:description" content="盛克思简介  About me13年3月从事前端开发至今  现研究方向现研究mock.js(模拟接口请求)，eslint + prettier(语法检查和格式化工具)，来辅助vue-cli3项目的开发项目还在努力维护中，为保证功能完善，给大家铺路。  2019自己决定重新调整自己在前端领域的发展方向，这些年总是跟着新技术往前看（这个宗旨是没什么问题），但是前端最基础的知识点，时间过去很久，已经记忆">
@@ -455,7 +481,7 @@
 </blockquote>
 <h2 id="现研究方向"><a href="#现研究方向" class="headerlink" title="现研究方向"></a>现研究方向</h2><blockquote><p>现研究mock.js(模拟接口请求)，eslint + prettier(语法检查和格式化工具)，来辅助vue-cli3项目的开发<br>项目还在努力维护中，为保证功能完善，给大家铺路。</p>
 </blockquote>
-<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p>自己决定重新调整自己在前端领域的发展方向，这些年总是跟着新技术往前看（这个宗旨是没什么问题），但是前端最基础的知识点，时间过去很久，已经记忆模糊了，大牛曾经跟我说“这些基础是前端人的立命之本”，才发觉自己这些年是有些舍本逐末了，决定抽出一定的时间温习一下前端最基础的知识和研究一下各类框架的源码。</p>
+<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p>自己决定重新调整自己在前端领域的发展方向，这些年总是跟着新技术往前看（这个宗旨是没什么问题），但是前端最基础的知识点，时间过去很久，已经记忆模糊了，才发觉自己这些年是有些舍本逐末了，决定抽出一定的时间温习一下前端最基础的知识和研究一下各类框架的源码。</p>
 <h3 id="2019-01-25"><a href="#2019-01-25" class="headerlink" title="2019-01-25"></a>2019-01-25</h3><p>趁着工作午休时间，把自己博客的评论功能加上了，并填了首页插入的图片不显示的问题的坑。</p>
 <h3 id="2019-01-24"><a href="#2019-01-24" class="headerlink" title="2019-01-24"></a>2019-01-24</h3><p>经过折腾了linux安装docker, 并且在docker内装了jenkins后，感觉缺点什么，想弄个GitLab，在服务器存储自己的代码。<br>踩坑开始，经过层层扒坑埋坑的过程，总算把GitLab建立起来了，但是访问是502页面。<br>最后找到原因：由于服务配置太低（CPU 1核，内存2GB），无法满足Gitlab的（CPU 2核，内存4GB）的要求，页面报502，踩坑结束。</p>
 <h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><blockquote><p>研究vue2.0 VUEX状态管理机制 webpack 等</p>
@@ -492,6 +518,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -906,6 +934,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
   
@@ -922,7 +957,7 @@
       
           pbOptions.position = "bottomCenter";
       
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+          pbOptions.networks = "Wechat,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
@@ -935,7 +970,7 @@
       
           flOptions.position = "middleRight";
       
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+          flOptions.networks = "Wechat,Twitter,Facebook";
       
       new needShareButton('#needsharebutton-float', flOptions);
     
