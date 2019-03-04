@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2019-03-01T02:27:31.354Z</updated>
+  <updated>2019-03-04T07:50:09.715Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react的基础之上进行引入webpack、eslint、babel的框架搭建</title>
+    <link href="https://www.shengkesi.cn/create-react-app-simple/"/>
+    <id>https://www.shengkesi.cn/create-react-app-simple/</id>
+    <published>2019-03-04T07:13:00.000Z</published>
+    <updated>2019-03-04T07:50:09.715Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 &lt;a href=&quot;https://github.com/SKSSSX/jelly2&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;react的基础之上进行引入webpack、eslint、babel的框架搭建&lt;/a&gt;, 但是你仔细阅读react项目下的 &lt;span style=&quot;color: #fe2c23&quot;&gt;READEME.md&lt;/span&gt;, 你就会发现我绕了远路，其实react提供了 npm run reject 来注入webpack, eslint, label 等相关依赖和配置，可能这就是react给大家提供的 &lt;span style=&quot;color: #fe2c23&quot;&gt;脚手架&lt;/span&gt; 吧&lt;/p&gt;
+&lt;p&gt;虽说自己饶了远路，但是还是学到些东西的，也温习了一些 webpack，babel 的配置和原理等，想亲自动手，亲自实践的朋友按照如下步骤进行就行，我已经为你们绕过了一些坑&lt;br&gt;比如：babel 升级 6.x 到 7.x, 请参阅 &lt;a href=&quot;https://www.jianshu.com/p/e21d19875fbb&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;babel 7.x 和 webpack 4.x 配置vue项目&lt;/a&gt;, 如果以下步骤有什么不妥之处，欢迎大家给我评论，我会及时修正并回复大家的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="reactjs" scheme="https://www.shengkesi.cn/categories/reactjs/"/>
+    
+    
+      <category term="reactjs" scheme="https://www.shengkesi.cn/tags/reactjs/"/>
+    
+  </entry>
   
   <entry>
     <title>JS 的深拷贝与浅拷贝</title>
@@ -57,7 +79,7 @@
     <link href="https://www.shengkesi.cn/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%88%90%E9%95%BF%E7%9A%84%E7%97%9B%EF%BC%8C%E4%BD%A0%E5%8D%A0%E5%87%A0%E6%9D%A1%EF%BC%9F/"/>
     <id>https://www.shengkesi.cn/前端工程师成长的痛，你占几条？/</id>
     <published>2019-02-23T01:48:01.000Z</published>
-    <updated>2019-03-01T02:36:00.866Z</updated>
+    <updated>2019-03-01T02:40:30.926Z</updated>
     
     <summary type="html">
     
@@ -247,7 +269,7 @@
     <link href="https://www.shengkesi.cn/VUE%E7%9A%84%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
     <id>https://www.shengkesi.cn/VUE的权限控制/</id>
     <published>2018-08-22T07:17:06.000Z</published>
-    <updated>2019-03-01T02:27:31.353Z</updated>
+    <updated>2019-03-04T05:57:35.526Z</updated>
     
     <summary type="html">
     

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.shengkesi.cn/create-react-app-simple/</loc>
+    <lastmod>2019-03-04</lastmod>
+  </url>  <url>
+    <loc>https://www.shengkesi.cn/VUE%E7%9A%84%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/</loc>
+    <lastmod>2019-03-04</lastmod>
+  </url>  <url>
     <loc>https://www.shengkesi.cn/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%88%90%E9%95%BF%E7%9A%84%E7%97%9B%EF%BC%8C%E4%BD%A0%E5%8D%A0%E5%87%A0%E6%9D%A1%EF%BC%9F/</loc>
     <lastmod>2019-03-01</lastmod>
   </url>  <url>
@@ -17,9 +23,6 @@
     <lastmod>2019-03-01</lastmod>
   </url>  <url>
     <loc>https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/</loc>
-    <lastmod>2019-03-01</lastmod>
-  </url>  <url>
-    <loc>https://www.shengkesi.cn/VUE%E7%9A%84%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/</loc>
     <lastmod>2019-03-01</lastmod>
   </url>  <url>
     <loc>https://www.shengkesi.cn/Hexo-%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</loc>
