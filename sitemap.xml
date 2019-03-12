@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.shengkesi.cn/about/index.html</loc>
+    
+    <lastmod>2019-03-12T02:25:20.151Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.shengkesi.cn/create-react-app-simple/</loc>
     
-    <lastmod>2019-03-12T02:23:22.157Z</lastmod>
+    <lastmod>2019-03-12T02:25:20.148Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.shengkesi.cn/create-react-app-complex/</loc>
     
-    <lastmod>2019-03-12T02:22:39.957Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.shengkesi.cn/about/index.html</loc>
-    
-    <lastmod>2019-03-12T01:51:57.713Z</lastmod>
+    <lastmod>2019-03-12T02:25:20.147Z</lastmod>
     
   </url>
   
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/tags/index.html</loc>
+    <loc>https://www.shengkesi.cn/categories/index.html</loc>
     
     <lastmod>2019-03-01T02:27:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/categories/index.html</loc>
+    <loc>https://www.shengkesi.cn/tags/index.html</loc>
     
     <lastmod>2019-03-01T02:27:32.000Z</lastmod>
     
