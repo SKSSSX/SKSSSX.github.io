@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2019-03-12T02:10:16.562Z</updated>
+  <updated>2019-03-12T02:22:39.957Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.shengkesi.cn/create-react-app-complex/"/>
     <id>https://www.shengkesi.cn/create-react-app-complex/</id>
     <published>2019-03-12T01:47:05.000Z</published>
-    <updated>2019-03-12T02:10:16.562Z</updated>
+    <updated>2019-03-12T02:22:39.957Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
       
         
         
-          &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h3&gt;&lt;p&gt;react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程&lt;/p&gt;
-&lt;h3
+          &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;
         
       
     
@@ -50,7 +49,7 @@
     <link href="https://www.shengkesi.cn/create-react-app-simple/"/>
     <id>https://www.shengkesi.cn/create-react-app-simple/</id>
     <published>2019-03-04T07:13:00.000Z</published>
-    <updated>2019-03-12T01:53:15.373Z</updated>
+    <updated>2019-03-12T02:23:22.157Z</updated>
     
     <summary type="html">
     
@@ -62,10 +61,10 @@
     
     </summary>
     
-      <category term="reactjs" scheme="https://www.shengkesi.cn/categories/reactjs/"/>
+      <category term="React" scheme="https://www.shengkesi.cn/categories/React/"/>
     
     
-      <category term="reactjs" scheme="https://www.shengkesi.cn/tags/reactjs/"/>
+      <category term="React" scheme="https://www.shengkesi.cn/tags/React/"/>
     
   </entry>
   
