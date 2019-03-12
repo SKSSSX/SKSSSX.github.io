@@ -144,18 +144,18 @@
 
 
 
-  <meta name="description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目   接下来就是思考自己的项目结构了如果你刚开始">
+  <meta name="description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">
 <meta property="og:url" content="https://www.shengkesi.cn/create-react-app-complex/index.html">
 <meta property="og:site_name" content="盛克思的博客">
-<meta property="og:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目   接下来就是思考自己的项目结构了如果你刚开始">
+<meta property="og:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-12T02:25:20.147Z">
+<meta property="og:updated_time" content="2019-03-12T02:43:54.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">
-<meta name="twitter:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目   接下来就是思考自己的项目结构了如果你刚开始">
+<meta name="twitter:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目">
 
 
 
@@ -520,7 +520,7 @@
                 
               
 
-              <time title="创建时间：2019-03-12 09:47:05 / 修改时间：10:25:20" itemprop="dateCreated datePublished" datetime="2019-03-12T09:47:05+08:00">2019-03-12</time>
+              <time title="创建时间：2019-03-12 09:47:05 / 修改时间：10:43:54" itemprop="dateCreated datePublished" datetime="2019-03-12T09:47:05+08:00">2019-03-12</time>
             
 
             
@@ -582,7 +582,7 @@
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 7 分钟
+              阅读时长：≈ 8 分钟
             </span>
           
 
@@ -611,6 +611,7 @@
 <li>yarn start 启动项目</li>
 </ul>
 </blockquote>
+<a id="more"></a>
 <h3 id="接下来就是思考自己的项目结构了"><a href="#接下来就是思考自己的项目结构了" class="headerlink" title="接下来就是思考自己的项目结构了"></a>接下来就是思考自己的项目结构了</h3><blockquote><p>如果你刚开始一个项目，不要花超过五分钟在选择一个文件结构上。从以上方法（或者你自己想到的）中任意挑一个然后开始编程吧！在写完一些真实的代码之后，你可能会想重新考虑它。</p>
 <footer><strong>@歌特式灵魂摆渡人</strong><cite><a href="https://www.jianshu.com/p/eb7d518b05b8" rel="external nofollow noopener noreferrer" target="_blank">www.jianshu.com/p/eb7d518b05b8</a></cite></footer></blockquote>
 <h3 id="引入路径别名"><a href="#引入路径别名" class="headerlink" title="引入路径别名"></a>引入路径别名</h3><blockquote><p>发现更改目录结构后，相对路径的名字写起来很麻烦，想跟以前VUE项目一样，src 路径 以 别名 “@” 代替<br>我们可以通过使用 webpack 中的 resolve.alias 配置别名，将某些文件目录配置成固定的引入。<br>例如： 我们可以将 ../../src 这样的相对路径的目录，设置成一个 @ 别名， 以后就可以用 @ 代替这个目录引入就行了，而不需要写一坨 ../../../</p>
@@ -631,6 +632,7 @@
 <li>typescript里面引入图片时，TS语法检查报错，项目没办法正常启动<br>参阅了(<a href="https://stackoverflow.com/questions/43638454/webpack-typescript-image-import?rq=1)，解决了这个问题。" rel="external nofollow noopener noreferrer" target="_blank">https://stackoverflow.com/questions/43638454/webpack-typescript-image-import?rq=1)，解决了这个问题。</a></li>
 </ol>
 </blockquote>
+<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3>
       
     </div>
 
@@ -658,7 +660,7 @@
   <p><span>本文标题:</span><a href="/create-react-app-complex/">在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
   <p><span>发布时间:</span>2019年03月12日 - 09:47</p>
-  <p><span>最后更新:</span>2019年03月12日 - 10:25</p>
+  <p><span>最后更新:</span>2019年03月12日 - 10:43</p>
   <p><span>原始链接:</span><a href="/create-react-app-complex/" title="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">https://www.shengkesi.cn/create-react-app-complex/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/create-react-app-complex/" aria-label="复制成功！"></i></span>
   </p>
@@ -966,7 +968,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目的流程"><span class="nav-number">2.</span> <span class="nav-text">创建项目的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来就是思考自己的项目结构了"><span class="nav-number">3.</span> <span class="nav-text">接下来就是思考自己的项目结构了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入路径别名"><span class="nav-number">4.</span> <span class="nav-text">引入路径别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给React项目添加TypeScript支持"><span class="nav-number">5.</span> <span class="nav-text">给React项目添加TypeScript支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入代码语法格式检查工具"><span class="nav-number">6.</span> <span class="nav-text">加入代码语法格式检查工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决相关的问题"><span class="nav-number">7.</span> <span class="nav-text">解决相关的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目的流程"><span class="nav-number">2.</span> <span class="nav-text">创建项目的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来就是思考自己的项目结构了"><span class="nav-number">3.</span> <span class="nav-text">接下来就是思考自己的项目结构了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入路径别名"><span class="nav-number">4.</span> <span class="nav-text">引入路径别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给React项目添加TypeScript支持"><span class="nav-number">5.</span> <span class="nav-text">给React项目添加TypeScript支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入代码语法格式检查工具"><span class="nav-number">6.</span> <span class="nav-text">加入代码语法格式检查工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决相关的问题"><span class="nav-number">7.</span> <span class="nav-text">解决相关的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续"><span class="nav-number">8.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2019-03-12T02:25:20.147Z</updated>
+  <updated>2019-03-12T02:43:54.923Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,17 +21,19 @@
     <link href="https://www.shengkesi.cn/create-react-app-complex/"/>
     <id>https://www.shengkesi.cn/create-react-app-complex/</id>
     <published>2019-03-12T01:47:05.000Z</published>
-    <updated>2019-03-12T02:25:20.147Z</updated>
+    <updated>2019-03-12T02:43:54.923Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;创建项目的流程&quot;&gt;&lt;a href=&quot;#创建项目的流程&quot; class=&quot;headerlink&quot; title=&quot;创建项目的流程&quot;&gt;&lt;/a&gt;创建项目的流程&lt;/h3&gt;&lt;blockquote&gt;&lt;ul&gt;
+&lt;li&gt;npx create-react-app jelly3&lt;br&gt; 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令&lt;/li&gt;
+&lt;li&gt;cd jelly3 切换到自己创建项目根目录下&lt;/li&gt;
+&lt;li&gt;yarn eject&lt;/li&gt;
+&lt;li&gt;yarn start 启动项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
