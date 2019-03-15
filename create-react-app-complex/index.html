@@ -152,7 +152,7 @@
 <meta property="og:site_name" content="盛克思的博客">
 <meta property="og:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-12T02:47:37.815Z">
+<meta property="og:updated_time" content="2019-03-15T06:39:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">
 <meta name="twitter:description" content="引言react脚手架并不能直接运用到项目中去，需要改造，自己进行了进一步探索，总结创建项目的心酸历程  创建项目的流程 npx create-react-app jelly3 备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令 cd jelly3 切换到自己创建项目根目录下 yarn eject yarn start 启动项目">
@@ -249,7 +249,7 @@
     </div>
     
       
-        <h1 class="site-subtitle" itemprop="description">一命二运三本事</h1>
+        <h1 class="site-subtitle" itemprop="description">光看不练是退步！</h1>
       
     
   </div>
@@ -520,12 +520,24 @@
                 
               
 
-              <time title="创建时间：2019-03-12 09:47:05 / 修改时间：10:47:37" itemprop="dateCreated datePublished" datetime="2019-03-12T09:47:05+08:00">2019-03-12</time>
+              <time title="创建时间：2019-03-12 09:47:05" itemprop="dateCreated datePublished" datetime="2019-03-12T09:47:05+08:00">2019-03-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-15 14:39:26" itemprop="dateModified" datetime="2019-03-15T14:39:26+08:00">2019-03-15</time>
               
             
           </span>
@@ -577,7 +589,7 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 1.6k 字
+              字数统计： 1.7k 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
@@ -632,7 +644,9 @@
 <li>typescript里面引入图片时，TS语法检查报错，项目没办法正常启动<br>参阅了(<a href="https://stackoverflow.com/questions/43638454/webpack-typescript-image-import?rq=1)，解决了这个问题。" rel="external nofollow noopener noreferrer" target="_blank">https://stackoverflow.com/questions/43638454/webpack-typescript-image-import?rq=1)，解决了这个问题。</a></li>
 </ol>
 </blockquote>
-<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3>
+<h3 id="为项目引入react-router-v4-、antd-mobile"><a href="#为项目引入react-router-v4-、antd-mobile" class="headerlink" title="为项目引入react-router(v4) 、antd-mobile"></a>为项目引入react-router(v4) 、antd-mobile</h3><blockquote><p>yarn add react-router-dom<br>antd-mobile 请参照官网进行配置和引入，最好是按需加载<br>遇到的问题：<br>如果babel-plugin-import按需加载的js不符合tslint规范，怎么办？<br>修改 tslint 的语法检查配置<br>tsconfig.json 中添加   “allowSyntheticDefaultImports”: true, // 允许模块没有默认导出</p>
+</blockquote>
+<h3 id="浏览器兼容问题—babel-polyfill"><a href="#浏览器兼容问题—babel-polyfill" class="headerlink" title="浏览器兼容问题—babel-polyfill"></a>浏览器兼容问题—babel-polyfill</h3>
       
     </div>
 
@@ -660,7 +674,7 @@
   <p><span>本文标题:</span><a href="/create-react-app-complex/">在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
   <p><span>发布时间:</span>2019年03月12日 - 09:47</p>
-  <p><span>最后更新:</span>2019年03月12日 - 10:47</p>
+  <p><span>最后更新:</span>2019年03月15日 - 14:39</p>
   <p><span>原始链接:</span><a href="/create-react-app-complex/" title="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">https://www.shengkesi.cn/create-react-app-complex/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/create-react-app-complex/" aria-label="复制成功！"></i></span>
   </p>
@@ -968,7 +982,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目的流程"><span class="nav-number">2.</span> <span class="nav-text">创建项目的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来就是思考自己的项目结构了"><span class="nav-number">3.</span> <span class="nav-text">接下来就是思考自己的项目结构了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入路径别名"><span class="nav-number">4.</span> <span class="nav-text">引入路径别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给React项目添加TypeScript支持"><span class="nav-number">5.</span> <span class="nav-text">给React项目添加TypeScript支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入代码语法格式检查工具"><span class="nav-number">6.</span> <span class="nav-text">加入代码语法格式检查工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决相关的问题"><span class="nav-number">7.</span> <span class="nav-text">解决相关的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续"><span class="nav-number">8.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目的流程"><span class="nav-number">2.</span> <span class="nav-text">创建项目的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来就是思考自己的项目结构了"><span class="nav-number">3.</span> <span class="nav-text">接下来就是思考自己的项目结构了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引入路径别名"><span class="nav-number">4.</span> <span class="nav-text">引入路径别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给React项目添加TypeScript支持"><span class="nav-number">5.</span> <span class="nav-text">给React项目添加TypeScript支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加入代码语法格式检查工具"><span class="nav-number">6.</span> <span class="nav-text">加入代码语法格式检查工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决相关的问题"><span class="nav-number">7.</span> <span class="nav-text">解决相关的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为项目引入react-router-v4-、antd-mobile"><span class="nav-number">8.</span> <span class="nav-text">为项目引入react-router(v4) 、antd-mobile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器兼容问题—babel-polyfill"><span class="nav-number">9.</span> <span class="nav-text">浏览器兼容问题—babel-polyfill</span></a></li></ol></div>
             
 
           </div>
@@ -1015,7 +1029,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 9.9k 字</span>
+  <span class="post-count">博客全站共 10k 字</span>
 </div>
         
 <div class="busuanzi-count">
