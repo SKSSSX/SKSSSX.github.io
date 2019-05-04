@@ -144,21 +144,20 @@
 
 
 
-  <meta name="description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
-<meta name="keywords" content="element-ui">
+  <meta name="description" content="引言开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 react的基础之上进行引入webpack、eslint、babel的框架搭建, 但是你仔细阅读react项目下的 READEME.md, 你就会发现我绕了远路，其实react提供了 yarn">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
-<meta property="og:title" content="element-ui table展开行，设置type=&quot;expand&quot;，如何添加表头？如何去掉展开按钮并设置成文字？">
-<meta property="og:url" content="https://www.shengkesi.cn/element/index.html">
+<meta property="og:title" content="react的基础之上进行引入webpack、eslint、babel的框架搭建">
+<meta property="og:url" content="https://www.shengkesi.cn/create-react-app-simple/index.html">
 <meta property="og:site_name" content="盛克思的博客">
-<meta property="og:description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
+<meta property="og:description" content="引言开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 react的基础之上进行引入webpack、eslint、babel的框架搭建, 但是你仔细阅读react项目下的 READEME.md, 你就会发现我绕了远路，其实react提供了 yarn">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.shengkesi.cn/element/element_table_expand.png">
-<meta property="og:image" content="https://www.shengkesi.cn/element/elment_table_expand_edit.jpg">
-<meta property="og:updated_time" content="2019-03-01T02:27:32.000Z">
+<meta property="og:image" content="https://www.shengkesi.cn/create-react-app-simple/logo.svg">
+<meta property="og:updated_time" content="2019-05-03T06:11:16.415Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="element-ui table展开行，设置type=&quot;expand&quot;，如何添加表头？如何去掉展开按钮并设置成文字？">
-<meta name="twitter:description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
-<meta name="twitter:image" content="https://www.shengkesi.cn/element/element_table_expand.png">
+<meta name="twitter:title" content="react的基础之上进行引入webpack、eslint、babel的框架搭建">
+<meta name="twitter:description" content="引言开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 react的基础之上进行引入webpack、eslint、babel的框架搭建, 但是你仔细阅读react项目下的 READEME.md, 你就会发现我绕了远路，其实react提供了 yarn">
+<meta name="twitter:image" content="https://www.shengkesi.cn/create-react-app-simple/logo.svg">
 
 
 
@@ -167,7 +166,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengkesi.cn/element/">
+  <link rel="canonical" href="https://www.shengkesi.cn/create-react-app-simple/">
 
 
 
@@ -177,7 +176,7 @@
   };
 </script>
 
-  <title>element-ui table展开行，设置type="expand"，如何添加表头？如何去掉展开按钮并设置成文字？ | 盛克思的博客</title>
+  <title>react的基础之上进行引入webpack、eslint、babel的框架搭建 | 盛克思的博客</title>
   
 
 
@@ -475,7 +474,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/element/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/create-react-app-simple/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="shengkesi">
@@ -492,7 +491,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">element-ui table展开行，设置type="expand"，如何添加表头？如何去掉展开按钮并设置成文字？
+          <h2 class="post-title" itemprop="name headline">react的基础之上进行引入webpack、eslint、babel的框架搭建
 
               
             
@@ -519,7 +518,7 @@
                 
               
 
-              <time title="创建时间：2018-09-27 23:08:37" itemprop="dateCreated datePublished" datetime="2018-09-27T23:08:37+08:00">2018-09-27</time>
+              <time title="创建时间：2019-03-04 15:13:00" itemprop="dateCreated datePublished" datetime="2019-03-04T15:13:00+08:00">2019-03-04</time>
             
 
             
@@ -536,7 +535,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-01 10:27:32" itemprop="dateModified" datetime="2019-03-01T10:27:32+08:00">2019-03-01</time>
+                <time title="修改时间：2019-05-03 14:11:16" itemprop="dateModified" datetime="2019-05-03T14:11:16+08:00">2019-05-03</time>
               
             
           </span>
@@ -553,7 +552,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Element-UI/" itemprop="url" rel="index"><span itemprop="name">Element-UI</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
 
                 
                 
@@ -568,8 +567,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/element/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/element/" itemprop="commentCount"></span>
+                <a href="/create-react-app-simple/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/create-react-app-simple/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -588,12 +587,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 157 字
+              字数统计： 636 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 1 分钟
+              阅读时长：≈ 2 分钟
             </span>
           
 
@@ -611,17 +610,41 @@
 
       
       
+        <div class="post-gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox" href="/create-react-app-simple/logo.svg" rel="gallery_cjv95kjtu000ko4wfd54drey6" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/create-react-app-simple/logo.svg" itemprop="contentUrl">
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote><p>从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。<br>添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图</p>
+        <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><blockquote><p>开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 <a href="https://github.com/SKSSSX/jelly2" rel="external nofollow noopener noreferrer" target="_blank">react的基础之上进行引入webpack、eslint、babel的框架搭建</a>, 但是你仔细阅读react项目下的 <span style="color: #fe2c23">READEME.md</span>, 你就会发现我绕了远路，其实react提供了 yarn eject 来注入webpack, eslint, label 等相关依赖和配置，可能这就是react给大家提供的 <span style="color: #fe2c23">脚手架</span> 吧</p>
+<div class="note danger"><p>需要注意的是：这个命令只能执行一次，而且不可逆转。</p></div>
+
+<p>虽说自己饶了远路，但是还是学到些东西的，也温习了一些 webpack，babel 的配置和原理等，想亲自动手，亲自实践的朋友按照如下步骤进行就行，我已经为你们绕过了一些坑<br>比如：babel 升级 6.x 到 7.x, 请参阅 <a href="https://www.jianshu.com/p/e21d19875fbb" rel="external nofollow noopener noreferrer" target="_blank">babel 7.x 和 webpack 4.x 配置vue项目</a>, 如果以下步骤有什么不妥之处，欢迎大家给我评论，我会及时修正并回复大家的问题。</p>
 </blockquote>
-<p><img src="/element/element_table_expand.png" alt="element-ui 表格展开行默认效果" title="element-ui 表格展开行默认效果"></p>
-<blockquote><p>表头 label 属性，源码本身就支持，用就可以了<br>用的时候这样用,如下:<br>改变了之后，变为文字，如下图</p>
-</blockquote>
-<p><img src="/element/elment_table_expand_edit.jpg" alt="element-ui 表格展开行修改后的效果" title="element-ui 表格展开行修改后的效果"></p>
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"操作"</span> <span class="attr">type</span>=<span class="string">"expand"</span> <span class="attr">look</span>=<span class="string">"查看"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="源代码文件夹替换替换"><a href="#源代码文件夹替换替换" class="headerlink" title="源代码文件夹替换替换"></a>源代码文件夹替换替换</h3><blockquote><p>将修改后的 lib 文件夹 替换掉你的 element-ui 中的 lib 文件夹, 路径：node-modules/element-ui<br><a href="download/element-ui.zip">点击下载</a></p>
-</blockquote>
+<a id="more"></a>
+<h3 id="创建项目的流程"><a href="#创建项目的流程" class="headerlink" title="创建项目的流程"></a>创建项目的流程</h3><ol>
+<li>npx create-react-app jelly<br>备注：你的环境没有全局安装npx，放心，它会自动安装上并执行创建项目的命令</li>
+<li>cd jelly 切换到自己创建项目根目录下</li>
+<li>导入 react-dom 、react-router-dom 、 redux 、 react-redux 、lodash 依赖包<br>yarn add react-dom react-router-dom redux react-redux lodash</li>
+<li>安装 Webpack, 现在最流行的模块打包工具<br>yarn add webpack webpack-cli webpack-dev-server webpack-merge –dev</li>
+<li>安装一些必要的 Webpack 打包插件 和 eslint<br>yarn add html-webpack-plugin copy-webpack-plugin css-loader file-loader eslint babel-eslint –dev</li>
+<li>安装Babel, 可以把ES6转换为ES5，注意Babel最新的V6版本分为babel-cli和babel-core两个模块，这里只需要用babel-core即可<br>yarn add @babel/core –dev</li>
+<li>安装其他的babel依赖<br>yarn add @babel/polyfill @babel/runtime @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react –dev</li>
+<li>安装 cross-env ， cross-env能跨平台地设置及使用环境变量<br>yarn add cross-env –dev</li>
+<li>打开 package.json , 添加或者修改下面的命令脚本 <figure class="highlight plain"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;cross-env NODE_ENV=development webpack-dev-server --cache --colors --profile --progress -d&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;cross-env NODE_ENV=production webpack --cache --colors --profile --progress --hide-modules&quot;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure></li>
+<li>命令行输入 yarn start 将要启动 webpack dev server.<br>命令行输入 yarn build 将会进行生产环境打包.</li>
+<li>要想成功用webpack打包，还需要 webpack.config.js 和 webpack.ini.js , .babelrc</li>
+</ol>
 
       
     </div>
@@ -647,12 +670,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/element/">element-ui table展开行，设置type="expand"，如何添加表头？如何去掉展开按钮并设置成文字？</a></p>
+  <p><span>本文标题:</span><a href="/create-react-app-simple/">react的基础之上进行引入webpack、eslint、babel的框架搭建</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
-  <p><span>发布时间:</span>2018年09月27日 - 23:08</p>
-  <p><span>最后更新:</span>2019年03月01日 - 10:27</p>
-  <p><span>原始链接:</span><a href="/element/" title="element-ui table展开行，设置type=" expand"，如何添加表头？如何去掉展开按钮并设置成文字？"="">https://www.shengkesi.cn/element/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/element/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年03月04日 - 15:13</p>
+  <p><span>最后更新:</span>2019年05月03日 - 14:11</p>
+  <p><span>原始链接:</span><a href="/create-react-app-simple/" title="react的基础之上进行引入webpack、eslint、babel的框架搭建">https://www.shengkesi.cn/create-react-app-simple/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/create-react-app-simple/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -711,7 +734,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/element-ui/" rel="tag"><i class="fa fa-tag"></i> element-ui</a>
+            <a href="/tags/React/" rel="tag"><i class="fa fa-tag"></i> React</a>
           
         </div>
       
@@ -724,8 +747,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/VUE的权限控制/" rel="next" title="VUE的权限控制">
-                <i class="fa fa-chevron-left"></i> VUE的权限控制
+              <a href="/deep-copy-and-shallow-copy-for-JavaScript/" rel="next" title="JS 的深拷贝与浅拷贝">
+                <i class="fa fa-chevron-left"></i> JS 的深拷贝与浅拷贝
               </a>
             
           </div>
@@ -734,8 +757,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/你真的会检查自己系统安装的VUE版本吗？/" rel="prev" title="你真的会检查自己系统安装的VUE版本吗？">
-                你真的会检查自己系统安装的VUE版本吗？ <i class="fa fa-chevron-right"></i>
+              <a href="/create-react-app-complex/" rel="prev" title="在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）">
+                在 react 项目的基础上增加一些配置（typescript支持，webpack别名等） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -960,7 +983,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">2.</span> <span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#源代码文件夹替换替换"><span class="nav-number">2.1.</span> <span class="nav-text">源代码文件夹替换替换</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目的流程"><span class="nav-number">2.</span> <span class="nav-text">创建项目的流程</span></a></li></ol></div>
             
 
           </div>
