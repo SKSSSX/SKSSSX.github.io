@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2019-05-04T08:11:44.554Z</updated>
+  <updated>2019-05-18T10:37:20.000Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ES6 的新特性</title>
+    <link href="https://www.shengkesi.cn/ECMAScript6-New-Features/"/>
+    <id>https://www.shengkesi.cn/ECMAScript6-New-Features/</id>
+    <published>2019-05-18T10:26:14.000Z</published>
+    <updated>2019-05-18T10:37:20.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;&lt;p&gt;写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;关键字-let-与-const-的应用&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在 react 项目的基础上增加一些配置（typescript支持，webpack别名等）</title>
     <link href="https://www.shengkesi.cn/create-react-app-complex/"/>
     <id>https://www.shengkesi.cn/create-react-app-complex/</id>
     <published>2019-03-12T01:47:05.000Z</published>
-    <updated>2019-05-04T08:11:44.554Z</updated>
+    <updated>2019-05-04T08:11:46.000Z</updated>
     
     <summary type="html">
     
@@ -51,7 +79,7 @@
     <link href="https://www.shengkesi.cn/create-react-app-simple/"/>
     <id>https://www.shengkesi.cn/create-react-app-simple/</id>
     <published>2019-03-04T07:13:00.000Z</published>
-    <updated>2019-05-04T08:11:44.610Z</updated>
+    <updated>2019-05-04T08:11:46.000Z</updated>
     
     <summary type="html">
     
