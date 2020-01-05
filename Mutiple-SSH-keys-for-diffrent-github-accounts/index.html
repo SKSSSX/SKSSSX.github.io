@@ -144,18 +144,20 @@
 
 
 
-  <meta name="description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+  <meta name="description" content="create different public keycreate different ssh key according to your needNote: blog’s SSH-KEY is global, others is in your project  12$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;your_e">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mutiple SSH keys for diffrent github accounts">
 <meta property="og:url" content="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+<meta property="og:description" content="create different public keycreate different ssh key according to your needNote: blog’s SSH-KEY is global, others is in your project  12$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;your_e">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-05T13:43:49.783Z">
+<meta property="og:image" content="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/github-setting.png">
+<meta property="og:updated_time" content="2020-01-05T13:50:23.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mutiple SSH keys for diffrent github accounts">
-<meta name="twitter:description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+<meta name="twitter:description" content="create different public keycreate different ssh key according to your needNote: blog’s SSH-KEY is global, others is in your project  12$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;your_e">
+<meta name="twitter:image" content="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/github-setting.png">
 
 
 
@@ -516,7 +518,7 @@
                 
               
 
-              <time title="创建时间：2020-01-05 20:01:31 / 修改时间：21:43:49" itemprop="dateCreated datePublished" datetime="2020-01-05T20:01:31+08:00">2020-01-05</time>
+              <time title="创建时间：2020-01-05 20:01:31 / 修改时间：21:50:23" itemprop="dateCreated datePublished" datetime="2020-01-05T20:01:31+08:00">2020-01-05</time>
             
 
             
@@ -573,12 +575,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 0 字
+              字数统计： 948 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 1 分钟
+              阅读时长：≈ 4 分钟
             </span>
           
 
@@ -598,7 +600,55 @@
       
 
       
-        
+        <h2 id="create-different-public-key"><a href="#create-different-public-key" class="headerlink" title="create different public key"></a>create different public key</h2><blockquote><p>create different ssh key according to your need<br>Note: blog’s SSH-KEY is global, others is in your project</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &quot;your_email@youremail.com&quot;</span><br><span class="line">$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_jexchan -C &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<blockquote><p>运行上面那条命令后会让输入一个文件名，用于保存刚才生成的 SSH key 代码，如：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/azhen/.ssh/id_rsa): /Users/azhen/.ssh/id_rsa_user2</span><br></pre></td></tr></table></figure>
+<blockquote><p>你可以不输入文件名，使用默认文件名，那么就会生成 id_rsa 和 id_rsa.pub 两个全局默认的秘钥文件，前者为私钥，后者为公钥。<br>当然我们有两个代码仓库，所以最好写上文件名，如id_rsa(公司)或id_rsa_user2(个人). 这样ssh目录下会生成id_rsa.pub和id_rsa_user2.pub两个文件</p>
+</blockquote>
+<blockquote><p>接着又会提示你输入两次密码（该密码是你push文件的时候要输入的密码，而不是github管理者的密码）。也可以直接按回车键，那么push的时候就不需要输入密码，直接提交到github上了，如：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line"># Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+<blockquote><p>当你看到下面这段代码的时候，那就说明，SSH key 已经创建成功，只需要添加到github的SSH key上就可以了。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span><br><span class="line"># Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line"># The key fingerprint is:</span><br><span class="line"># 70:e2:e5:25:06:6c:0b:1a:b1:73:69:18:3a:b4:f4:a2 your_email@example.com</span><br></pre></td></tr></table></figure>
+<blockquote><p>2 keys created at:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/.ssh/id_rsa_activehacker</span><br><span class="line">~/.ssh/id_rsa_jexchan</span><br></pre></td></tr></table></figure>
+<blockquote><p>then, add these two keys as following(添加到 ssh-agent 信任列表)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa_activehacker</span><br><span class="line">$ ssh-add ~/.ssh/id_rsa_jexchan</span><br></pre></td></tr></table></figure>
+<blockquote><p>请注意：此处有坑，你可能会遇到这样的问题</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Could not open a connection to your authentication agent.</span><br></pre></td></tr></table></figure>
+<blockquote><p>解决方案：（也可以是其他的，参考资料里边stackoverflow里边的答案你都可以试试）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-agent bash</span><br></pre></td></tr></table></figure>
+<blockquote><p>这之后，再添加。看到如下所示的情况，就证明添加成功了</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa_activehacker</span><br><span class="line">Identity added: /c/Users/dong/.ssh/id_rsa_activehacker (/c/Users/dong/.ssh/id_rsa_activehacker)</span><br></pre></td></tr></table></figure>
+<h2 id="添加ssh-key到github"><a href="#添加ssh-key到github" class="headerlink" title="添加ssh-key到github"></a>添加ssh-key到github</h2><blockquote><p>在 Github 的后台，可以看到一个叫做 SSH and GPG keys 的选项：<br><img src="/Mutiple-SSH-keys-for-diffrent-github-accounts/github-setting.png" alt="SSH and GPG keys" title="SSH and GPG keys"><br>这里面列出了当前账号绑定的 SSH Key。 每一个 key 对应一台独立的设备。</p>
+</blockquote>
+<blockquote><p>设置好两个ssh key之后就要配置下它们的使用场景<br>登录你的github账号，从右上角的设置（ Settings ）进入，然后点击菜单栏的 SSH key 进入页面添加 SSH key。<br>点击 Add SSH key 按钮添加一个 SSH key 。把你复制的 SSH key 代码粘贴到 key 所对应的输入框中，记得 SSH key 代码的前后不要留有空格或者回车。当然，上面的 Title 所对应的输入框你也可以输入一个该 SSH key 显示在 github 上的一个别名。</p>
+</blockquote>
+<h2 id="Modify-the-ssh-config"><a href="#Modify-the-ssh-config" class="headerlink" title="Modify the ssh config"></a>Modify the ssh config</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh/</span><br><span class="line">$ touch config</span><br><span class="line">$ subl -a config</span><br></pre></td></tr></table></figure>
+<blockquote><p>Then added</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#activehacker account</span><br><span class="line">Host github.com-activehacker</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_activehacker</span><br><span class="line"></span><br><span class="line">#jexchan account</span><br><span class="line">Host github.com-jexchan</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_jexchan</span><br></pre></td></tr></table></figure>
+<h2 id="Clone-you-repo-and-modify-your-Git-config"><a href="#Clone-you-repo-and-modify-your-Git-config" class="headerlink" title="Clone you repo and modify your Git config"></a>Clone you repo and modify your Git config</h2><blockquote><p>clone your repo<br>比如我们图中的 <a href="mailto:git@github.com" rel="external nofollow noopener noreferrer" target="_blank">git@github.com</a>:azhen1/lerna-demo.git。 我们需要对它稍作加工，把域名部分替换成我们在 config 中配置的 Host： <a href="mailto:git@github.azhen1" rel="external nofollow noopener noreferrer" target="_blank">git@github.azhen1</a>:azhen1/lerna-demo.git。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:activehacker/gfs.git gfs_jexchan</span><br></pre></td></tr></table></figure>
+<blockquote><p>这样本地仓库就和对应的密钥建立起了联系。 以后的操作中，都会自动使用这个 SSH key 来访问 Github 远程仓库了。 如果想同时在另外一个本地仓库使用其他 Github 账户，只需要在 ~/.ssh/config文件中配置好相应的 SSH key 和对应的 Host，就可以了。</p>
+</blockquote>
+<blockquote><p>cd gfs_jexchan and modify git config</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name &quot;jexchan&quot;</span><br><span class="line">$ git config user.email &quot;jexchan@gmail.com&quot; </span><br><span class="line"></span><br><span class="line">$ git config user.name &quot;activehacker&quot;</span><br><span class="line">$ git config user.email &quot;jexlab@gmail.com&quot; </span><br></pre></td></tr></table></figure>
+<blockquote><p>then use normal flow to push your code</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;your comments&quot;</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -626,7 +676,7 @@
   <p><span>本文标题:</span><a href="/Mutiple-SSH-keys-for-diffrent-github-accounts/">Mutiple SSH keys for diffrent github accounts</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
   <p><span>发布时间:</span>2020年01月05日 - 20:01</p>
-  <p><span>最后更新:</span>2020年01月05日 - 21:43</p>
+  <p><span>最后更新:</span>2020年01月05日 - 21:50</p>
   <p><span>原始链接:</span><a href="/Mutiple-SSH-keys-for-diffrent-github-accounts/" title="Mutiple SSH keys for diffrent github accounts">https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/" aria-label="复制成功！"></i></span>
   </p>
@@ -759,8 +809,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -914,6 +973,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#create-different-public-key"><span class="nav-number">1.</span> <span class="nav-text">create different public key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加ssh-key到github"><span class="nav-number">2.</span> <span class="nav-text">添加ssh-key到github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modify-the-ssh-config"><span class="nav-number">3.</span> <span class="nav-text">Modify the ssh config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clone-you-repo-and-modify-your-Git-config"><span class="nav-number">4.</span> <span class="nav-text">Clone you repo and modify your Git config</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -954,7 +1029,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 10.5k 字</span>
+  <span class="post-count">博客全站共 11.5k 字</span>
 </div>
         
 <div class="busuanzi-count">
