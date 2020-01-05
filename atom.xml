@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-01-05T11:25:00.891Z</updated>
+  <updated>2020-01-05T13:43:49.783Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mutiple SSH keys for diffrent github accounts</title>
+    <link href="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/"/>
+    <id>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</id>
+    <published>2020-01-05T12:01:31.000Z</published>
+    <updated>2020-01-05T13:43:49.783Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6 的新特性</title>
