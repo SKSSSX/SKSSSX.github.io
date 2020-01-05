@@ -153,7 +153,7 @@
 <meta property="og:description" content="create different public keycreate different ssh key according to your needNote: blog’s SSH-KEY is global, others is in your project  12$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;your_e">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/github-setting.png">
-<meta property="og:updated_time" content="2020-01-05T13:57:42.398Z">
+<meta property="og:updated_time" content="2020-01-05T14:17:21.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mutiple SSH keys for diffrent github accounts">
 <meta name="twitter:description" content="create different public keycreate different ssh key according to your needNote: blog’s SSH-KEY is global, others is in your project  12$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;your_e">
@@ -518,7 +518,7 @@
                 
               
 
-              <time title="创建时间：2020-01-05 20:01:31 / 修改时间：21:57:42" itemprop="dateCreated datePublished" datetime="2020-01-05T20:01:31+08:00">2020-01-05</time>
+              <time title="创建时间：2020-01-05 20:01:31 / 修改时间：22:17:21" itemprop="dateCreated datePublished" datetime="2020-01-05T20:01:31+08:00">2020-01-05</time>
             
 
             
@@ -575,7 +575,7 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 948 字
+              字数统计： 1k 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
@@ -637,9 +637,11 @@
 <blockquote><p>Then added</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#activehacker account</span><br><span class="line">Host github.com-activehacker</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_activehacker</span><br><span class="line"></span><br><span class="line">#jexchan account</span><br><span class="line">Host github.com-jexchan</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa_jexchan</span><br></pre></td></tr></table></figure>
+<blockquote><p>这里的Host名称一定不能起github.com 或者 gitlab.com 不然如果对于hexo博客来说，设置的全局git账户就会到这个文件去找对应的SSH-key，然后就会报无权限推送代码的问题</p>
+</blockquote>
 <h2 id="Clone-you-repo-and-modify-your-Git-config"><a href="#Clone-you-repo-and-modify-your-Git-config" class="headerlink" title="Clone you repo and modify your Git config"></a>Clone you repo and modify your Git config</h2><blockquote><p>clone your repo<br>比如我们图中的 <a href="mailto:git@github.com" rel="external nofollow noopener noreferrer" target="_blank">git@github.com</a>:azhen1/lerna-demo.git。 我们需要对它稍作加工，把域名部分替换成我们在 config 中配置的 Host： <a href="mailto:git@github.azhen1" rel="external nofollow noopener noreferrer" target="_blank">git@github.azhen1</a>:azhen1/lerna-demo.git。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:activehacker/gfs.git gfs_jexchan</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com-activehacker:activehacker/gfs.git gfs_jexchan</span><br></pre></td></tr></table></figure>
 <blockquote><p>这样本地仓库就和对应的密钥建立起了联系。 以后的操作中，都会自动使用这个 SSH key 来访问 Github 远程仓库了。 如果想同时在另外一个本地仓库使用其他 Github 账户，只需要在 ~/.ssh/config文件中配置好相应的 SSH key 和对应的 Host，就可以了。</p>
 </blockquote>
 <blockquote><p>cd gfs_jexchan and modify git config</p>
@@ -676,7 +678,7 @@
   <p><span>本文标题:</span><a href="/Mutiple-SSH-keys-for-diffrent-github-accounts/">Mutiple SSH keys for diffrent github accounts</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
   <p><span>发布时间:</span>2020年01月05日 - 20:01</p>
-  <p><span>最后更新:</span>2020年01月05日 - 21:57</p>
+  <p><span>最后更新:</span>2020年01月05日 - 22:17</p>
   <p><span>原始链接:</span><a href="/Mutiple-SSH-keys-for-diffrent-github-accounts/" title="Mutiple SSH keys for diffrent github accounts">https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/" aria-label="复制成功！"></i></span>
   </p>
