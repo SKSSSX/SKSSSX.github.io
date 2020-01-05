@@ -144,18 +144,18 @@
 
 
 
-  <meta name="description" content="写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法  关键字 let 与 const 的应用大家都知道，ES5 中的 var 是一种无数据类型的定义（仅在这提及一下Typescript新语法，每定义一个变量必然需要声明数据类型，比如：const order: object = {}）而且这个 var 会使变量提升，JavaS">
+  <meta name="description" content="Welcome to my blog, enter password to read.">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6 的新特性">
 <meta property="og:url" content="https://www.shengkesi.cn/ECMAScript6-New-Features/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法  关键字 let 与 const 的应用大家都知道，ES5 中的 var 是一种无数据类型的定义（仅在这提及一下Typescript新语法，每定义一个变量必然需要声明数据类型，比如：const order: object = {}）而且这个 var 会使变量提升，JavaS">
+<meta property="og:description" content="Welcome to my blog, enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-18T10:37:20.000Z">
+<meta property="og:updated_time" content="2020-01-05T11:25:00.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 的新特性">
-<meta name="twitter:description" content="写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法  关键字 let 与 const 的应用大家都知道，ES5 中的 var 是一种无数据类型的定义（仅在这提及一下Typescript新语法，每定义一个变量必然需要声明数据类型，比如：const order: object = {}）而且这个 var 会使变量提升，JavaS">
+<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
 
 
 
@@ -516,12 +516,24 @@
                 
               
 
-              <time title="创建时间：2019-05-18 18:26:14 / 修改时间：18:37:20" itemprop="dateCreated datePublished" datetime="2019-05-18T18:26:14+08:00">2019-05-18</time>
+              <time title="创建时间：2019-05-18 18:26:14" itemprop="dateCreated datePublished" datetime="2019-05-18T18:26:14+08:00">2019-05-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-01-05 19:25:00" itemprop="dateModified" datetime="2020-01-05T19:25:00+08:00">2020-01-05</time>
               
             
           </span>
@@ -573,12 +585,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 140 字
+              字数统计： 350 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 1 分钟
+              阅读时长：≈ 2 分钟
             </span>
           
 
@@ -598,11 +610,19 @@
       
 
       
-        <blockquote><p>写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法</p>
-</blockquote>
-<h3 id="关键字-let-与-const-的应用"><a href="#关键字-let-与-const-的应用" class="headerlink" title="关键字 let 与 const 的应用"></a>关键字 let 与 const 的应用</h3><blockquote><p>大家都知道，ES5 中的 var 是一种无数据类型的定义（仅在这提及一下Typescript新语法，每定义一个变量必然需要声明数据类型，比如：const order: object = {}）而且这个 var 会使变量提升，JavaScript 仅提升声明，而不提升初始化，请看下面的例子：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+        <div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read.">
+    <label for="pass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -630,7 +650,7 @@
   <p><span>本文标题:</span><a href="/ECMAScript6-New-Features/">ES6 的新特性</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 shengkesi 的个人博客">shengkesi</a></p>
   <p><span>发布时间:</span>2019年05月18日 - 18:26</p>
-  <p><span>最后更新:</span>2019年05月18日 - 18:37</p>
+  <p><span>最后更新:</span>2020年01月05日 - 19:25</p>
   <p><span>原始链接:</span><a href="/ECMAScript6-New-Features/" title="ES6 的新特性">https://www.shengkesi.cn/ECMAScript6-New-Features/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/ECMAScript6-New-Features/" aria-label="复制成功！"></i></span>
   </p>
@@ -763,17 +783,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -927,22 +938,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字-let-与-const-的应用"><span class="nav-number">1.</span> <span class="nav-text">关键字 let 与 const 的应用</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -956,7 +951,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -983,7 +978,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 10.3k 字</span>
+  <span class="post-count">博客全站共 10.5k 字</span>
 </div>
         
 <div class="busuanzi-count">
