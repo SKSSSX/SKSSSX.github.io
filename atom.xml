@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>sanks的博客</title>
   
-  <subtitle>光看不练是退步！</subtitle>
+  <subtitle>用新思路解决旧问题！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
@@ -10,7 +10,7 @@
   <id>https://www.shengkesi.cn/</id>
   
   <author>
-    <name>shengkesi</name>
+    <name>sanks</name>
     
   </author>
   
