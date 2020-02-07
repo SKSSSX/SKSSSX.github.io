@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</loc>
+    <loc>https://www.shengkesi.cn/ECMAScript6-New-Features/</loc>
     
-    <lastmod>2020-01-19T17:56:37.447Z</lastmod>
+    <lastmod>2020-02-07T01:32:53.196Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/ECMAScript6-New-Features/</loc>
+    <loc>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</loc>
     
-    <lastmod>2020-01-19T17:48:52.893Z</lastmod>
+    <lastmod>2020-01-19T17:56:37.447Z</lastmod>
     
   </url>
   
@@ -107,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/categories/index.html</loc>
-    
-    <lastmod>2019-03-01T02:27:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.shengkesi.cn/Hexo-%E4%B8%BB%E9%A2%98%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8A%E4%BC%A0%E4%B8%8D%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84github%E4%B8%8A/</loc>
     
     <lastmod>2019-03-01T02:27:32.000Z</lastmod>
@@ -121,14 +114,21 @@
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/categories/package.json</loc>
+    <loc>https://www.shengkesi.cn/archives/index.html</loc>
     
     <lastmod>2019-03-01T02:27:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.shengkesi.cn/archives/index.html</loc>
+    <loc>https://www.shengkesi.cn/categories/index.html</loc>
+    
+    <lastmod>2019-03-01T02:27:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.shengkesi.cn/categories/package.json</loc>
     
     <lastmod>2019-03-01T02:27:32.000Z</lastmod>
     
