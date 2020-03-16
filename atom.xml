@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-01-19T17:56:37.447Z</updated>
+  <updated>2020-03-16T13:27:50.124Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,11 +21,17 @@
     <link href="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/"/>
     <id>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</id>
     <published>2020-01-05T12:01:31.000Z</published>
-    <updated>2020-01-19T17:56:37.447Z</updated>
+    <updated>2020-03-16T13:27:50.124Z</updated>
     
     <summary type="html">
     
-      Welcome to my blog, enter password to read.
+      
+      
+        
+        
+          &lt;h2 id=&quot;create-different-public-key&quot;&gt;&lt;a href=&quot;#create-different-public-key&quot; class=&quot;headerlink&quot; title=&quot;create different public
+        
+      
     
     </summary>
     
@@ -41,11 +47,19 @@
     <link href="https://www.shengkesi.cn/ECMAScript6-New-Features/"/>
     <id>https://www.shengkesi.cn/ECMAScript6-New-Features/</id>
     <published>2019-05-18T10:26:14.000Z</published>
-    <updated>2020-02-26T01:49:16.595Z</updated>
+    <updated>2020-03-16T13:27:40.046Z</updated>
     
     <summary type="html">
     
-      Welcome to my blog, enter password to read.
+      
+      
+        
+        
+          &lt;blockquote&gt;&lt;p&gt;写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;关键字-async-与-await-的应用&quot;&gt;&lt;a
+        
+      
     
     </summary>
     
