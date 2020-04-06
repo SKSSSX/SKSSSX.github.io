@@ -144,18 +144,18 @@
 
 
 
-  <meta name="description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  利用js回调嵌套的方式1234567891011121314151617181920212223242526// 异步接口1: 科室列表function getDepartmentsList(callback)&amp;#123;    //模拟实现    var departm">
+  <meta name="description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  首先普及一下promise的一些冷门知识执行 then 和 catch 会返回一个新的 Promise ，该 Promise 最终状态根据 then 和 catch 的回调函数的执行结果决定  如果回调函数最终是 throw ， 该 Promise 是 rejected">
 <meta name="keywords" content="promise,axios,ES6,回调地狱">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Axios 执行多个并发请求(使用Promise解决多层异步调用)">
 <meta property="og:url" content="https://www.shengkesi.cn/Axios-执行多个并发请求-promise/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  利用js回调嵌套的方式1234567891011121314151617181920212223242526// 异步接口1: 科室列表function getDepartmentsList(callback)&amp;#123;    //模拟实现    var departm">
+<meta property="og:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  首先普及一下promise的一些冷门知识执行 then 和 catch 会返回一个新的 Promise ，该 Promise 最终状态根据 then 和 catch 的回调函数的执行结果决定  如果回调函数最终是 throw ， 该 Promise 是 rejected">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-01T02:27:32.000Z">
+<meta property="og:updated_time" content="2020-04-06T08:20:55.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Axios 执行多个并发请求(使用Promise解决多层异步调用)">
-<meta name="twitter:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  利用js回调嵌套的方式1234567891011121314151617181920212223242526// 异步接口1: 科室列表function getDepartmentsList(callback)&amp;#123;    //模拟实现    var departm">
+<meta name="twitter:description" content="引语场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法  首先普及一下promise的一些冷门知识执行 then 和 catch 会返回一个新的 Promise ，该 Promise 最终状态根据 then 和 catch 的回调函数的执行结果决定  如果回调函数最终是 throw ， 该 Promise 是 rejected">
 
 
 
@@ -533,7 +533,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-01 10:27:32" itemprop="dateModified" datetime="2019-03-01T10:27:32+08:00">2019-03-01</time>
+                <time title="修改时间：2020-04-06 16:20:55" itemprop="dateModified" datetime="2020-04-06T16:20:55+08:00">2020-04-06</time>
               
             
           </span>
@@ -585,12 +585,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 1.1k 字
+              字数统计： 1.2k 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 4 分钟
+              阅读时长：≈ 5 分钟
             </span>
           
 
@@ -611,6 +611,13 @@
 
       
         <h2 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h2><blockquote><p>场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,<br>需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法</p>
+</blockquote>
+<h2 id="首先普及一下promise的一些冷门知识"><a href="#首先普及一下promise的一些冷门知识" class="headerlink" title="首先普及一下promise的一些冷门知识"></a>首先普及一下promise的一些冷门知识</h2><blockquote><p>执行 then 和 catch 会返回一个新的 Promise ，该 Promise 最终状态根据 then 和 catch 的回调函数的执行结果决定</p>
+<ul>
+<li>如果回调函数最终是 throw ， 该 Promise 是 rejected 状态</li>
+<li>如果回调函数最终是 return ， 该 Promise 是 resolved 状态</li>
+<li>但如果回调函数最终 return 了一个 Promise ， 该 Promise 会和回调函数的 reurn 的状态保持一致 </li>
+</ul>
 </blockquote>
 <h2 id="利用js回调嵌套的方式"><a href="#利用js回调嵌套的方式" class="headerlink" title="利用js回调嵌套的方式"></a>利用js回调嵌套的方式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步接口1: 科室列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDepartmentsList</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> departmentList = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(departmentList)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 异步接口2: 级别列表</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLevelList</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> levelList = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">1000</span>)+<span class="number">1000</span></span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(levelList)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步接口，列表中科室和级别码转换成对应的中文，需要前两个接口的数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">registrationList</span>(<span class="params">departmentList,levelList,callback</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//模拟实现</span></span><br><span class="line">    <span class="keyword">var</span> percent = <span class="built_in">Math</span>.ceil(departmentList/levelList*<span class="number">100</span>)</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        callback(percent)</span><br><span class="line">    &#125;,<span class="built_in">Math</span>.random()*<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a> 
@@ -654,7 +661,7 @@
   <p><span>本文标题:</span><a href="/Axios-执行多个并发请求-promise/">Axios 执行多个并发请求(使用Promise解决多层异步调用)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
   <p><span>发布时间:</span>2018年12月18日 - 08:21</p>
-  <p><span>最后更新:</span>2019年03月01日 - 10:27</p>
+  <p><span>最后更新:</span>2020年04月06日 - 16:20</p>
   <p><span>原始链接:</span><a href="/Axios-执行多个并发请求-promise/" title="Axios 执行多个并发请求(使用Promise解决多层异步调用)">https://www.shengkesi.cn/Axios-执行多个并发请求-promise/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/Axios-执行多个并发请求-promise/" aria-label="复制成功！"></i></span>
   </p>
@@ -824,7 +831,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -853,7 +860,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -892,7 +903,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -974,7 +989,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引语"><span class="nav-number">1.</span> <span class="nav-text">引语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用js回调嵌套的方式"><span class="nav-number">2.</span> <span class="nav-text">利用js回调嵌套的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用es6的promise解决回调地狱问题"><span class="nav-number">3.</span> <span class="nav-text">利用es6的promise解决回调地狱问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#《ES6标准入门》对Promise的描述"><span class="nav-number">3.1.</span> <span class="nav-text">《ES6标准入门》对Promise的描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDN对Promise的描述："><span class="nav-number">3.2.</span> <span class="nav-text">MDN对Promise的描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每个异步接口-返回一个promise对象"><span class="nav-number">3.3.</span> <span class="nav-text">每个异步接口 返回一个promise对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用promise-all方法保证接口数据成功返回再执行操作"><span class="nav-number">3.4.</span> <span class="nav-text">利用promise.all方法保证接口数据成功返回再执行操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Axios-解决方案-VUE"><span class="nav-number">4.</span> <span class="nav-text">Axios 解决方案(VUE)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每个异步接口-返回一个axios对象"><span class="nav-number">4.1.</span> <span class="nav-text">每个异步接口 返回一个axios对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用axios-all方法执行多个并发请求"><span class="nav-number">4.2.</span> <span class="nav-text">利用axios.all方法执行多个并发请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引语"><span class="nav-number">1.</span> <span class="nav-text">引语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#首先普及一下promise的一些冷门知识"><span class="nav-number">2.</span> <span class="nav-text">首先普及一下promise的一些冷门知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用js回调嵌套的方式"><span class="nav-number">3.</span> <span class="nav-text">利用js回调嵌套的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用es6的promise解决回调地狱问题"><span class="nav-number">4.</span> <span class="nav-text">利用es6的promise解决回调地狱问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#《ES6标准入门》对Promise的描述"><span class="nav-number">4.1.</span> <span class="nav-text">《ES6标准入门》对Promise的描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDN对Promise的描述："><span class="nav-number">4.2.</span> <span class="nav-text">MDN对Promise的描述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#每个异步接口-返回一个promise对象"><span class="nav-number">4.3.</span> <span class="nav-text">每个异步接口 返回一个promise对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用promise-all方法保证接口数据成功返回再执行操作"><span class="nav-number">4.4.</span> <span class="nav-text">利用promise.all方法保证接口数据成功返回再执行操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Axios-解决方案-VUE"><span class="nav-number">5.</span> <span class="nav-text">Axios 解决方案(VUE)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每个异步接口-返回一个axios对象"><span class="nav-number">5.1.</span> <span class="nav-text">每个异步接口 返回一个axios对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用axios-all方法执行多个并发请求"><span class="nav-number">5.2.</span> <span class="nav-text">利用axios.all方法执行多个并发请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -1021,7 +1036,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 12.3k 字</span>
+  <span class="post-count">博客全站共 13.2k 字</span>
 </div>
         
 <div class="busuanzi-count">
