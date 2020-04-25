@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-04-13T06:07:51.351Z</updated>
+  <updated>2020-04-25T16:27:32.532Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.shengkesi.cn/http-request-timeout/"/>
     <id>https://www.shengkesi.cn/http-request-timeout/</id>
     <published>2020-04-13T01:24:58.000Z</published>
-    <updated>2020-04-13T06:07:51.351Z</updated>
+    <updated>2020-04-25T16:27:32.532Z</updated>
     
     <summary type="html">
     
@@ -41,17 +41,14 @@
     <link href="https://www.shengkesi.cn/NodeJS-Middleware/"/>
     <id>https://www.shengkesi.cn/NodeJS-Middleware/</id>
     <published>2020-02-03T06:59:38.000Z</published>
-    <updated>2020-04-13T01:34:34.236Z</updated>
+    <updated>2020-04-25T16:28:13.728Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;Nodejs-作为中间层能做的事&quot;&gt;&lt;a href=&quot;#Nodejs-作为中间层能做的事&quot; class=&quot;headerlink&quot; title=&quot;Nodejs 作为中间层能做的事&quot;&gt;&lt;/a&gt;Nodejs
-        
-      
+      &lt;h2 id=&quot;Nodejs-作为中间层能做的事&quot;&gt;&lt;a href=&quot;#Nodejs-作为中间层能做的事&quot; class=&quot;headerlink&quot; title=&quot;Nodejs 作为中间层能做的事&quot;&gt;&lt;/a&gt;Nodejs 作为中间层能做的事&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;nodejs中间层能减少开发过程中的一些实际问题，比如跨域，也能分担后台开发人员的工作，比如文件上传服务器，也能做简单的即时消息聊天功能，都是基于nodejs的特性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;反向代理和跨域&quot;&gt;&lt;a href=&quot;#反向代理和跨域&quot; class=&quot;headerlink&quot; title=&quot;反向代理和跨域&quot;&gt;&lt;/a&gt;反向代理和跨域&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;同源策略（SOP）是为了防止CSRF（跨域请求伪造）的攻击，浏览器引入的策略。&lt;br&gt;&lt;img src=&quot;/NodeJS-Middleware/sop.png&quot; alt=&quot;同源策略&quot; title=&quot;同源策略&quot;&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -67,17 +64,24 @@
     <link href="https://www.shengkesi.cn/Flutter/"/>
     <id>https://www.shengkesi.cn/Flutter/</id>
     <published>2020-02-01T07:53:14.000Z</published>
-    <updated>2020-04-11T11:11:50.355Z</updated>
+    <updated>2020-04-25T16:28:34.769Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;引语&quot;&gt;&lt;a href=&quot;#引语&quot; class=&quot;headerlink&quot; title=&quot;引语&quot;&gt;&lt;/a&gt;引语&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Flutter 是 Google 研发的 移动 UI
-        
-      
+      &lt;h2 id=&quot;引语&quot;&gt;&lt;a href=&quot;#引语&quot; class=&quot;headerlink&quot; title=&quot;引语&quot;&gt;&lt;/a&gt;引语&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Flutter 是 Google 研发的 移动 UI 框架，可以快速在iOS和Android上构建高质量的原生用户界面。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Dart&quot;&gt;&lt;a href=&quot;#Dart&quot; class=&quot;headerlink&quot; title=&quot;Dart&quot;&gt;&lt;/a&gt;Dart&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;Dart 是 Flutter 的开发语言， 如同 IOS开发用 swift 一样, &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Flutter-SDK&quot;&gt;&lt;a href=&quot;#Flutter-SDK&quot; class=&quot;headerlink&quot; title=&quot;Flutter SDK&quot;&gt;&lt;/a&gt;Flutter SDK&lt;/h2&gt;&lt;blockquote&gt;&lt;h3 id=&quot;Flutter-SDK里面有什么？&quot;&gt;&lt;a href=&quot;#Flutter-SDK里面有什么？&quot; class=&quot;headerlink&quot; title=&quot;Flutter SDK里面有什么？&quot;&gt;&lt;/a&gt;Flutter SDK里面有什么？&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;深度优化了的、移动优先的2D渲染引擎&lt;/li&gt;
+&lt;li&gt;现代、响应式框架&lt;/li&gt;
+&lt;li&gt;丰富的Android和iOS套件&lt;/li&gt;
+&lt;li&gt;单元和集成测试的API&lt;/li&gt;
+&lt;li&gt;连接到系统和第三方SDK的Interop和插件API&lt;/li&gt;
+&lt;li&gt;无头的测试运行器，用于在Windows、Linux和Mac上运行测试&lt;/li&gt;
+&lt;li&gt;用于创建、构建、测试和编译应用程序的命令行工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -93,17 +97,19 @@
     <link href="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/"/>
     <id>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</id>
     <published>2020-01-05T12:01:31.000Z</published>
-    <updated>2020-04-11T03:53:55.594Z</updated>
+    <updated>2020-04-25T16:30:02.683Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;create-different-public-key&quot;&gt;&lt;a href=&quot;#create-different-public-key&quot; class=&quot;headerlink&quot; title=&quot;create different public
-        
-      
+      &lt;h2 id=&quot;create-different-public-key&quot;&gt;&lt;a href=&quot;#create-different-public-key&quot; class=&quot;headerlink&quot; title=&quot;create different public key&quot;&gt;&lt;/a&gt;create different public key&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;color: #fe2c23&quot;&gt;Note: blog’s git configuration is global, others is in your project&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;create-different-ssh-key-according-to-your-need&quot;&gt;&lt;a href=&quot;#create-different-ssh-key-according-to-your-need&quot; class=&quot;headerlink&quot; title=&quot;create different ssh key according to your need&quot;&gt;&lt;/a&gt;create different ssh key according to your need&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_activehacker -C &amp;quot;jexlab@gmail.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -f ~/.ssh/id_rsa_jexchan -C &amp;quot;jexchan@gmail.com&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;blockquote&gt;&lt;p&gt;If your command line has no arguments “-f ~/.ssh/id_rsa_activehacker”, as following&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;&lt;a href=&quot;mailto:jexlab@gmail.com&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;jexlab@gmail.com&lt;/a&gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;&lt;a href=&quot;mailto:jexchan@gmail.com&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;jexchan@gmail.com&lt;/a&gt;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行上面那条命令后会让输入一个文件名，用于保存刚才生成的 SSH key 代码，此时需要输入完整的绝对路径，或者只输入文件名，在当前目录生成，生成后移动到指定的.ssh文件夹内，如：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Generating public/private rsa key pair.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Enter file in which to save the key (/c/Users/SKS/.ssh/id_rsa): /c/Users/SKS/.ssh/id_rsa_activehacker&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -119,19 +125,23 @@
     <link href="https://www.shengkesi.cn/ECMAScript6-New-Features/"/>
     <id>https://www.shengkesi.cn/ECMAScript6-New-Features/</id>
     <published>2019-05-18T10:26:14.000Z</published>
-    <updated>2020-04-11T03:53:45.267Z</updated>
+    <updated>2020-04-25T16:30:56.283Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;&lt;p&gt;写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法&lt;/p&gt;
+      &lt;blockquote&gt;&lt;p&gt;写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;关键字-async-await-的应用&quot;&gt;&lt;a
-        
-      
+&lt;h3 id=&quot;关键字-async-await-的应用&quot;&gt;&lt;a href=&quot;#关键字-async-await-的应用&quot; class=&quot;headerlink&quot; title=&quot;关键字 async/await 的应用&quot;&gt;&lt;/a&gt;关键字 async/await 的应用&lt;/h3&gt;&lt;blockquote&gt;&lt;ol&gt;
+&lt;li&gt;async function 是 Promise 的语法糖封装&lt;/li&gt;
+&lt;li&gt;异步编程的终极方案 - 以同步的方式写异步&lt;ul&gt;
+&lt;li&gt;await 关键字可以 “暂停” async function 的执行&lt;/li&gt;
+&lt;li&gt;await 关键字可以以同步的写法获取 Promise 的执行结果&lt;/li&gt;
+&lt;li&gt;try-catch 可以获取 await 所得到的错误&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一个穿越事件循环存在的 function&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
