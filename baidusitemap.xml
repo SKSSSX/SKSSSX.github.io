@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.shengkesi.cn/ECMAScript6-New-Features/</loc>
+    <lastmod>2020-05-20</lastmod>
+  </url>  <url>
     <loc>https://www.shengkesi.cn/debounce-and-throttle/</loc>
     <lastmod>2020-05-20</lastmod>
   </url>  <url>
@@ -14,9 +17,6 @@
     <lastmod>2020-04-25</lastmod>
   </url>  <url>
     <loc>https://www.shengkesi.cn/Flutter/</loc>
-    <lastmod>2020-04-25</lastmod>
-  </url>  <url>
-    <loc>https://www.shengkesi.cn/ECMAScript6-New-Features/</loc>
     <lastmod>2020-04-25</lastmod>
   </url>  <url>
     <loc>https://www.shengkesi.cn/Axios-%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82-promise/</loc>

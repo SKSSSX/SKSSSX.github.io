@@ -145,23 +145,11 @@
     <link href="https://www.shengkesi.cn/ECMAScript6-New-Features/"/>
     <id>https://www.shengkesi.cn/ECMAScript6-New-Features/</id>
     <published>2019-05-18T10:26:14.000Z</published>
-    <updated>2020-04-25T17:00:56.836Z</updated>
+    <updated>2020-05-20T16:54:40.243Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;&lt;p&gt;写这篇文章的目的就是告诉前端的同学们，ES6 已经是前端程序员必不可少的技能之一，后期再追加 Typescript 的新语法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;关键字-async-await-的应用&quot;&gt;&lt;a href=&quot;#关键字-async-await-的应用&quot; class=&quot;headerlink&quot; title=&quot;关键字 async/await 的应用&quot;&gt;&lt;/a&gt;关键字 async/await 的应用&lt;/h3&gt;&lt;blockquote&gt;&lt;ol&gt;
-&lt;li&gt;async function 是 Promise 的语法糖封装&lt;/li&gt;
-&lt;li&gt;异步编程的终极方案 - 以同步的方式写异步&lt;ul&gt;
-&lt;li&gt;await 关键字可以 “暂停” async function 的执行&lt;/li&gt;
-&lt;li&gt;await 关键字可以以同步的写法获取 Promise 的执行结果&lt;/li&gt;
-&lt;li&gt;try-catch 可以获取 await 所得到的错误&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;一个穿越事件循环存在的 function&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
+      Welcome to my blog, enter password to read.
     
     </summary>
     
