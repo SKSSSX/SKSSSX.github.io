@@ -472,6 +472,222 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/Hexo-主题文件夹上传不到自己的github上/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sanks">
+      <meta itemprop="description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sanks的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Hexo-主题文件夹上传不到自己的github上/" class="post-title-link" itemprop="https://www.shengkesi.cn/page/2/index.html">Hexo-主题文件夹上传不到自己的github上</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-10 14:44:49" itemprop="dateCreated datePublished" datetime="2019-02-10T14:44:49+08:00">2019-02-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-01 10:27:32" itemprop="dateModified" datetime="2019-03-01T10:27:32+08:00">2019-03-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Hexo-主题文件夹上传不到自己的github上/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Hexo-主题文件夹上传不到自己的github上/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount">
+              <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
+              字数统计： 493 字
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.min2read">
+              <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
+              阅读时长：≈ 1 分钟
+            </span>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><blockquote><p>好多人都已经用Hexo博客框架搭建了自己的博客，而且也部署到了自己的github上（或者是自己的云服务器上），再简单购买一个域名，让别人也可浏览自己的博客。<br>但是搭建过程中遇到了好多坑，自己的博客代码上传至自己的github上，但是发现<strong>除了主题文件夹下的文件，其他都 <code>push</code> 上去了</strong></p>
+</blockquote>
+<p><img src="/Hexo-主题文件夹上传不到自己的github上/github.png" alt="主题文件夹是空的" title="主题文件夹是空的"></p>
+<blockquote><p>而自己本地的主题文件夹是有文件的</p>
+</blockquote>
+<p><img src="/Hexo-主题文件夹上传不到自己的github上/local.png" alt="本地主题" title="本地主题"></p>
+<h3 id="探索"><a href="#探索" class="headerlink" title="探索"></a>探索</h3><blockquote><p>大家可能想到是因为.gitignore里面忽略了这两个文件夹下的所有文件，但是经过自己的检查，发现并不是这儿的问题，自己的项目的.gitignore内容如下：</p>
+</blockquote>
+<p><img src="/Hexo-主题文件夹上传不到自己的github上/gitignore.png" alt=".gitignore内容" title=".gitignore内容"><br></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Hexo-主题文件夹上传不到自己的github上/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+    <div>
+        
+    </div>
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/Hexo-插入图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2017,7 +2233,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2154,7 +2370,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://xiaosuda.top" title="http://xiaosuda.top" rel="external nofollow noopener noreferrer" target="_blank">Steven博客</a>
+                    <a href="https://xiaosuda.top" title="https://xiaosuda.top" rel="external nofollow noopener noreferrer" target="_blank">Steven博客</a>
                   </li>
                 
               </ul>
@@ -2210,7 +2426,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 13.8k 字</span>
+  <span class="post-count">博客全站共 13.9k 字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -2449,6 +2665,8 @@
 
   
   
+    
+      
     
       
     

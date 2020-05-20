@@ -144,18 +144,18 @@
 
 
 
-  <meta name="description" content="About me13年3月从事前端开发至今  现研究方向现研究flutter和Dart语法，socket.io 写个即时通信的小项目。项目还在努力维护中，为保证功能完善，给大家铺路。  20202020-01-10APP方面学习flutter和Dart语法，移动web继续使用VUE和ReactJS，并写一些nodejs相关的中间件或服务器。 2019自己决定重新调整自己在前端领域的发展方向，努力">
-<meta name="keywords" content="javascript,hexo,ES6,VUE,axios,promise,permission,回调地狱,Element-UI,NodeJS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sanks简介">
-<meta property="og:url" content="https://www.shengkesi.cn/about/index.html">
+  <meta name="description" content="Welcome to my blog, enter password to read.">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="防抖动和节流">
+<meta property="og:url" content="https://www.shengkesi.cn/debounce-and-throttle/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="About me13年3月从事前端开发至今  现研究方向现研究flutter和Dart语法，socket.io 写个即时通信的小项目。项目还在努力维护中，为保证功能完善，给大家铺路。  20202020-01-10APP方面学习flutter和Dart语法，移动web继续使用VUE和ReactJS，并写一些nodejs相关的中间件或服务器。 2019自己决定重新调整自己在前端领域的发展方向，努力">
+<meta property="og:description" content="Welcome to my blog, enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-25T17:00:57.065Z">
+<meta property="og:updated_time" content="2020-05-20T16:39:08.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sanks简介">
-<meta name="twitter:description" content="About me13年3月从事前端开发至今  现研究方向现研究flutter和Dart语法，socket.io 写个即时通信的小项目。项目还在努力维护中，为保证功能完善，给大家铺路。  20202020-01-10APP方面学习flutter和Dart语法，移动web继续使用VUE和ReactJS，并写一些nodejs相关的中间件或服务器。 2019自己决定重新调整自己在前端领域的发展方向，努力">
+<meta name="twitter:title" content="防抖动和节流">
+<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
 
 
 
@@ -164,7 +164,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengkesi.cn/about/">
+  <link rel="canonical" href="https://www.shengkesi.cn/debounce-and-throttle/">
 
 
 
@@ -174,7 +174,7 @@
   };
 </script>
 
-  <title>sanks简介 | sanks的博客</title>
+  <title>防抖动和节流 | sanks的博客</title>
   
 
 
@@ -290,7 +290,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -405,34 +405,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -486,68 +458,309 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/debounce-and-throttle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sanks">
+      <meta itemprop="description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sanks的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h2 class="post-title" itemprop="name headline">sanks简介
+        
+        
+          <h2 class="post-title" itemprop="name headline">防抖动和节流
 
-</h2>
+              
+            
+          </h2>
+        
 
-<div class="post-meta">
-  
-  
+        <div class="post-meta">
+          
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2020-05-20 23:40:45" itemprop="dateCreated datePublished" datetime="2020-05-20T23:40:45+08:00">2020-05-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-05-21 00:39:08" itemprop="dateModified" datetime="2020-05-21T00:39:08+08:00">2020-05-21</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/debounce-and-throttle/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/debounce-and-throttle/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount">
+              <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
+              字数统计： 164 字
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.min2read">
+              <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
+              阅读时长：≈ 1 分钟
+            </span>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read.">
+    <label for="pass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
 </div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+U2FsdGVkX1+eqcJhtCitmHDNpFbJ6nONeSgIrbY6z1CjW0ep50NApAPu7vI/6Y9nFLZJpQZ6NPx3sJZ+hVPHRUxcKkO90Ui6Et/2jXN4IlnBiLI61Bsswx7MyTuUKd+w2yjetKqn+ZtEnmSHkP51D6D29W48DFetfxlzeH5Keo3sxdfzebSxQobzv+IbXWpLti41/gv6qlU0RtkcC2/ZbgpWL/yrWEto+x75lT4K7sdL3CxBHNcuqdCKhYIc/bUSxZ7u29zo6yNoCq8EdTAM2ANEcV2errMRDEPK/WweKwpYu0z8dtYngJL8tPtOO2HEhOXiPyyhBvG7rUoK1I9+ir8zIso0vPHvbklmwCxCk/qXjI9vwbzcIZVflCK1sLfH84NEl22cowjdDPtYSMKDnKj/33W2NuyOVii85qGI86GWoayJVO4tmrrex0JDSXIkpqCSG5DA3IGCSqIlnfLPwNAGwFN5m0apjX2iNr5M5j8hwUAFnNOBkCGUV2GHOuli7KERzQ+PjhJmlMVQLG8Wfo7IMkrJi4KmYndVfV073jklvEu3FybKSTq9iAY1J95jvhMDkooK0PcItr1KojEhehBtzzjMg4elni1xBYMmRXewsrAIv2uqIDTWnL7zBKnvaZOdNOcwCU9yuf70SkRp/B8lS/lbPlLJgLFjsdbvfmgIp6V08loomE6tsmV7QmFk/pwM9E/vTtVaZ9TUqwE4YMlq9bD3SzU3fbjeyRKUnQnUUV06A52f/jP6pwn4uC99OpayFLVqjS7nOemO+rRpeAK3PEMibd4zeO3oq72AW08oABEXwYy5TGNye+ppgFbePYqvmbFg85cYHScwsMLS9F5rzzNs7/97BM+o7aZorCh01hE9c+QFnHCMk+7V8N3+TcC5jXSDEioU6p5nCtzlACcJGguNGZJLnbkNJV7lfWVBpdqT7MKwjJ9mPLvMEC33MRz+9xk60p9tAyMzP+CiQK+qip7mgBykWqXxka9Sv88gzrHLUOXEbY4Xc7cITlBscnUXm50oMr+5CWlSbaIc2BCeWJWnu+c7PRcTxU2GTcOCikYfuJlGNQPtn22kK6tef6eei3VvJGSJ2LDfpnfTrUuY7seOx69lqEY3H8lApIUxrGcTrk1U3hxRNwByDGvxetR8fPOypiSkfP1ZNXVhHvphxbWB5CMg4GPRi1RAi23yNmlvZ1zJuBi4XC+GjZyMn1XTLe721T15jCDJeyteUlcg2kkxU8kVJNM+IrAEi5DGZAIu5YV76XA0YSce6UJRvwsJrPvtrPClfcAtaXZGOB08fN0sFzyGD2KqTLkfoKsY3LLRkqwJsGQLuWPfuBOaGCul5py68BKYpcZSTlV4lzoqa/e+B7UGaeISqQjw5dmDCf3GTsTaLkPkMYje/kaw5OoiXzo4pjz8ayIQN1m9hmFsqVK9B5IKxJGaqPygerjzERl67G9vAHTChjrYGbqXhMVWHdlaOaXUrCBgWBz+cspFP+ccns+ffk63oFoNht3VgZaAx4VkuXotosG8Jl+U0v7Ms4GFytFUUxPznVeXg8vvYigvURCwfoYMx1bma6LI6TKKlLarPWEZOd4bBhaQvZHQ2wFkr8+QvYuN9tF+F3jhSenwbX+BLBb9Q0SbsesA0l8elFnCGCHtu2HMiTPUnjzqXglly3sSQxL37KF3uKdEHFmw1OK7FPhncZmQ/6myMU3Kp5CqPEj9mzHZ8S8yTU9W5SVL0bLOAAf8rU6pmaZN+t5XsG+P0ZE3E6sCKZYfaPEGzjm6Yol230cwPwsGnhAsXNlODTfRT9nBIqcHG8vWPAa4sChptpIZao2SOo7QIo7mFVu93eo94J6v03+Q10YbslMI0W1G0su1aaB3cwalzmY7zGh6Hd/mMJcHWMwWjpYOmVjFSxEG+aika2lTKcgp5bmS6m8r+d+s25//Ymi2jqGPEDT7ae+ogCeB4ErV98a4na4cywK6ynTrEWWXPyBHcBRZ9jQj3ddSgwOvVD+a1acn+ZNSJX0tbAWSFts8mz4CJtkV7pJWQmaTPFqUFT+VQdDJW7l6BJc90CevIqzoT3SnS4AvnGd0cR/r6+rRXo+nuG3C8mPAhXq5Wxq9955/vDRu4U2pte43qtzB0w7ywjmvtrwQdbasx0soks3FyrvaWxseZAI/nQgl1A0njjPd7eBtssYYJkXs5bOFLtqxBjCxdXts0z1ZjH4+/8nqdnewg2vUkYu62jHcm8T+6eKdV7261pDbKMuWRTJ7nqMsjQ7Bd3AYZFPg2d9OSCOQ6V85OcgSXIxVhp6mj/wLkz8r7AEEVK9UnSDQoQdDDC3IZxdsh44HhM7CNW3egfFbaK9YahP0yJMjnsvfXGW60OkmZvGeQWky2AY/EGXH9SW0c4FDKRXSaMJ7waUCl7mMmP1e/sZBkL04pLcAnj5EjLE0cvC17Jx4NZuEidXt5CM9ZrbR3u4fNWzi4ER3/cF6vwFzGEYx4DxQYloQi2fI26T2qfdjCjwqeSKnKlDI+Cr5gI9LcK6Bxyl8KdBJCw3Ysmu/i+9AhEfb1v/Fhsk5mJKQO03bN59iYPES2w+sbWxZkE2v9NokC0Jbvi75QJsH4ncD3pomt/XNMkoSTud3F52YitZEaiLGS8cdPCpj6yXnYgvJ8SaG5vvfv9ESzsnMXq5XzfqpYKOTHYTI3cZS8X01IYYT8rLL/CkK8t7dndgb9t6ebqM1AWVeCqlVpbyX6BHcw8rA7xK5Ey4EyI7IImRz95A0zAa9UctztDm8uCzX6T74xUkHCj8U2c386+rZ2mhnAeg2DIb0fjrvHDp7MvuYvD8+smvjSjnC85+v+gDTn4Ji4OSP7mnqR8FuG3/za6j5GwiybjHMlnGL21oA0iZed/Zmos/lTt3uOuxHhnCehz6PLsEZkGYu/f/er231JpXz3KWym+GG3zhSei+ixFYDGFmv9GcaxGbdUcC6ZWqQiHCFLgYrhDVQrsxwK2EpYf1Sz96LVtbZH5uAUtZcwd5WZ5WgGTnP4gxkP2dTNEzGIXwKPBJqjsaqaHuIgfFGDFnPO2UbayLlZC7qv8vZPiZGyn5nBwgsfCCMtJNXZbAFjz5KjCiz0e0LbOQOhh5DP3S10ewWhWC8EFczOAg4Qiu1w54R0APS+3CHUM9/LLz+eDzeD0Gv+MQg4OWUWk5Vs3Yj6rkEE3FBHMFQTSIpt4+L/L8rNFX4XWhKlhuWCrtiupYR4J85adUgm8yzLdAT1PTPNRv5i/DscrE5Z/43I0LPh7yWBmKoWOKOkVT21wECy2md9+Ykx3lkaqZhRUaHJ3FmsHtbhLHs3rprZKTnrIVjeOXn7OEcHrqRLXmnGV93JIXmAQs4mi99i0xdS3hRQEWu+SH6Yuu+gqFW/ji+mfXDqmc31AOhIGSseC/cAV+sM2+vG37yPKLrHtv/9y87wcoOohAxoGIAIsi+s2CmmQMd+UFh/AvSRthTaE1U9G9XzABeIuTs8aYxJ/FvAnXc0cSuVK15xBIRFVK+Xd/ZamYlf5SHH9iIPWl85jpBA/+Wng7cLhWM5KbEBrc5HI2D19VfzGATPZGgKgSzMK5IUDmzbzf2V2ZhGaUbYNa2cxz3lqoTkZtyhNGfxfHe68Tnc07FUnrUW+67cbAuY4hQdxQorTYV3l94d/x3kZpzLe87LCTt8OGJjGNogT7advX3k3rnz/eP+hnM8SawkJRHFQJvt3dJjBd+b/NZa63ysxFMsje86gL33skPsDbjaWpmxlcje58CxZWPnMUILJPHKNAkhLoLPoQUXjE7zJwWDaJ1eeWPo0Rgh4NP052BPACD35GOG8kchF/I6NssQjigNKF761wuiCj8fJYhNocuhR7KtRQisl+P+jLPwriklvOFi3TjX1nJkdL0zfNQQE7vpNp04/FPv9gKImhsWS12g2XLViAl5HPOoiFZoOgWWYUWkYxrsi9+VfBWd7BZyDBHtNE2hKu/yRbclZ/dVgpEKAmxXEObW5MjyeY/DuRkNKRu7E8xtP7NaqFQkaM8VYsIe6GZ9ZLBGiTWgb3sRDaU+lAwF7ejIdsUWQI1eVgJ96JtxLJGTG9s9/z2j4GCFLk56SVFMhkK7MMUWY7u7iy9BMPDyl/WpEBRq4wli2Z+IK0ScI4C+olhAiEQ60Sgx7N8D/io8t8KR79BiVwHNkM32dceePh/K+XvK69luMPFF/rWjYCGzMFZqNAZ6NR1InZHr4NAoiBelnn2D03c0COGCTMMi6yjykuUUlAFFmi5OlfNsZkMccWm7jfztbawXMWJsdP2seYsByghuSUMrVDbMJa+ZII/MH/3adDuk28ARXc6jpcudMIFxUqXhw6GM+G3gfpeGdUnUNSShZJxDFZhGL5y9H5iSQ2g7JP4iEgKvyiOcB+A8vVU1/Hf212Lr8pHeKFRXZ88GY4ARF8+RK4ILbHvzeghQRJPpI1B62/5dsDiQ4kLbI9OPgXJ1iScmHQHWiF6QU6PTt7RgPCWFObgTNIbXAkvCo8PSDSqpWDbPhzh/gL3PVskIBG8NGmBpYjkKtpG9J3lhd8YPkHOvBj9faR5MIp06GBlcC3cmvC0jJ7fluNEk4J/STZYDSfCpmJrRBh/7Mtxee0tl7u1OnhyIOcwh197tz7Mncy222g+GV+JaemHzk5hdMWwUBgMdmjRlETK5owdDGmZptEFsAvTQwMdL0Q2zEA1QCGfHRqLgxpaJTpTdi695AMVY2pELH5zlH6jPKhiiuJwJbfLrCnvnlSADTpSKMzziIhObdhEqU4wOnXW2seCgUDx/GuT9Bc+
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      
+    </div>
 
-</header>
+    
 
-      
-      
-      
-      <div class="post-body">
+    
+    
+    
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    <div>
         
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/debounce-and-throttle/">防抖动和节流</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
+  <p><span>发布时间:</span>2020年05月20日 - 23:40</p>
+  <p><span>最后更新:</span>2020年05月21日 - 00:39</p>
+  <p><span>原始链接:</span><a href="/debounce-and-throttle/" title="防抖动和节流">https://www.shengkesi.cn/debounce-and-throttle/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/debounce-and-throttle/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success",
+          buttons: {
+            text: "确定"
+          }
+        });
+	});
+    });  
+</script>
+
         
-          <!--<div style="color: red" align="center">sanks简介</div>-->
-<h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><blockquote><p>13年3月从事前端开发至今</p>
-</blockquote>
-<h2 id="现研究方向"><a href="#现研究方向" class="headerlink" title="现研究方向"></a>现研究方向</h2><blockquote><p>现研究flutter和Dart语法，socket.io 写个即时通信的小项目。<br>项目还在努力维护中，为保证功能完善，给大家铺路。</p>
-</blockquote>
-<h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><h3 id="2020-01-10"><a href="#2020-01-10" class="headerlink" title="2020-01-10"></a>2020-01-10</h3><p>APP方面学习flutter和Dart语法，移动web继续使用VUE和ReactJS，并写一些nodejs相关的中间件或服务器。</p>
-<h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p>自己决定重新调整自己在前端领域的发展方向，努力拓展自己未涉及的领域。</p>
-<h3 id="2019-05-04"><a href="#2019-05-04" class="headerlink" title="2019-05-04"></a>2019-05-04</h3><p>利用周六日的闲暇时间，填了搭建react + typescript 的一些坑，框架已经成型，项目中想到的，需要的配置都有了；好的前端框架搭建是做一个可维护，可拓展项目的基础，不会给以后接手的程序员带来麻烦。</p>
-<h3 id="2019-03-10"><a href="#2019-03-10" class="headerlink" title="2019-03-10"></a>2019-03-10</h3><p>几天的努力之下，自己的react项目总算成型，决定新建一个“发布”分支，以供以后开发用。</p>
-<h3 id="2019-03-04"><a href="#2019-03-04" class="headerlink" title="2019-03-04"></a>2019-03-04</h3><p>开始深入研究reactjs，弥补之前的浅尝辄止；一开始自己用官方的项目生成器生成了一个简单的架构，自己从这个简化版逐步加入babel, webpack, eslint 等相关的配置，有兴趣的朋友可以移步 <a href="https://github.com/SKSSSX/jelly2" rel="external nofollow noopener noreferrer" target="_blank">react的基础之上进行引入webpack、eslint、babel的框架搭建</a>, 但是你仔细阅读react项目下的 <span style="color: #fe2c23">READEME.md</span>, 你就会发现我绕了远路，其实react提供了 npm run eject 来注入webpack, eslint, label 等相关依赖和配置，可能这就是react给大家提供的 <span style="color: #fe2c23">脚手架</span> 吧，<span style="color: #fe2c23">需要注意的是：这个命令只能执行一次，而且不可逆转。</span></p>
-<h3 id="2019-02-25"><a href="#2019-02-25" class="headerlink" title="2019-02-25"></a>2019-02-25</h3><p>为博客每篇文章（包括首页）也显示字数统计和阅读时长， Nginx 优化配置 - Gzip 压缩, 博文分享换成addthis。</p>
-<h3 id="2019-02-22"><a href="#2019-02-22" class="headerlink" title="2019-02-22"></a>2019-02-22</h3><p>为博客加入了百度统计功能，实际的去观察网站访问情况</p>
-<h3 id="2019-02-15"><a href="#2019-02-15" class="headerlink" title="2019-02-15"></a>2019-02-15</h3><p>为自己的博客网站进行了SEO，包括百度搜索和谷歌搜索，并加入了相关的站点地图，在hexo中添加百度主动推送功能, 每次部署主动推送一次</p>
-<h3 id="2019-02-09"><a href="#2019-02-09" class="headerlink" title="2019-02-09"></a>2019-02-09</h3><p>把自己的博客成功迁移到自己服务器上，配置了git远程资源库，配置nginx ：能够用https协议访问博客地址，强制http转https协议访问博客，<a href="http://shengkesi.cn" rel="external nofollow noopener noreferrer" target="_blank">http://shengkesi.cn</a> -&gt; <a href="https://shengkesi.cn" rel="external nofollow noopener noreferrer" target="_blank">https://shengkesi.cn</a>    <a href="http://www.shengkesi.cn">http://www.shengkesi.cn</a> -&gt; <a href="https://www.shengkesi.cn">https://www.shengkesi.cn</a></p>
-<h3 id="2019-01-27"><a href="#2019-01-27" class="headerlink" title="2019-01-27"></a>2019-01-27</h3><p>服务器部署gitlab失败后，自己在家测试了一下ping自己的博客的github地址，和ping自己的服务器对比了一下，发现github的延迟132ms,而且丢包；自己的服务器74ms，毅然决定把自己的博客网站迁移到自己的服务器上，一开始弄了FTP，但是有些舍近求远了；发现其实自己在服务器端搭建跟本地一样的开发环境即可，只是多了ngnix的安装和配置。</p>
-<h3 id="2019-01-25"><a href="#2019-01-25" class="headerlink" title="2019-01-25"></a>2019-01-25</h3><p>趁着工作午休时间，把自己博客的评论功能加上了，并填了首页插入的图片不显示的问题的坑。</p>
-<h3 id="2019-01-24"><a href="#2019-01-24" class="headerlink" title="2019-01-24"></a>2019-01-24</h3><p>经过折腾了linux安装docker, 并且在docker内装了jenkins后，感觉缺点什么，想弄个GitLab，在服务器存储自己的代码。<br>踩坑开始，经过层层扒坑埋坑的过程，总算把GitLab建立起来了，但是访问是502页面。<br>最后找到原因：由于服务配置太低（CPU 1核，内存2GB），无法满足Gitlab的（CPU 2核，内存4GB）的要求，页面报502，踩坑结束。</p>
-<h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><blockquote><p>研究vue2.0 VUEX状态管理机制 webpack 等</p>
-</blockquote>
-        
-      </div>
-      
-      
-      
     </div>
     
 
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="sanks 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/http-request-timeout/" rel="next" title="http request timeout">
+                <i class="fa fa-chevron-left"></i> http request timeout
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-    
-    
-    
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -570,17 +783,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -749,22 +953,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#About-me"><span class="nav-number">1.</span> <span class="nav-text">About me</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现研究方向"><span class="nav-number">2.</span> <span class="nav-text">现研究方向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2020"><span class="nav-number">3.</span> <span class="nav-text">2020</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2020-01-10"><span class="nav-number">3.1.</span> <span class="nav-text">2020-01-10</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2019"><span class="nav-number">4.</span> <span class="nav-text">2019</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-05-04"><span class="nav-number">4.1.</span> <span class="nav-text">2019-05-04</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-03-10"><span class="nav-number">4.2.</span> <span class="nav-text">2019-03-10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-03-04"><span class="nav-number">4.3.</span> <span class="nav-text">2019-03-04</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-02-25"><span class="nav-number">4.4.</span> <span class="nav-text">2019-02-25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-02-22"><span class="nav-number">4.5.</span> <span class="nav-text">2019-02-22</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-02-15"><span class="nav-number">4.6.</span> <span class="nav-text">2019-02-15</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-02-09"><span class="nav-number">4.7.</span> <span class="nav-text">2019-02-09</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-01-27"><span class="nav-number">4.8.</span> <span class="nav-text">2019-01-27</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-01-25"><span class="nav-number">4.9.</span> <span class="nav-text">2019-01-25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2019-01-24"><span class="nav-number">4.10.</span> <span class="nav-text">2019-01-24</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2018"><span class="nav-number">5.</span> <span class="nav-text">2018</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
