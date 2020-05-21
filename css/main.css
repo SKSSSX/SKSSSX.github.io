@@ -2019,7 +2019,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #00a3d6;
+  background: #34f626;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2987,4 +2987,16 @@ pre {
 }
 .at-share-btn:hover {
   border-bottom: none;
+}
+.sanks-keywords {
+  display: inline-block;
+  background: #fff6ea;
+  overflow-wrap: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0.1rem 0.5rem 0.2rem;
+  margin: 0 0.2rem;
+  border-radius: 0.2rem;
 }

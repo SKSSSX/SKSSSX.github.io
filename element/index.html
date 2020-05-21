@@ -144,21 +144,18 @@
 
 
 
-  <meta name="description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
-<meta name="keywords" content="element-ui">
+  <meta name="description" content="Welcome to my blog, enter password to read.">
+<meta name="keywords" content="Element-UI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="element-ui table展开行，设置type=&quot;expand&quot;，如何添加表头？如何去掉展开按钮并设置成文字？">
 <meta property="og:url" content="https://www.shengkesi.cn/element/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
+<meta property="og:description" content="Welcome to my blog, enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.shengkesi.cn/element/element_table_expand.png">
-<meta property="og:image" content="https://www.shengkesi.cn/element/elment_table_expand_edit.jpg">
-<meta property="og:updated_time" content="2019-03-01T02:27:32.000Z">
+<meta property="og:updated_time" content="2020-05-21T07:17:15.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="element-ui table展开行，设置type=&quot;expand&quot;，如何添加表头？如何去掉展开按钮并设置成文字？">
-<meta name="twitter:description" content="解决方案从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图   表头 label 属性，源码本身就支持，用就可以了用的时候这样用,如下:改变了之后，变为文字，如下图   用法12&amp;lt;el-table-column label=&quot;操作&quot; type=&quot;expand&quot; look=&quot;查看&quot;&amp;gt;&amp;lt;">
-<meta name="twitter:image" content="https://www.shengkesi.cn/element/element_table_expand.png">
+<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
 
 
 
@@ -536,7 +533,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-01 10:27:32" itemprop="dateModified" datetime="2019-03-01T10:27:32+08:00">2019-03-01</time>
+                <time title="修改时间：2020-05-21 15:17:15" itemprop="dateModified" datetime="2020-05-21T15:17:15+08:00">2020-05-21</time>
               
             
           </span>
@@ -588,7 +585,7 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 157 字
+              字数统计： 140 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
@@ -613,16 +610,19 @@
       
 
       
-        <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote><p>从项目的可维护和可扩展性考虑，还是改 element-ui 的源码，是最好的解决方案。<br>添加了了一个属性 look, 更改了展开行中的图标 ＞，如下图</p>
-</blockquote>
-<p><img src="/element/element_table_expand.png" alt="element-ui 表格展开行默认效果" title="element-ui 表格展开行默认效果"></p>
-<blockquote><p>表头 label 属性，源码本身就支持，用就可以了<br>用的时候这样用,如下:<br>改变了之后，变为文字，如下图</p>
-</blockquote>
-<p><img src="/element/elment_table_expand_edit.jpg" alt="element-ui 表格展开行修改后的效果" title="element-ui 表格展开行修改后的效果"></p>
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">"操作"</span> <span class="attr">type</span>=<span class="string">"expand"</span> <span class="attr">look</span>=<span class="string">"查看"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="源代码文件夹替换替换"><a href="#源代码文件夹替换替换" class="headerlink" title="源代码文件夹替换替换"></a>源代码文件夹替换替换</h3><blockquote><p>将修改后的 lib 文件夹 替换掉你的 element-ui 中的 lib 文件夹, 路径：node-modules/element-ui<br><a href="download/element-ui.zip">点击下载</a></p>
-</blockquote>
-
+        <div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read.">
+    <label for="pass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -650,7 +650,7 @@
   <p><span>本文标题:</span><a href="/element/">element-ui table展开行，设置type="expand"，如何添加表头？如何去掉展开按钮并设置成文字？</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
   <p><span>发布时间:</span>2018年09月27日 - 23:08</p>
-  <p><span>最后更新:</span>2019年03月01日 - 10:27</p>
+  <p><span>最后更新:</span>2020年05月21日 - 15:17</p>
   <p><span>原始链接:</span><a href="/element/" title="element-ui table展开行，设置type=" expand"，如何添加表头？如何去掉展开按钮并设置成文字？">https://www.shengkesi.cn/element/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/element/" aria-label="复制成功！"></i></span>
   </p>
@@ -787,17 +787,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -967,22 +958,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">2.</span> <span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#源代码文件夹替换替换"><span class="nav-number">2.1.</span> <span class="nav-text">源代码文件夹替换替换</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -1023,7 +998,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 13.5k 字</span>
+  <span class="post-count">博客全站共 13.3k 字</span>
 </div>
         
 <div class="busuanzi-count">
