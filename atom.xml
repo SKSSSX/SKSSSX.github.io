@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-06-02T11:33:57.949Z</updated>
+  <updated>2020-06-02T11:39:37.979Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,17 +21,18 @@
     <link href="https://www.shengkesi.cn/debounce-and-throttle/"/>
     <id>https://www.shengkesi.cn/debounce-and-throttle/</id>
     <published>2020-05-20T15:40:45.000Z</published>
-    <updated>2020-06-02T11:33:57.949Z</updated>
+    <updated>2020-06-02T11:39:37.979Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;译文说明&quot;&gt;&lt;a href=&quot;#译文说明&quot; class=&quot;headerlink&quot; title=&quot;译文说明&quot;&gt;&lt;/a&gt;译文说明&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;作者：David Corbacho&lt;br&gt;原文链接：&lt;a
-        
-      
+      &lt;h2 id=&quot;译文说明&quot;&gt;&lt;a href=&quot;#译文说明&quot; class=&quot;headerlink&quot; title=&quot;译文说明&quot;&gt;&lt;/a&gt;译文说明&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;作者：David Corbacho&lt;br&gt;原文链接：&lt;a href=&quot;https://css-tricks.com/debouncing-throttling-explained-examples/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://css-tricks.com/debouncing-throttling-explained-examples/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-style: italic&quot;&gt;以下是伦敦前端工程师 &lt;a href=&quot;https://twitter.com/dcorbacho&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;David Corbacho&lt;/a&gt; 的客座文章。我们已经&lt;a href=&quot;https://css-tricks.com/the-difference-between-throttling-and-debouncing/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;之前讨论过这个主题&lt;/a&gt;，但是这次，David将通过交互式演示来讲解这些概念，使事情变得非常清楚。&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-weight: bolder&quot;&gt;Debounce&lt;/span&gt; 和 &lt;span style=&quot;font-weight: bolder&quot;&gt;throttle&lt;/span&gt; 是两种类似(但不同的!)的技术，用于控制我们允许一个函数在一段时间内执行多少次。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;在将函数附加到DOM事件时，具有函数的防抖动或节流的版本尤其有用。为什么呢?因为我们在事件和函数的执行之间给了自己一个控制层。请记住，我们不控制这些DOM事件的发出频率。它可以变化。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -124,7 +125,7 @@
     <link href="https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/"/>
     <id>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</id>
     <published>2020-01-05T12:01:31.000Z</published>
-    <updated>2020-06-02T11:33:58.334Z</updated>
+    <updated>2020-06-02T11:40:44.353Z</updated>
     
     <summary type="html">
     
