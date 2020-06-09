@@ -144,21 +144,18 @@
 
 
 
-  <meta name="description" content="引语在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错  12345678// 权限指令Vue.directive(&apos;has&apos;, &amp;#123;    bind: function (el, binding) &amp;#123;        if (el.parentNode &amp;amp;&amp;amp; !Vue.prototype.$_has(binding.valu">
+  <meta name="description" content="Welcome to my blog, enter password to read.">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）">
 <meta property="og:url" content="https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="引语在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错  12345678// 权限指令Vue.directive(&apos;has&apos;, &amp;#123;    bind: function (el, binding) &amp;#123;        if (el.parentNode &amp;amp;&amp;amp; !Vue.prototype.$_has(binding.valu">
+<meta property="og:description" content="Welcome to my blog, enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png">
-<meta property="og:image" content="https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/test.png">
-<meta property="og:updated_time" content="2020-06-02T11:33:58.120Z">
+<meta property="og:updated_time" content="2020-06-09T12:42:36.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）">
-<meta name="twitter:description" content="引语在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错  12345678// 权限指令Vue.directive(&apos;has&apos;, &amp;#123;    bind: function (el, binding) &amp;#123;        if (el.parentNode &amp;amp;&amp;amp; !Vue.prototype.$_has(binding.valu">
-<meta name="twitter:image" content="https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png">
+<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
 
 
 
@@ -536,7 +533,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-02 19:33:58" itemprop="dateModified" datetime="2020-06-02T19:33:58+08:00">2020-06-02</time>
+                <time title="修改时间：2020-06-09 20:42:36" itemprop="dateModified" datetime="2020-06-09T20:42:36+08:00">2020-06-09</time>
               
             
           </span>
@@ -588,12 +585,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 676 字
+              字数统计： 507 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 2 分钟
+              阅读时长：≈ 3 分钟
             </span>
           
 
@@ -613,34 +610,19 @@
       
 
       
-        <h2 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h2><blockquote><p>在VUE中运用 VUE 指令，发现之前的写法存在问题，刷新页面后报错，先贴代码， 再看报错</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 权限指令</span></span><br><span class="line">Vue.directive(<span class="string">'has'</span>, &#123;</span><br><span class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (el.parentNode &amp;&amp; !Vue.prototype.$_has(binding.value)) &#123;</span><br><span class="line">            el.parentNode.removeChild(el)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote><p>只要刷新页面会出现如下问题：<br><img src="/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/null-error.png" alt="刷新页面报错展示" title="刷新页面报错"></p>
-</blockquote>
-<a id="more"></a> 
-<h2 id="猜测并寻找出现报错的原因"><a href="#猜测并寻找出现报错的原因" class="headerlink" title="猜测并寻找出现报错的原因"></a>猜测并寻找出现报错的原因</h2><blockquote><p>看到这样的报错就顺藤摸瓜到这个VUE指令中，初步猜想是 函数中 el 元素未找到，但实际则是 el 元素的父节点 el.parentNode 未找到，值为 null，于是写如下代码验证自己的猜测</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 权限指令</span></span><br><span class="line">Vue.directive(<span class="string">'has'</span>, &#123;</span><br><span class="line">    bind: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(el.parentNode)</span><br><span class="line">        <span class="keyword">if</span> (el.parentNode &amp;&amp; !Vue.prototype.$_has(binding.value)) &#123;</span><br><span class="line">            el.parentNode.removeChild(el)</span><br><span class="line">        &#125;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(el.parentNode)</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote><p>结果是这样的：<br><img src="/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/test.png" alt="测试结果展示" title="测试结果"></p>
-<p>进而验证了我的猜测</p>
-</blockquote>
-<h2 id="寻找解决方案"><a href="#寻找解决方案" class="headerlink" title="寻找解决方案"></a>寻找解决方案</h2><blockquote><p>经过百度查阅资料，终于恍然大悟，这篇文章说到点上了<br><a href="https://segmentfault.com/a/1190000015860475" rel="external nofollow noopener noreferrer" target="_blank">vue指令与$nextTick 操作DOM的不同之处</a><br>或许这篇文章跟我要解决的不是一个问题，但是已经写的很明了，把关键的地方摘抄到这：</p>
-</blockquote>
-<h3 id="vue指令"><a href="#vue指令" class="headerlink" title="vue指令"></a>vue指令</h3><blockquote><p>钩子函数</p>
-<p>一个指令定义对象可以提供如下几个钩子函数 (均为可选)：</p>
-<p>bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。</p>
-<p>inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</p>
-<p>update：所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。</p>
-<p>componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。</p>
-<p>unbind：只调用一次，指令与元素解绑时调用。</p>
-</blockquote>
-<h3 id="最为关键的一句，解决问题的关键"><a href="#最为关键的一句，解决问题的关键" class="headerlink" title="最为关键的一句，解决问题的关键"></a>最为关键的一句，解决问题的关键</h3><blockquote><p>inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</p>
-</blockquote>
-<h2 id="更改后的代码为"><a href="#更改后的代码为" class="headerlink" title="更改后的代码为"></a>更改后的代码为</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 权限指令</span></span><br><span class="line">Vue.directive(<span class="string">'has'</span>, &#123;</span><br><span class="line">    inserted: <span class="function"><span class="keyword">function</span> (<span class="params">el, binding</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (el.parentNode &amp;&amp; !Vue.prototype.$_has(binding.value)) &#123;</span><br><span class="line">            el.parentNode.removeChild(el)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote><p>总结：如果当前节点刚刚被建立,还没有被插入到DOM树中,则该节点的parentNode属性会返回null.</p>
-<p>此时，完美解决问题。所以在用任何东西之前都熟读文档是很有必要的，免得出现问题像我这样绕一大圈</p>
-</blockquote>
+        <div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Welcome to my blog, enter password to read.">
+    <label for="pass">Welcome to my blog, enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -668,7 +650,7 @@
   <p><span>本文标题:</span><a href="/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/">vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
   <p><span>发布时间:</span>2019年01月23日 - 12:20</p>
-  <p><span>最后更新:</span>2020年06月02日 - 19:33</p>
+  <p><span>最后更新:</span>2020年06月09日 - 20:42</p>
   <p><span>原始链接:</span><a href="/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/" title="vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）">https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/" aria-label="复制成功！"></i></span>
   </p>
@@ -805,17 +787,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -985,22 +958,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引语"><span class="nav-number">1.</span> <span class="nav-text">引语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#猜测并寻找出现报错的原因"><span class="nav-number">2.</span> <span class="nav-text">猜测并寻找出现报错的原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#寻找解决方案"><span class="nav-number">3.</span> <span class="nav-text">寻找解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue指令"><span class="nav-number">3.1.</span> <span class="nav-text">vue指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最为关键的一句，解决问题的关键"><span class="nav-number">3.2.</span> <span class="nav-text">最为关键的一句，解决问题的关键</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更改后的代码为"><span class="nav-number">4.</span> <span class="nav-text">更改后的代码为</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
 
@@ -1041,7 +998,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 16.4k 字</span>
+  <span class="post-count">博客全站共 13.1k 字</span>
 </div>
         
 <div class="busuanzi-count">
