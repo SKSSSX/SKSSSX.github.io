@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-07-12T09:30:58.640Z</updated>
+  <updated>2020-07-16T12:52:08.413Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端感悟</title>
+    <link href="https://www.shengkesi.cn/front-end-comprehension/"/>
+    <id>https://www.shengkesi.cn/front-end-comprehension/</id>
+    <published>2020-07-16T12:11:40.000Z</published>
+    <updated>2020-07-16T12:52:08.413Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;用高标准来严格要求自己&quot;&gt;&lt;a href=&quot;#用高标准来严格要求自己&quot; class=&quot;headerlink&quot; title=&quot;用高标准来严格要求自己&quot;&gt;&lt;/a&gt;用高标准来严格要求自己&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;#1、&lt;br&gt;对于工作，别人靠运气，人脉，而我，想靠实力，即使有好的运气，好的人脉，没有实力也是万万不行的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;#2、&lt;br&gt;“怕” – 前端初学者犯的最大的错误并不是代码写的不好，而是从心里就开始怕了，怕去尝试新技术，怕领导部署的任务完不成，进而用更多的插件来加速开发，到最后自己并没有学到什么，只是单纯的一个“码农”。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;#3、&lt;br&gt;对于代码级别的问题，编程思想  和 代码基础 缺一不可， 有了编程思想才能更灵活的运用已有的语法结构创造出自己需要的东西。编程思想极为重要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;#4、&lt;br&gt;对于前端这门技术的无限延伸和学习，一方面要追求“新”，一方面要追求对自己已学知识的把握程度上。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;#5、&lt;br&gt;开发属于自己的UI组件，js工具函数，乃至框架的编写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;#6、&lt;br&gt;更多时候&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://www.shengkesi.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://www.shengkesi.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>connected React Router</title>
