@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>sanks的博客</title>
   
-  <subtitle>用新思路解决旧问题！</subtitle>
+  <subtitle>知识付诸行动才有转换为能力的效果</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-07-16T23:21:39.878Z</updated>
+  <updated>2020-07-17T08:24:05.515Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.shengkesi.cn/front-end-comprehension/"/>
     <id>https://www.shengkesi.cn/front-end-comprehension/</id>
     <published>2020-07-16T12:11:40.000Z</published>
-    <updated>2020-07-16T23:21:39.878Z</updated>
+    <updated>2020-07-17T08:24:05.515Z</updated>
     
     <summary type="html">
     
