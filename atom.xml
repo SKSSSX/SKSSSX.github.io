@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-07-17T10:20:03.753Z</updated>
+  <updated>2020-07-29T12:59:37.809Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -17,22 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端感悟</title>
-    <link href="https://www.shengkesi.cn/front-end-comprehension/"/>
-    <id>https://www.shengkesi.cn/front-end-comprehension/</id>
-    <published>2020-07-16T12:11:40.000Z</published>
-    <updated>2020-07-17T10:20:03.753Z</updated>
+    <title>前端框架设计及技术预研</title>
+    <link href="https://www.shengkesi.cn/front-end-framework/"/>
+    <id>https://www.shengkesi.cn/front-end-framework/</id>
+    <published>2020-05-25T11:38:37.000Z</published>
+    <updated>2020-07-29T12:59:37.809Z</updated>
     
     <summary type="html">
     
-      Welcome to my blog, enter password to read.
+      &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;权限拓展&quot;&gt;&lt;a href=&quot;#权限拓展&quot; class=&quot;headerlink&quot; title=&quot;权限拓展&quot;&gt;&lt;/a&gt;权限拓展&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/front-end-framework/permission.jpg&quot; alt=&quot;permission structure chart&quot; title=&quot;权限控制结构图&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
-      <category term="随笔" scheme="https://www.shengkesi.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="Framework" scheme="https://www.shengkesi.cn/categories/Framework/"/>
     
     
-      <category term="随笔" scheme="https://www.shengkesi.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="Framework" scheme="https://www.shengkesi.cn/tags/Framework/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过例子解释防抖动和节流</title>
+    <link href="https://www.shengkesi.cn/debounce-and-throttle/"/>
+    <id>https://www.shengkesi.cn/debounce-and-throttle/</id>
+    <published>2020-05-20T15:40:45.000Z</published>
+    <updated>2020-07-29T11:46:25.270Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;译文说明&quot;&gt;&lt;a href=&quot;#译文说明&quot; class=&quot;headerlink&quot; title=&quot;译文说明&quot;&gt;&lt;/a&gt;译文说明&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;作者：David Corbacho&lt;br&gt;原文链接：&lt;a href=&quot;https://css-tricks.com/debouncing-throttling-explained-examples/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://css-tricks.com/debouncing-throttling-explained-examples/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-style: italic&quot;&gt;以下是伦敦前端工程师 &lt;a href=&quot;https://twitter.com/dcorbacho&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;David Corbacho&lt;/a&gt; 的客座文章。我们已经&lt;a href=&quot;https://css-tricks.com/the-difference-between-throttling-and-debouncing/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;之前讨论过这个主题&lt;/a&gt;，但是这次，David将通过交互式演示来讲解这些概念，使事情变得非常清楚。&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-weight: bolder&quot;&gt;Debounce&lt;/span&gt; 和 &lt;span style=&quot;font-weight: bolder&quot;&gt;throttle&lt;/span&gt; 是两种类似(但不同的!)的技术，用于控制我们允许一个函数在一段时间内执行多少次。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;在将函数附加到DOM事件时，具有函数的防抖动或节流的版本尤其有用。为什么呢?因为我们在事件和函数的执行之间给了自己一个控制层。请记住，我们不控制这些DOM事件的发出频率。它可以变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/tags/JavaScript/"/>
     
   </entry>
   
@@ -40,8 +69,8 @@
     <title>connected React Router</title>
     <link href="https://www.shengkesi.cn/connected-React-Router/"/>
     <id>https://www.shengkesi.cn/connected-React-Router/</id>
-    <published>2020-07-06T02:16:42.000Z</published>
-    <updated>2020-07-12T09:30:58.640Z</updated>
+    <published>2020-05-06T02:16:42.000Z</published>
+    <updated>2020-07-29T11:47:08.944Z</updated>
     
     <summary type="html">
     
@@ -65,29 +94,22 @@
   </entry>
   
   <entry>
-    <title>通过例子解释防抖动和节流</title>
-    <link href="https://www.shengkesi.cn/debounce-and-throttle/"/>
-    <id>https://www.shengkesi.cn/debounce-and-throttle/</id>
-    <published>2020-05-20T15:40:45.000Z</published>
-    <updated>2020-07-12T09:30:58.675Z</updated>
+    <title>前端感悟</title>
+    <link href="https://www.shengkesi.cn/front-end-comprehension/"/>
+    <id>https://www.shengkesi.cn/front-end-comprehension/</id>
+    <published>2020-04-16T12:11:40.000Z</published>
+    <updated>2020-07-29T11:47:43.603Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;译文说明&quot;&gt;&lt;a href=&quot;#译文说明&quot; class=&quot;headerlink&quot; title=&quot;译文说明&quot;&gt;&lt;/a&gt;译文说明&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;作者：David Corbacho&lt;br&gt;原文链接：&lt;a href=&quot;https://css-tricks.com/debouncing-throttling-explained-examples/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;https://css-tricks.com/debouncing-throttling-explained-examples/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-style: italic&quot;&gt;以下是伦敦前端工程师 &lt;a href=&quot;https://twitter.com/dcorbacho&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;David Corbacho&lt;/a&gt; 的客座文章。我们已经&lt;a href=&quot;https://css-tricks.com/the-difference-between-throttling-and-debouncing/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;之前讨论过这个主题&lt;/a&gt;，但是这次，David将通过交互式演示来讲解这些概念，使事情变得非常清楚。&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-weight: bolder&quot;&gt;Debounce&lt;/span&gt; 和 &lt;span style=&quot;font-weight: bolder&quot;&gt;throttle&lt;/span&gt; 是两种类似(但不同的!)的技术，用于控制我们允许一个函数在一段时间内执行多少次。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;在将函数附加到DOM事件时，具有函数的防抖动或节流的版本尤其有用。为什么呢?因为我们在事件和函数的执行之间给了自己一个控制层。请记住，我们不控制这些DOM事件的发出频率。它可以变化。&lt;/p&gt;
-&lt;/blockquote&gt;
+      Welcome to my blog, enter password to read.
     
     </summary>
     
-      <category term="JavaScript" scheme="https://www.shengkesi.cn/categories/JavaScript/"/>
+      <category term="随笔" scheme="https://www.shengkesi.cn/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="JavaScript" scheme="https://www.shengkesi.cn/tags/JavaScript/"/>
+      <category term="随笔" scheme="https://www.shengkesi.cn/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -544,32 +566,6 @@
       <category term="vue" scheme="https://www.shengkesi.cn/tags/vue/"/>
     
       <category term="permission" scheme="https://www.shengkesi.cn/tags/permission/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://www.shengkesi.cn/hello-world/"/>
-    <id>https://www.shengkesi.cn/hello-world/</id>
-    <published>2018-08-21T07:17:06.000Z</published>
-    <updated>2020-07-12T09:30:58.708Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first
-        
-      
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://www.shengkesi.cn/categories/Hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://www.shengkesi.cn/tags/hexo/"/>
     
   </entry>
   

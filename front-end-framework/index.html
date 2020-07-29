@@ -144,20 +144,21 @@
 
 
 
-  <meta name="description" content="原文链接作者：ziwei3749https://segmentfault.com/a/1190000012828382  这篇文章的受众 第一类,业务需要,急需知道如何深拷贝JS对象的开发者。 第二类,希望扎实JS基础,将来好去面试官前秀操作的好学者。  写给第一类读者你只需要一行黑科技代码就可以实现深拷贝  123456var copyObj = &amp;#123;    name: &amp;apos;zi">
-<meta name="keywords" content="JavaScript">
+  <meta name="description" content="权限拓展 针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：">
+<meta name="keywords" content="Nodejs,Koa,GraphQL,MongoDB,JWT,TypeScript,serverless">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS 的深拷贝与浅拷贝">
-<meta property="og:url" content="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/index.html">
+<meta property="og:title" content="前端框架设计及技术预研">
+<meta property="og:url" content="https://www.shengkesi.cn/front-end-framework/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="原文链接作者：ziwei3749https://segmentfault.com/a/1190000012828382  这篇文章的受众 第一类,业务需要,急需知道如何深拷贝JS对象的开发者。 第二类,希望扎实JS基础,将来好去面试官前秀操作的好学者。  写给第一类读者你只需要一行黑科技代码就可以实现深拷贝  123456var copyObj = &amp;#123;    name: &amp;apos;zi">
+<meta property="og:description" content="权限拓展 针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/articlex.jpg">
-<meta property="og:updated_time" content="2020-07-12T09:30:58.700Z">
+<meta property="og:image" content="https://www.shengkesi.cn/front-end-framework/permission.jpg">
+<meta property="og:image" content="https://www.shengkesi.cn/front-end-framework/jwt.png">
+<meta property="og:updated_time" content="2020-07-29T12:59:37.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS 的深拷贝与浅拷贝">
-<meta name="twitter:description" content="原文链接作者：ziwei3749https://segmentfault.com/a/1190000012828382  这篇文章的受众 第一类,业务需要,急需知道如何深拷贝JS对象的开发者。 第二类,希望扎实JS基础,将来好去面试官前秀操作的好学者。  写给第一类读者你只需要一行黑科技代码就可以实现深拷贝  123456var copyObj = &amp;#123;    name: &amp;apos;zi">
-<meta name="twitter:image" content="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/articlex.jpg">
+<meta name="twitter:title" content="前端框架设计及技术预研">
+<meta name="twitter:description" content="权限拓展 针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：">
+<meta name="twitter:image" content="https://www.shengkesi.cn/front-end-framework/permission.jpg">
 
 
 
@@ -166,7 +167,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/">
+  <link rel="canonical" href="https://www.shengkesi.cn/front-end-framework/">
 
 
 
@@ -176,7 +177,7 @@
   };
 </script>
 
-  <title>JS 的深拷贝与浅拷贝 | sanks的博客</title>
+  <title>前端框架设计及技术预研 | sanks的博客</title>
   
 
 
@@ -474,7 +475,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/front-end-framework/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sanks">
@@ -491,7 +492,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JS 的深拷贝与浅拷贝
+          <h2 class="post-title" itemprop="name headline">前端框架设计及技术预研
 
               
             
@@ -518,7 +519,7 @@
                 
               
 
-              <time title="创建时间：2019-02-24 09:21:09" itemprop="dateCreated datePublished" datetime="2019-02-24T09:21:09+08:00">2019-02-24</time>
+              <time title="创建时间：2020-05-25 19:38:37" itemprop="dateCreated datePublished" datetime="2020-05-25T19:38:37+08:00">2020-05-25</time>
             
 
             
@@ -535,7 +536,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-07-12 17:30:58" itemprop="dateModified" datetime="2020-07-12T17:30:58+08:00">2020-07-12</time>
+                <time title="修改时间：2020-07-29 20:59:37" itemprop="dateModified" datetime="2020-07-29T20:59:37+08:00">2020-07-29</time>
               
             
           </span>
@@ -552,7 +553,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Framework/" itemprop="url" rel="index"><span itemprop="name">Framework</span></a></span>
 
                 
                 
@@ -567,8 +568,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/deep-copy-and-shallow-copy-for-JavaScript/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/deep-copy-and-shallow-copy-for-JavaScript/" itemprop="commentCount"></span>
+                <a href="/front-end-framework/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/front-end-framework/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -587,12 +588,12 @@
             <span class="post-meta-divider">|</span>
             <span title="post.wordcount">
               <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
-              字数统计： 1.9k 字
+              字数统计： 612 字
             </span>
             <span class="post-meta-divider">|</span>
             <span title="post.min2read">
               <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
-              阅读时长：≈ 7 分钟
+              阅读时长：≈ 2 分钟
             </span>
           
 
@@ -612,95 +613,29 @@
       
 
       
-        <blockquote><h3 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h3><p>作者：ziwei3749<br><a href="https://segmentfault.com/a/1190000012828382" rel="external nofollow noopener noreferrer" target="_blank">https://segmentfault.com/a/1190000012828382</a></p>
+        <div class="note info"><h2 id="权限拓展"><a href="#权限拓展" class="headerlink" title="权限拓展"></a>权限拓展</h2></div>
+<blockquote><p>针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：</p>
+<p><img src="/front-end-framework/permission.jpg" alt="permission structure chart" title="权限控制结构图"><br><a id="more"></a><br>权限树结构：</p>
 </blockquote>
-<blockquote><h3 id="这篇文章的受众"><a href="#这篇文章的受众" class="headerlink" title="这篇文章的受众"></a>这篇文章的受众</h3><ul>
-<li>第一类,业务需要,急需知道如何深拷贝JS对象的开发者。</li>
-<li>第二类,希望扎实JS基础,将来好去面试官前秀操作的好学者。</li>
-</ul>
-<h3 id="写给第一类读者"><a href="#写给第一类读者" class="headerlink" title="写给第一类读者"></a>写给第一类读者</h3><p>你只需要一行黑科技代码就可以实现深拷贝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;resultCode&quot;: 200,</span><br><span class="line">    &quot;resultJson&quot;:</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;code&quot;: 0,</span><br><span class="line">        &quot;msg&quot;: null,</span><br><span class="line">        &quot;data&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: 1000,</span><br><span class="line">            &quot;api&quot;: [</span><br><span class="line">              &quot;/api/token/getRefreshToken&quot;,</span><br><span class="line">              &quot;/api/login/phoneValidCode&quot;,</span><br><span class="line">              &quot;/api/login/imageValidCode&quot;,</span><br><span class="line">              &quot;/api/register/saveUser&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;parentId&quot;: -1,</span><br><span class="line">            &quot;children&quot;: [],</span><br><span class="line">            &quot;name&quot;: &quot;登录页&quot;,</span><br><span class="line">            &quot;path&quot;: &quot;login&quot;,</span><br><span class="line">            &quot;sort&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: 2000,</span><br><span class="line">            &quot;api&quot;: [&quot;/api/register/isExistUser&quot;],</span><br><span class="line">            &quot;parentId&quot;: -1,</span><br><span class="line">            &quot;children&quot;: [],</span><br><span class="line">            &quot;name&quot;: &quot;注册页&quot;,</span><br><span class="line">            &quot;path&quot;: &quot;register&quot;,</span><br><span class="line">            &quot;sort&quot;: 1</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: 3000,</span><br><span class="line">            &quot;api&quot;: [],</span><br><span class="line">            &quot;parentId&quot;: -1,</span><br><span class="line">            &quot;children&quot;: [],</span><br><span class="line">            &quot;name&quot;: &quot;首页&quot;,</span><br><span class="line">            &quot;path&quot;: &quot;home&quot;,</span><br><span class="line">            &quot;sort&quot;: 2</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: 4000,</span><br><span class="line">            &quot;api&quot;: [],</span><br><span class="line">            &quot;parentId&quot;: -1,</span><br><span class="line">            &quot;children&quot;: [</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;id&quot;: 4100,</span><br><span class="line">                &quot;api&quot;: [],</span><br><span class="line">                &quot;parentId&quot;: 4000,</span><br><span class="line">                &quot;children&quot;: [],</span><br><span class="line">                &quot;name&quot;: &quot;客户列表&quot;,</span><br><span class="line">                &quot;path&quot;: &quot;list&quot;,</span><br><span class="line">                &quot;sort&quot;: 0</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;id&quot;: 4200,</span><br><span class="line">                &quot;api&quot;: [],</span><br><span class="line">                &quot;parentId&quot;: 4000,</span><br><span class="line">                &quot;children&quot;: [],</span><br><span class="line">                &quot;name&quot;: &quot;客户详情&quot;,</span><br><span class="line">                &quot;path&quot;: &quot;detail&quot;,</span><br><span class="line">                &quot;sort&quot;: 1</span><br><span class="line">            &#125;],</span><br><span class="line">            &quot;name&quot;: &quot;客户&quot;,</span><br><span class="line">            &quot;path&quot;: &quot;customer&quot;,</span><br><span class="line">            &quot;sort&quot;: 3</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;resultMessage&quot;: &quot;获取权限成功&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>接口白名单配置：</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var copyObj = &#123;</span><br><span class="line">    name: &apos;ziwei&apos;,</span><br><span class="line">    arr : [1,2,3]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var targetObj = JSON.parse(JSON.stringify(copyObj))</span><br></pre></td></tr></table></figure>
-<blockquote><p>此时 copyObj.arr !== targetObj.arr  已经实现了深拷贝</p>
-<div class="note warning"><p>别着急走,利用window.JSON的方法做深拷贝存在2个缺点:</p></div>
-
-<ul>
-<li>如果你的对象里有函数,函数无法被拷贝下来</li>
-<li>无法拷贝copyObj对象原型链上的属性和方法</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    //免验证路由</span><br><span class="line">    FreeRoute: [</span><br><span class="line">        &apos;/api/login/signIn&apos;,</span><br><span class="line">        &apos;/api/auth/resources&apos;, // 获取前台路由权限的接口</span><br><span class="line">        &apos;/api/login/phoneValidCode&apos;, // 获取手机验证码接口</span><br><span class="line">        &apos;/api/login/imageValidCode&apos;, // 获取图像验证码的接口</span><br><span class="line">        &apos;/api/register/saveUser&apos; // 保存单个用户</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><h2 id="JWT登录机制"><a href="#JWT登录机制" class="headerlink" title="JWT登录机制"></a>JWT登录机制</h2></div>
+<blockquote><p>JWT我放在了Nodejs中间件层，JWT的实现原理如下图所示；</p>
+<p><img src="/front-end-framework/jwt.png" alt="jwt" title="JWT基本原理"></p>
 </blockquote>
-<a id="more"></a>
-<blockquote><p>当然,你明确知道他们的缺点后,如果他的缺点对你的业务需求没有影响,就可以放心使用了,一行原生代码就能搞定。<br>目前我在开发业务场景中,大多还真可以忽略上面2个缺点。往往需要深拷贝的对象里没有函数,也不需要拷贝它原型链的属性。</p>
-<h3 id="写给第二类读者"><a href="#写给第二类读者" class="headerlink" title="写给第二类读者"></a>写给第二类读者</h3><p>下面我会尽可能全面的讲解清楚JS里对象的拷贝,要讲清楚拷贝,你需要一点点前置知识</p>
-<p>你需要的前置知识:</p>
-<ul>
-<li><p>理解JS里的引用类型和值类型的区别,知道Obj存储的只是引用</p>
-</li>
-<li><p>对原型链有基本了解</p>
-</li>
-</ul>
-<p>关于对象拷贝的全部:</p>
-<ol>
-<li><p>深拷贝、浅拷贝是什么</p>
-</li>
-<li><p>深拷贝、浅拷贝在业务里的最常见的应用场景</p>
-</li>
-<li><p>深拷贝和浅拷贝的实现方式</p>
-</li>
-<li><p>总结与建议</p>
-</li>
-</ol>
-<h4 id="1-深拷贝、浅拷贝是什么"><a href="#1-深拷贝、浅拷贝是什么" class="headerlink" title="1. 深拷贝、浅拷贝是什么"></a>1. 深拷贝、浅拷贝是什么</h4><p>我们讨论JS对象深拷贝、浅拷贝的前提</p>
-<p>只有对象里嵌套对象的情况下,才会根据需求讨论,我们要深拷贝还是浅拷贝。</p>
-<p>比如下面这种对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj1 = &#123;</span><br><span class="line">    name: &apos;ziwei&apos;,</span><br><span class="line">    arr : [1,2,3]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>因为,如果是类似这样{name: ‘ziwei’},没有嵌套对象的对象的话,就没必要区分深浅拷贝了。只有在有嵌套的对象时,深拷贝和浅拷贝才有区别<br><br><div class="note primary"><p>浅拷贝是什么样子的 (我们暂时不管具体如何实现,因为下面会单讲)</p></div><br>调用shallowCopy()后,obj2拷贝obj1所有的属性。但是obj2.arr和obj1.arr是不同的引用,指向同一个内存空间<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj2 = shallowCopy( obj1 , &#123;&#125;)</span><br><span class="line"></span><br><span class="line">console.log( obj1 !== obj2 ) // true    无论哪种拷贝,obj1和obj2一定都是2个不同的对象(内存空间不同)</span><br><span class="line"></span><br><span class="line">console.log( obj2.arr === obj1.arr ) // true   他们2个对象里arr的引用,指向【相同的】内存空间</span><br></pre></td></tr></table></figure>
-
-<p><strong>所以, 2个obj经过拷贝后,虽然他们属性相同,也的确是不同的对象,但他们内部的obj都是指向同一个内存空间,这种我们叫浅拷贝</strong></p>
-<div class="note primary"><p>深拷贝是什么样子的 (我们暂时不管具体如何实现,因为下面会单讲)</p></div>
-
-<p>调用deepCopy()后,obj2拷贝obj1所有的属性,而且obj2.arr和obj1.arr是指向不同的内存空间,</p>
-<p>2个obj2除了拷贝了一样的属性,没有任何其他关联。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj2 = deepCopy( obj1 , &#123;&#125;)</span><br><span class="line"></span><br><span class="line">console.log( obj1 !== obj2 ) // true    无论哪种拷贝,obj1和obj2一定都是2个不同的对象(内存空间不同)</span><br><span class="line"></span><br><span class="line">console.log( obj2.arr === obj1.arr ) // false   他们2个对象里arr的引用,指向【不同的】内存空间</span><br></pre></td></tr></table></figure>
-
-<p><strong>所以, 2个obj经过拷贝后,除了拷贝下来相同的属性之外,没有任何其他关联的2个对象,这种我们叫深拷贝</strong></p>
-<h4 id="2-深拷贝在业务里的最常见的应用场景"><a href="#2-深拷贝在业务里的最常见的应用场景" class="headerlink" title="2. 深拷贝在业务里的最常见的应用场景"></a>2. 深拷贝在业务里的最常见的应用场景</h4><p>举个栗子,业务需求是 : 一个表格展示商品各种信息,点击【同意】时,是可以弹出对话框调整商品数量的。</p>
-<p>这种业务需求下,我们就会用到对象的深拷贝。因为【商品表格】的属性和【调整商品表格】的属性几乎一样,我们需要拷贝。</p>
-<p>下面的伪代码和图片就是展示使用浅拷贝存在的问题</p>
-<p><img src="/deep-copy-and-shallow-copy-for-JavaScript/articlex.jpg" alt="深拷贝的应用场景" title="深拷贝的应用场景"></p>
-<p>这样得到的adjustTableArr和tableArr里,内部对象都是相同的,所以就出现了图中红线标注的情况,</p>
-<p>当我们修改【调整商品表格】里的商品数量时,【商品表格】也跟着改变了,这并不是我们想要的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 表格对象的数据结构</span><br><span class="line">var tableArr = [</span><br><span class="line">        &#123;goods_name : &apos;长袖腰背夹&apos; , code : &apos;M216C239E0864&apos; , num : &apos;2&apos;&#125;,</span><br><span class="line">        &#123;goods_name : &apos;长袖腰背夹&apos; , code : &apos;M216C240B0170&apos; , num : &apos;3&apos;&#125;,</span><br><span class="line">        &#123;goods_name : &apos;短塑裤&apos; , code : &apos;M216D241C04106&apos; , num : &apos;3&apos;&#125;,</span><br><span class="line">    ]</span><br><span class="line">    </span><br><span class="line">var adjustTableArr = []                  // 调整表格用的数组</span><br><span class="line"></span><br><span class="line">for (var key in tableArr) &#123;               // 浅拷贝</span><br><span class="line">    adjustTableArr[key] = tableArr[key]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>而实际上,我们希望这2个表格里的数据完全独立,互不干扰,只有在确认调整之后才刷新商品数量。</p>
-<p>这种情况下我们就可以使用前面说的深拷贝的一行黑科技</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var adjustTableArr = JSON.parse(JSON.stringify(tableArr))</span><br></pre></td></tr></table></figure>
-
-<p>还记得它的缺陷吗? 对象里的函数无法被拷贝,原型链里的属性无法被拷贝。这里就对业务没有影响,可以很方便的深拷贝。</p>
-<h4 id="3-深拷贝和浅拷贝的实现方式"><a href="#3-深拷贝和浅拷贝的实现方式" class="headerlink" title="3. 深拷贝和浅拷贝的实现方式"></a>3. 深拷贝和浅拷贝的实现方式</h4><p>其实JQ里已经有$.extend()函数,实现就是深拷贝和浅拷贝的功能。有兴趣的小伙伴也可以看看源码。</p>
-<div class="note primary"><p>浅拷贝</p></div>
-
-<p>浅拷贝比较简单,就是用for in 循环赋值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function shallowCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">    var key;</span><br><span class="line">    for (key in source) &#123;</span><br><span class="line">        if (source.hasOwnProperty(key)) &#123;  // 意思就是<strong>proto</strong>上面的属性,我不拷贝</span><br><span class="line">            target[key] = source[key];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return target;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note primary"><p>深拷贝的实现</p></div>
-
-<ul>
-<li>深拷贝,就是遍历那个被拷贝的对象</li>
-<li>判断对象里每一项的数据类型</li>
-<li>如果不是对象类型,就直接赋值,如果是对象类型,就再次调用deepCopy,递归的去赋值。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function deepCopy(source, target = &#123;&#125;) &#123;</span><br><span class="line">    var key;</span><br><span class="line">    for (key in source) &#123;</span><br><span class="line">        if (source.hasOwnProperty(key)) &#123; // 意思就是<strong>proto</strong>上面的属性,我不拷贝</span><br><span class="line">            if (typeof(source[key]) === &quot;object&quot;) &#123; // 如果这一项是object类型,就递归调用deepCopy</span><br><span class="line">                target[key] = Array.isArray(source[key]) ? [] : &#123;&#125;;</span><br><span class="line">                deepCopy(source[key], target[key]);</span><br><span class="line">            &#125; else &#123;                            // 如果不是object类型,就直接赋值拷贝</span><br><span class="line">                target[key] = source[key];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return target;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>以上的无论深、浅拷贝,都用了source.hasOwnProperty(key),意思是判断这一项是否是其自有属性,是的话才拷贝,不是就不拷贝。</p>
-<p>也就是说<strong>proto</strong>上面的属性,我不拷贝。这个其实你可以根据业务需求,来决定加上和这个条件</p>
-<p>(JQ的$.extend()是会连<strong>proto</strong>上的属性也拷贝下来的,但是是直接拷贝到对象上,而不是放到之前的<strong>proto</strong>上)</p>
-<h4 id="4-总结与建议"><a href="#4-总结与建议" class="headerlink" title="4. 总结与建议"></a>4. 总结与建议</h4><p>虽然大家可能经常用框架提供的api来实现深拷贝。</p>
-<p>这篇文章分享的目的,更多还是希望用一篇文章整理清楚深浅拷贝的含义、递归实现思路,以及小伙伴们如果使用了JSON.parse()这种黑科技,一定要清楚这样写的优缺点。</p>
-<h4 id="5-修正"><a href="#5-修正" class="headerlink" title="5. 修正"></a>5. 修正</h4><p>上面的deepCopy方法有漏洞，没有考虑source一开始就是数组的情况</p>
-<p>下面是一个修改后版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function deepCopy( source ) &#123;</span><br><span class="line">    let target = Array.isArray( source ) ? [] : &#123;&#125;</span><br><span class="line">    for ( var k in source ) &#123;</span><br><span class="line">        if ( typeof source[ k ] === &apos;object&apos; ) &#123;</span><br><span class="line">            target[ k ] = deepCopy( source[ k ] )</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            target[ k ] = source[ k ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return target</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success"><h2 id="工作流水线"><a href="#工作流水线" class="headerlink" title="工作流水线"></a>工作流水线</h2></div>
+<blockquote><p>在这里我做一下简单的描述：</p>
 </blockquote>
-
+<blockquote><p>前端代码请求接口-&gt;中间件路由代理层接到请求(GraphQL)-&gt;控制器层（controller）做逻辑判断等-&gt;从mongoDB数据中抓取数据</p>
+<p>这一流水线的好处是可多处拆解，可抛弃最后两层，直接与后台接口对接；如果有可通过nodejs服务来存储一些简单的数据的话，可使用整个流程。</p>
+</blockquote>
+<div class="note primary"><h2 id="打印日志功能"><a href="#打印日志功能" class="headerlink" title="打印日志功能"></a>打印日志功能</h2></div>
+<blockquote><p>后台的服务通常都有日志输出和存储，为了查找项目开发过程中的问题，或者是上线后存在的性能瓶颈；nodejs服务我同样加入了日志打印功能。</p>
+</blockquote>
+<blockquote><p>未完待续…</p>
+</blockquote>
       
     </div>
 
@@ -725,12 +660,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/deep-copy-and-shallow-copy-for-JavaScript/">JS 的深拷贝与浅拷贝</a></p>
+  <p><span>本文标题:</span><a href="/front-end-framework/">前端框架设计及技术预研</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
-  <p><span>发布时间:</span>2019年02月24日 - 09:21</p>
-  <p><span>最后更新:</span>2020年07月12日 - 17:30</p>
-  <p><span>原始链接:</span><a href="/deep-copy-and-shallow-copy-for-JavaScript/" title="JS 的深拷贝与浅拷贝">https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/deep-copy-and-shallow-copy-for-JavaScript/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2020年05月25日 - 19:38</p>
+  <p><span>最后更新:</span>2020年07月29日 - 20:59</p>
+  <p><span>原始链接:</span><a href="/front-end-framework/" title="前端框架设计及技术预研">https://www.shengkesi.cn/front-end-framework/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/front-end-framework/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -789,7 +724,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+            <a href="/tags/Framework/" rel="tag"><i class="fa fa-tag"></i> Framework</a>
           
         </div>
       
@@ -802,8 +737,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/前端工程师成长的痛，你占几条？/" rel="next" title="前端工程师成长的痛，你占几条？">
-                <i class="fa fa-chevron-left"></i> 前端工程师成长的痛，你占几条？
+              <a href="/debounce-and-throttle/" rel="next" title="通过例子解释防抖动和节流">
+                <i class="fa fa-chevron-left"></i> 通过例子解释防抖动和节流
               </a>
             
           </div>
@@ -811,10 +746,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/create-react-app-simple/" rel="prev" title="react的基础之上进行引入webpack、eslint、babel的框架搭建">
-                react的基础之上进行引入webpack、eslint、babel的框架搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1055,7 +986,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原文链接"><span class="nav-number">1.</span> <span class="nav-text">原文链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这篇文章的受众"><span class="nav-number">2.</span> <span class="nav-text">这篇文章的受众</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写给第一类读者"><span class="nav-number">3.</span> <span class="nav-text">写给第一类读者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写给第二类读者"><span class="nav-number">4.</span> <span class="nav-text">写给第二类读者</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-深拷贝、浅拷贝是什么"><span class="nav-number">4.1.</span> <span class="nav-text">1. 深拷贝、浅拷贝是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-深拷贝在业务里的最常见的应用场景"><span class="nav-number">4.2.</span> <span class="nav-text">2. 深拷贝在业务里的最常见的应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-深拷贝和浅拷贝的实现方式"><span class="nav-number">4.3.</span> <span class="nav-text">3. 深拷贝和浅拷贝的实现方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-总结与建议"><span class="nav-number">4.4.</span> <span class="nav-text">4. 总结与建议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-修正"><span class="nav-number">4.5.</span> <span class="nav-text">5. 修正</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#权限拓展"><span class="nav-number">1.</span> <span class="nav-text">权限拓展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JWT登录机制"><span class="nav-number">2.</span> <span class="nav-text">JWT登录机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作流水线"><span class="nav-number">3.</span> <span class="nav-text">工作流水线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打印日志功能"><span class="nav-number">4.</span> <span class="nav-text">打印日志功能</span></a></li></ol></div>
             
 
           </div>
