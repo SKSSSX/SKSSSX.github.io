@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-08-09T13:44:30.581Z</updated>
+  <updated>2020-08-17T23:26:11.809Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -21,11 +21,13 @@
     <link href="https://www.shengkesi.cn/front-end-framework/"/>
     <id>https://www.shengkesi.cn/front-end-framework/</id>
     <published>2020-05-25T11:38:37.000Z</published>
-    <updated>2020-08-09T13:44:30.581Z</updated>
+    <updated>2020-08-17T23:26:11.809Z</updated>
     
     <summary type="html">
     
-      Welcome to my blog, enter password to read.
+      &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;权限拓展&quot;&gt;&lt;a href=&quot;#权限拓展&quot; class=&quot;headerlink&quot; title=&quot;权限拓展&quot;&gt;&lt;/a&gt;权限拓展&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;针对以往的权限控制职能到达页面及按钮级别，结合nodeJS中间件（路由代理），做出了延伸到接口的权限控制，概要图如下所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/front-end-framework/permission.jpg&quot; alt=&quot;permission structure chart&quot; title=&quot;权限控制结构图&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
