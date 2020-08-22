@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-08-17T23:26:11.809Z</updated>
+  <updated>2020-08-22T02:04:35.294Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何使js进入休眠或等待</title>
+    <link href="https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/"/>
+    <id>https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/</id>
+    <published>2020-08-22T01:32:38.000Z</published>
+    <updated>2020-08-22T02:04:35.294Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;在做react的转场动画时，偶然想得一个解决方案中，需要拦截 React-router4 中 Prompt 的操作时，想让进程休眠，来执行转场动画，遗憾的是没有成功，但是意外获得了新技能 - javascript的休眠方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;如何编写sleep函数&quot;&gt;&lt;a href=&quot;#如何编写sleep函数&quot; class=&quot;headerlink&quot; title=&quot;如何编写sleep函数&quot;&gt;&lt;/a&gt;如何编写sleep函数&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;不卖关子了，直接上代码，不过需要你自己去验证，&lt;span class=&quot;sanks-keywords&quot;&gt;正所谓授之以鱼不如授之以渔&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/categories/JavaScript/"/>
+    
+      <category term="ES6" scheme="https://www.shengkesi.cn/categories/JavaScript/ES6/"/>
+    
+    
+      <category term="ES6" scheme="https://www.shengkesi.cn/tags/ES6/"/>
+    
+      <category term="JavaScript" scheme="https://www.shengkesi.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端框架设计及技术预研</title>
     <link href="https://www.shengkesi.cn/front-end-framework/"/>
     <id>https://www.shengkesi.cn/front-end-framework/</id>
-    <published>2020-05-25T11:38:37.000Z</published>
-    <updated>2020-08-17T23:26:11.809Z</updated>
+    <published>2020-06-25T11:38:37.000Z</published>
+    <updated>2020-08-22T02:05:27.887Z</updated>
     
     <summary type="html">
     
@@ -534,38 +561,6 @@
     
     
       <category term="element-ui" scheme="https://www.shengkesi.cn/tags/element-ui/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VUE的权限控制</title>
-    <link href="https://www.shengkesi.cn/VUE%E7%9A%84%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
-    <id>https://www.shengkesi.cn/VUE的权限控制/</id>
-    <published>2018-08-22T07:17:06.000Z</published>
-    <updated>2020-07-12T09:30:58.625Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;如果VUE权限控制问题困扰着你，那么这篇文章将拯救你。关于VUE的前台路由控制和视图控制是大家最需要的前端技术解决方案。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;Vue-Access-Control&quot;&gt;&lt;a href=&quot;#Vue-Access-Control&quot; class=&quot;headerlink&quot; title=&quot;Vue-Access-Control&quot;&gt;&lt;/a&gt;Vue-Access-Control&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;本解决方案是基于 &lt;a href=&quot;https://refined-x.com/2017/11/28/Vue2.0用户权限控制解决方案/&quot; title=&quot;[external] [title]&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Vue-Access-Control&lt;/a&gt; 进行改造的，深度剖析了里面的路由控制和视图控制（资源控制还是后台做比较靠谱）&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;心路历程&quot;&gt;&lt;a href=&quot;#心路历程&quot; class=&quot;headerlink&quot; title=&quot;心路历程&quot;&gt;&lt;/a&gt;心路历程&lt;/h2&gt;&lt;blockquote&gt;&lt;ol&gt;
-&lt;li&gt;权限数据由后台接口获得（权限树），但是前端不能贸然存储到本地浏览器里（localStorage、sessionStorage、Cookie等），如果被恶意篡改，麻烦可就大了!!!!!&lt;/li&gt;
-&lt;li&gt;想要用 VUEX （状态管理模式）来存储，但是网页一刷新，就会被重置成空，所以我推断 VUEX 适合用在 “无刷新” 的 APP 中；再者，权限树这么复杂的结构，并不是 VUEX 所实现的 “共享状态” 模式，只是单一的对每个页面（路由控制）、按钮（视图控制）、接口（请求控制）&lt;/li&gt;
-&lt;li&gt;针对实际的应用场景，请求控制，就是某个角色是否有调用某个接口的权限，这种后台会做权限控制的，没有权限会给你报401的，只有“路由控制”和“视图控制”是前端人员需要去解决的。&lt;/li&gt;
-&lt;li&gt;对于 Vue-Access-Control 这套权限解决方案貌似也有不完美之处，不能贴合实际的开发需要，需要稍作调整，比如路由嵌套两层还是可以使用的，要是三层及其以上就得修改递归的函数了。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.shengkesi.cn/categories/Vue/"/>
-    
-    
-      <category term="vue" scheme="https://www.shengkesi.cn/tags/vue/"/>
-    
-      <category term="permission" scheme="https://www.shengkesi.cn/tags/permission/"/>
     
   </entry>
   

@@ -144,17 +144,18 @@
 
 
 
-  <meta name="description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
-<meta name="keywords" content="javascript,hexo,ES6,VUE,axios,promise,permission,回调地狱,Element-UI,NodeJS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sanks的博客">
-<meta property="og:url" content="https://www.shengkesi.cn/tags/回调地狱/index.html">
+  <meta name="description" content="引言在做react的转场动画时，偶然想得一个解决方案中，需要拦截 React-router4 中 Prompt 的操作时，想让进程休眠，来执行转场动画，遗憾的是没有成功，但是意外获得了新技能 - javascript的休眠方法  如何编写sleep函数不卖关子了，直接上代码，不过需要你自己去验证，正所谓授之以鱼不如授之以渔">
+<meta name="keywords" content="JavaScript,sleep,wait">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使js进入休眠或等待">
+<meta property="og:url" content="https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+<meta property="og:description" content="引言在做react的转场动画时，偶然想得一个解决方案中，需要拦截 React-router4 中 Prompt 的操作时，想让进程休眠，来执行转场动画，遗憾的是没有成功，但是意外获得了新技能 - javascript的休眠方法  如何编写sleep函数不卖关子了，直接上代码，不过需要你自己去验证，正所谓授之以鱼不如授之以渔">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-22T02:04:35.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sanks的博客">
-<meta name="twitter:description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+<meta name="twitter:title" content="如何使js进入休眠或等待">
+<meta name="twitter:description" content="引言在做react的转场动画时，偶然想得一个解决方案中，需要拦截 React-router4 中 Prompt 的操作时，想让进程休眠，来执行转场动画，遗憾的是没有成功，但是意外获得了新技能 - javascript的休眠方法  如何编写sleep函数不卖关子了，直接上代码，不过需要你自己去验证，正所谓授之以鱼不如授之以渔">
 
 
 
@@ -163,7 +164,7 @@
 
 
 
-  <link rel="canonical" href="https://www.shengkesi.cn/tags/回调地狱/">
+  <link rel="canonical" href="https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/">
 
 
 
@@ -173,7 +174,7 @@
   };
 </script>
 
-  <title>标签: 回调地狱 | sanks的博客</title>
+  <title>如何使js进入休眠或等待 | sanks的博客</title>
   
 
 
@@ -231,7 +232,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <!--<a href="https://github.com/SKSSSX" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>-->
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,7 +307,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -404,34 +405,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -483,56 +456,311 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>回调地狱<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sanks">
+      <meta itemprop="description" content="对于JavaScript(ES6)、VUE、NodeJS、等相关技术的实战经验分享">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sanks的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Axios-执行多个并发请求-promise/" itemprop="url">
-              
-                <span itemprop="name">Axios 执行多个并发请求(使用Promise解决多层异步调用)</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">如何使js进入休眠或等待
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-18T08:21:43+08:00" content="2018-12-18">
-          12-18
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-08-22 09:32:38 / 修改时间：10:04:35" itemprop="dateCreated datePublished" datetime="2020-08-22T09:32:38+08:00">2020-08-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/javascript-go-sleep-to-wait-next-execute/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/javascript-go-sleep-to-wait-next-execute/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount">
+              <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
+              字数统计： 417 字
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.min2read">
+              <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
+              阅读时长：≈ 1 分钟
+            </span>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><blockquote><p>在做react的转场动画时，偶然想得一个解决方案中，需要拦截 React-router4 中 Prompt 的操作时，想让进程休眠，来执行转场动画，遗憾的是没有成功，但是意外获得了新技能 - javascript的休眠方法</p>
+</blockquote>
+<h2 id="如何编写sleep函数"><a href="#如何编写sleep函数" class="headerlink" title="如何编写sleep函数"></a>如何编写sleep函数</h2><blockquote><p>不卖关子了，直接上代码，不过需要你自己去验证，<span class="sanks-keywords">正所谓授之以鱼不如授之以渔</span></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function sleep(numberMillis: number) &#123;</span><br><span class="line">    var now = new Date();</span><br><span class="line">    var exitTime = now.getTime() + numberMillis;</span><br><span class="line">    while (true) &#123;</span><br><span class="line">        now = new Date();</span><br><span class="line">        if (now.getTime() &gt; exitTime) return;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function test() &#123;</span><br><span class="line">    console.log(new Date());</span><br><span class="line">    console.time(&apos;sleep_times&apos;);</span><br><span class="line">    sleep(1000);</span><br><span class="line">    console.timeEnd(&apos;sleep_times&apos;);</span><br><span class="line">    console.log(new Date());</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<blockquote><p>实际上，该例子不是使js脚本进入休眠，而是因为js是单线程，while(true){} 死循环调度执行,  使得 whlie(true){} 后面的程序被阻塞，从而实现休眠的假象。</p>
+</blockquote>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><blockquote><p>通过Promises，async 和 await 的功能，你可以编写一个 sleep2() 函数，该函数将按预期运行。</p>
+<p>但是，你只能从 async 函数中调用此自定义 sleep2() 函数，并且需要将其与 await 关键字一起使用。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function sleep2(time: number) &#123;</span><br><span class="line">    return new Promise(resolve =&gt; &#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;, time || 1000);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line">async function test() &#123;</span><br><span class="line">    console.log(new Date());</span><br><span class="line">    console.time(&apos;use_times&apos;);</span><br><span class="line">    await sleep2(1000);</span><br><span class="line">    console.timeEnd(&apos;use_times&apos;);</span><br><span class="line">    console.log(new Date());</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<blockquote><p>此JavaScript sleep2() 函数的功能与预期的完全一样，因为 await 导致代码的同步执行暂停，直到Promise被resolve()为止。</p>
+</blockquote>
+<blockquote><p>总结：以上两个方法请自行执行脚本，来看看执行的时间误差上有什么区别，哪个好就用哪个（最后还是卖了个关子）。</p>
+</blockquote>
       
     </div>
 
+    
+
+    
+    
+    
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    <div>
+        
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/javascript-go-sleep-to-wait-next-execute/">如何使js进入休眠或等待</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
+  <p><span>发布时间:</span>2020年08月22日 - 09:32</p>
+  <p><span>最后更新:</span>2020年08月22日 - 10:04</p>
+  <p><span>原始链接:</span><a href="/javascript-go-sleep-to-wait-next-execute/" title="如何使js进入休眠或等待">https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success",
+          buttons: {
+            text: "确定"
+          }
+        });
+	});
+    });  
+</script>
+
+        
+    </div>
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="sanks 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/front-end-framework/" rel="next" title="前端框架设计及技术预研">
+                <i class="fa fa-chevron-left"></i> 前端框架设计及技术预研
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -555,8 +783,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -729,6 +966,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何编写sleep函数"><span class="nav-number">2.</span> <span class="nav-text">如何编写sleep函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一"><span class="nav-number">2.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二"><span class="nav-number">2.2.</span> <span class="nav-text">方法二</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -893,6 +1146,10 @@
   
 
   
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 

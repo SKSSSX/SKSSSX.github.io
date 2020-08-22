@@ -2,7 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.shengkesi.cn/front-end-framework/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-22</lastmod>
+  </url>  <url>
+    <loc>https://www.shengkesi.cn/javascript-go-sleep-to-wait-next-execute/</loc>
+    <lastmod>2020-08-22</lastmod>
   </url>  <url>
     <loc>https://www.shengkesi.cn/Mutiple-SSH-keys-for-diffrent-github-accounts/</loc>
     <lastmod>2020-07-30</lastmod>
