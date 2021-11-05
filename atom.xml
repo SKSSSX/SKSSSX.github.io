@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.shengkesi.cn/"/>
-  <updated>2020-12-27T14:08:34.492Z</updated>
+  <updated>2021-11-05T14:17:28.677Z</updated>
   <id>https://www.shengkesi.cn/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>面试有感</title>
+    <title>requestAnimationFrame解决传统定时器的BUG</title>
+    <link href="https://www.shengkesi.cn/requestAnimationFrame/"/>
+    <id>https://www.shengkesi.cn/requestAnimationFrame/</id>
+    <published>2021-11-07T03:05:45.000Z</published>
+    <updated>2021-11-05T14:17:28.677Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;当你写一个倒计时组件时，可能会出现的解决方案是应用 setInterval来做的。&lt;br&gt;我摘取网上的setInterval的实例代码，测试一下这个倒计时的误差。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span class=&quot;sanks-keywords&quot;&gt;读者的疑问：一个倒计时组件，需要做的这么精准吗？&lt;/span&gt;&lt;br&gt;我的回答：这要看你对性能的要求是否是精益求精了，本着对计时精度的严格要求，尽量缩小倒计时误差，减小手机浏览器的内存消耗等很有必要；最重要的是，为以后的购物“秒杀”做准备，此组件扩展成“秒杀组件”是很简单的事。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="React" scheme="https://www.shengkesi.cn/categories/React/"/>
+    
+    
+      <category term="React" scheme="https://www.shengkesi.cn/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员的自我修养</title>
     <link href="https://www.shengkesi.cn/The-interview-experience/"/>
     <id>https://www.shengkesi.cn/The-interview-experience/</id>
     <published>2020-12-27T13:41:55.000Z</published>
-    <updated>2020-12-27T14:08:34.492Z</updated>
+    <updated>2021-11-04T23:21:00.929Z</updated>
     
     <summary type="html">
     
@@ -530,31 +554,6 @@
       <category term="ES6" scheme="https://www.shengkesi.cn/tags/ES6/"/>
     
       <category term="回调地狱" scheme="https://www.shengkesi.cn/tags/%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你真的会检查自己系统安装的VUE版本吗？</title>
-    <link href="https://www.shengkesi.cn/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E6%A3%80%E6%9F%A5%E8%87%AA%E5%B7%B1%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%9A%84VUE%E7%89%88%E6%9C%AC%E5%90%97%EF%BC%9F/"/>
-    <id>https://www.shengkesi.cn/你真的会检查自己系统安装的VUE版本吗？/</id>
-    <published>2018-12-17T05:55:52.000Z</published>
-    <updated>2020-07-12T09:30:58.726Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;引语&quot;&gt;&lt;a href=&quot;#引语&quot; class=&quot;headerlink&quot; title=&quot;引语&quot;&gt;&lt;/a&gt;引语&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;或许你觉得我这篇文章写的很傻，和无聊，但是我跟你说，即使你从事VUE开发一段时间，也不见得求在一些小问题上所求甚解。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;有些人认为的VUE版本检查命令是：&quot;&gt;&lt;a href=&quot;#有些人认为的VUE版本检查命令是：&quot; class=&quot;headerlink&quot; title=&quot;有些人认为的VUE版本检查命令是：&quot;&gt;&lt;/a&gt;有些人认为的VUE版本检查命令是：&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vue -V&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;或者&quot;&gt;&lt;a href=&quot;#或者&quot; class=&quot;headerlink&quot; title=&quot;或者&quot;&gt;&lt;/a&gt;或者&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vue --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;如下图&quot;&gt;&lt;a href=&quot;#如下图&quot; class=&quot;headerlink&quot; title=&quot;如下图&quot;&gt;&lt;/a&gt;如下图&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;&lt;img src=&quot;/你真的会检查自己系统安装的VUE版本吗？/vue-cli.png&quot; alt=&quot;检查vue-cli版本&quot; title=&quot;检查vue-cli版本&quot;&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="https://www.shengkesi.cn/categories/Vue/"/>
-    
-    
-      <category term="vue" scheme="https://www.shengkesi.cn/tags/vue/"/>
     
   </entry>
   

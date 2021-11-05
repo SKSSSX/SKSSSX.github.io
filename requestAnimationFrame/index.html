@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+<meta name="google-site-verification" content="566vKidEd3rhgol6_eANvniNU1LISEec0iyQZxjSE10">
+
+
+<meta name="baidu-site-verification" content="gxXWBW73j2">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="true">
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="true">
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: 'ded44ecb6cb09def6a2a97166489710c',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"在博客内搜索","hits_empty":"没有找到与 「${query}」相关的内容","hits_stats":"${hits} 条相关记录，共耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="引言 当你写一个倒计时组件时，可能会出现的解决方案是应用 setInterval来做的。我摘取网上的setInterval的实例代码，测试一下这个倒计时的误差。  读者的疑问：一个倒计时组件，需要做的这么精准吗？我的回答：这要看你对性能的要求是否是精益求精了，本着对计时精度的严格要求，尽量缩小倒计时误差，减小手机浏览器的内存消耗等很有必要；最重要的是，为以后的购物“秒杀”做准备，此组件扩展成“秒杀">
+<meta name="keywords" content="requestAnimationFrame,setInterval,setTimeout,倒计时组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="requestAnimationFrame解决传统定时器的BUG">
+<meta property="og:url" content="https://www.shengkesi.cn/requestAnimationFrame/index.html">
+<meta property="og:site_name" content="sanks的博客">
+<meta property="og:description" content="引言 当你写一个倒计时组件时，可能会出现的解决方案是应用 setInterval来做的。我摘取网上的setInterval的实例代码，测试一下这个倒计时的误差。  读者的疑问：一个倒计时组件，需要做的这么精准吗？我的回答：这要看你对性能的要求是否是精益求精了，本着对计时精度的严格要求，尽量缩小倒计时误差，减小手机浏览器的内存消耗等很有必要；最重要的是，为以后的购物“秒杀”做准备，此组件扩展成“秒杀">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.shengkesi.cn/requestAnimationFrame/setInterval.png">
+<meta property="og:image" content="https://www.shengkesi.cn/requestAnimationFrame/requestAnimationFrame.png">
+<meta property="og:updated_time" content="2021-11-05T14:17:28.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="requestAnimationFrame解决传统定时器的BUG">
+<meta name="twitter:description" content="引言 当你写一个倒计时组件时，可能会出现的解决方案是应用 setInterval来做的。我摘取网上的setInterval的实例代码，测试一下这个倒计时的误差。  读者的疑问：一个倒计时组件，需要做的这么精准吗？我的回答：这要看你对性能的要求是否是精益求精了，本着对计时精度的严格要求，尽量缩小倒计时误差，减小手机浏览器的内存消耗等很有必要；最重要的是，为以后的购物“秒杀”做准备，此组件扩展成“秒杀">
+<meta name="twitter:image" content="https://www.shengkesi.cn/requestAnimationFrame/setInterval.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="sanks的博客" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="https://www.shengkesi.cn/requestAnimationFrame/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>requestAnimationFrame解决传统定时器的BUG | sanks的博客</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c24ecb1164b6eb14a18c5147bbc696a9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+    <!--<a href="https://github.com/SKSSSX" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">sanks的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">知识付诸行动才有转换为能力的效果</h1>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.shengkesi.cn/requestAnimationFrame/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sanks">
+      <meta itemprop="description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sanks的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">requestAnimationFrame解决传统定时器的BUG
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-11-07 11:05:45" itemprop="dateCreated datePublished" datetime="2021-11-07T11:05:45+08:00">2021-11-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-11-05 22:17:28" itemprop="dateModified" datetime="2021-11-05T22:17:28+08:00">2021-11-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/requestAnimationFrame/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/requestAnimationFrame/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount">
+              <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
+              字数统计： 3.6k 字
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.min2read">
+              <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
+              阅读时长：≈ 16 分钟
+            </span>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note info"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2></div>
+<blockquote><p>当你写一个倒计时组件时，可能会出现的解决方案是应用 setInterval来做的。<br>我摘取网上的setInterval的实例代码，测试一下这个倒计时的误差。</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">读者的疑问：一个倒计时组件，需要做的这么精准吗？</span><br>我的回答：这要看你对性能的要求是否是精益求精了，本着对计时精度的严格要求，尽量缩小倒计时误差，减小手机浏览器的内存消耗等很有必要；最重要的是，为以后的购物“秒杀”做准备，此组件扩展成“秒杀组件”是很简单的事。</p>
+</blockquote>
+<a id="more"></a>
+<div class="note warning"><h2 id="并不精确的setInterval"><a href="#并不精确的setInterval" class="headerlink" title="并不精确的setInterval"></a>并不精确的setInterval</h2></div>
+<blockquote><p>作者：善宝橘<br>请阅读文章：<a href="https://juejin.cn/post/6882287025400070152" rel="external nofollow noopener noreferrer" target="_blank">https://juejin.cn/post/6882287025400070152</a><br>代码在线演示：<a href="https://codepen.io/liuluffy/pen/NWrqdbz" rel="external nofollow noopener noreferrer" target="_blank">https://codepen.io/liuluffy/pen/NWrqdbz</a></p>
+</blockquote>
+<h3 id="具体代码如下："><a href="#具体代码如下：" class="headerlink" title="具体代码如下："></a>具体代码如下：</h3><blockquote><p>JS：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">class Clock extends React.Component&#123;</span><br><span class="line">  constructor(props)&#123;</span><br><span class="line">    super(props)</span><br><span class="line">    this.state=&#123;</span><br><span class="line">      minute:60,</span><br><span class="line">      second:60</span><br><span class="line">    &#125;</span><br><span class="line">    this.start = this.start.bind(this)</span><br><span class="line">    this.no = this.no.bind(this)</span><br><span class="line">    this.end = this.end.bind(this)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  start()&#123;</span><br><span class="line">    if(this.state.second&gt;0)&#123;</span><br><span class="line">      this.setState(&#123;</span><br><span class="line">        minute:this.state.minute,</span><br><span class="line">        second:this.state.second - 1</span><br><span class="line">      &#125;) </span><br><span class="line">    &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">      console.log(&apos;结束&apos;, new Date().getTime())</span><br><span class="line">       this.setState(&#123;</span><br><span class="line">        minute:this.state.minute - 1,</span><br><span class="line">        second:this.state.second + 60</span><br><span class="line">      &#125;) </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  no()&#123;</span><br><span class="line">    console.log(&apos;开始&apos;, new Date().getTime())</span><br><span class="line">    this.id = setInterval(this.start,1000)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  end()&#123;</span><br><span class="line">    clearInterval(this.id)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return(</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div id=&quot;container&quot;&gt;</span><br><span class="line">          &#123;this.state.minute&#125; : &#123;this.state.second&#125;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;button onClick=&#123;this.no&#125;&gt;</span><br><span class="line">          start</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">            </span><br><span class="line">        &lt;button onClick=&#123;this.end&#125;&gt;</span><br><span class="line">          end</span><br><span class="line">        &lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;   </span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Clock/&gt;,</span><br><span class="line">  document.getElementById(&quot;root&quot;)</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote><p>CSS：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#container&#123;</span><br><span class="line">  height:10em;</span><br><span class="line">  width:10em;</span><br><span class="line">  border: 1px solid grey;</span><br><span class="line">  text-align:center;</span><br><span class="line">  line-height:1000%;</span><br><span class="line">  font-size:40px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">button&#123;</span><br><span class="line">  background-color:blue;</span><br><span class="line">  color:white;</span><br><span class="line">  height:40px;</span><br><span class="line">  width:10em;</span><br><span class="line">  margin-top:10px;</span><br><span class="line">  margin-right:2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote><p>DOM：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;root&quot;&gt;</span><br><span class="line">&lt;div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="测试结果如下图所示："><a href="#测试结果如下图所示：" class="headerlink" title="测试结果如下图所示："></a>测试结果如下图所示：</h3><p><img src="/requestAnimationFrame/setInterval.png" alt="setInterval" title="setInterval"></p>
+<div class="note warning"><h2 id="问题很明显"><a href="#问题很明显" class="headerlink" title="问题很明显"></a>问题很明显</h2></div>
+<blockquote><p><span class="sanks-keywords">(1)</span> 最明显的问题莫过于 setInterval 的使用。写一个定时任务，不少小伙伴第一反应想到的也是 setTimeout 和 setInterval 函数，但是它们真的足够精确吗？这就要从 JS 的任务队列及微任务队列（也有称 macrotask queue 和 microtask queue）说起了…</p>
+</blockquote>
+<blockquote><p>我们言简意赅总结下：JS 主线程执行时有一个栈存储运行时的函数相关变量，遇到函数时会先入栈执行完后再出栈。当遇到 setTimeout setInterval requestAnimationFrame 以及 I/O 操作时，这些函数会立刻返回一个值（如 setInterval 返回一个 intervalID ）保证主线程继续执行，而异步操作则由浏览器的其它线程维护。</p>
+</blockquote>
+<blockquote><p>当异步操作完成时，浏览器会将其回调函数插入主线程的任务队列中，当主线程执行完当前栈的逻辑后，才会依次执行任务队列中的任务。</p>
+</blockquote>
+<blockquote><p>但是在每个任务之间，还有一个微任务队列的存在。在当前任务执行完后，将先执行微任务队列中的所有任务，例如 Promise process.nextTick 等操作。也就是说当 setInterval(fn, 1000) 等待 1 秒钟后，fn 函数会被插入任务队列中，但并不一定会立刻执行，还需要等待当前任务以及微任务队列中的所有任务执行完。长此以往，使用 setInterval 的计时器超时将越来越严重。</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">(2)</span> 有人不注意 setState的异步问题，这个异步会存在时间误差；直接用js选择器来操作DOM即可。</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">(3)</span> 网上还有人对React生命周期没有做研判，正确的做法应放在 componentDidMount 生命周期中；</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">(4)</span> 为了刷新页面，有的人把时间戳存储在cookie中，每隔一秒更新一次，完全没有必要，只需要存储最终倒计时结束的时间戳即可。</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">(5)</span> 有人会考虑计算浮点数的误差，其实完全没必要，只需要对时间戳操作即可，在倒计时跨越“整秒”这一时机时，秒数减1，误差可忽略的，不影响最终的相减结果</p>
+</blockquote>
+<blockquote><p><span class="sanks-keywords">(6)</span> 更细致的是，每行代码执行也需要时间，这个也可以忽略不计。</p>
+</blockquote>
+<blockquote><p>基于以上的（1-3）描述存在的误差的原因，导致最终的倒计时会出现偏差，经过测试会大于1s，在我看来，已经是不可接受的误差了，如果在真实的代码环境下，可能会存在多个宏任务、微任务，误差会更大，对以后的代码扩展也是不利的。</p>
+</blockquote>
+<div class="note success"><h2 id="更好的更新策略"><a href="#更好的更新策略" class="headerlink" title="更好的更新策略"></a>更好的更新策略</h2></div>
+<blockquote><p>用requestAnimationFrame来解决这一问题:</p>
+</blockquote>
+<blockquote><p>requestAnimationFrame是浏览器用于定时循环操作的一个接口，类似于setTimeout，主要用途是按帧对网页进行重绘。</p>
+</blockquote>
+<blockquote><p>设置这个API的目的是为了让各种网页动画效果（DOM动画、Canvas动画、SVG动画、WebGL动画）能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果。代码中使用这个API，就是告诉浏览器希望执行一个动画，让浏览器在下一个动画帧安排一次网页重绘。</p>
+</blockquote>
+<blockquote><p>requestAnimationFrame的优势，在于充分利用显示器的刷新机制，比较节省系统资源。显示器有固定的刷新频率（60Hz或75Hz），也就是说，每秒最多只能重绘60次或75次，大多数电脑显示器的刷新频率是60Hz，大概相当于每秒钟重绘60次。大多数浏览器都会对重绘操作加以限制，不超过显示器的重绘频率，因为即使超过那个频率用户体验也不会有提升。因此，最平滑动画的最佳循环间隔是1000ms/60，约等于16.6ms。requestAnimationFrame的基本思想就是与这个刷新频率保持同步，利用这个刷新频率进行页面重绘。此外，使用这个API，一旦页面不处于浏览器的当前标签，就会自动停止刷新。这就节省了CPU、GPU和电力。</p>
+</blockquote>
+<blockquote><p>不过有一点需要注意，requestAnimationFrame是在主线程上完成。这意味着，如果主线程非常繁忙，requestAnimationFrame的动画效果会大打折扣。</p>
+</blockquote>
+<blockquote><p>requestAnimationFrame使用一个回调函数作为参数。这个回调函数会在浏览器重绘之前调用。</p>
+</blockquote>
+<blockquote><p>计时器一直是javascript动画的核心技术。而编写动画循环的关键是要知道延迟时间多长合适。一方面，循环间隔必须足够短，这样才能让不同的动画效果显得平滑流畅；另一方面，循环间隔还要足够长，这样才能确保浏览器有能力渲染产生的变化。</p>
+</blockquote>
+<blockquote><p>而setTimeout和setInterval的问题是，它们都不精确。它们的内在运行机制决定了时间间隔参数实际上只是指定了把动画代码添加到浏览器UI线程队列中以等待执行的时间。如果队列前面已经加入了其他任务，那动画代码就要等前面的任务完成后再执行。</p>
+</blockquote>
+<h3 id="requestAnimationFrame代码实践（React）"><a href="#requestAnimationFrame代码实践（React）" class="headerlink" title="requestAnimationFrame代码实践（React）"></a>requestAnimationFrame代码实践（React）</h3><blockquote><p>网上好多代码示例，要么是局部代码段，要么是不可执行的代码，或执行起来报错，或没有根据使用的实际情况调用cancelAnimationFrame取消定时器，以减少主线程的性能消耗。</p>
+</blockquote>
+<blockquote><p>本代码的核心思想是在规避其他会造成计时误差的前提下，存储时间戳的形式来进行计时操作的，一般执行60次。秒数会减1。如果正在倒计时，页面刷新不会重置。并且在页面“卸载”时或倒计时结束时，用cancelAnimationFrame取消定时器。经过自己反复测试，最后的误差在 [-10ms， 10ms]，大大缩减了计时误差。</p>
+</blockquote>
+<h3 id="具体测试结果见下图："><a href="#具体测试结果见下图：" class="headerlink" title="具体测试结果见下图："></a>具体测试结果见下图：</h3><p><img src="/requestAnimationFrame/requestAnimationFrame.png" alt="requestAnimationFrame" title="requestAnimationFrame"></p>
+<h3 id="具体代码如下：-1"><a href="#具体代码如下：-1" class="headerlink" title="具体代码如下："></a>具体代码如下：</h3><p>Countdown.tsx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">import * as React from &apos;react&apos;;</span><br><span class="line">import * as Cookies from &apos;js-cookie&apos;;</span><br><span class="line">import &apos;./coutdown.scss&apos;;</span><br><span class="line"></span><br><span class="line">interface CountProps &#123;</span><br><span class="line">    onRefCount: any;</span><br><span class="line">    seconds: number;</span><br><span class="line">    retryFetchCode: Function; // 子组建向父组件传递参数的函数</span><br><span class="line">&#125;</span><br><span class="line">interface CountState &#123;</span><br><span class="line">    endStamp: number;</span><br><span class="line">    text: string;</span><br><span class="line">    nodes: any;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let myReq: Function;</span><br><span class="line">class CountDown extends React.Component&lt;CountProps, CountState&gt; &#123;</span><br><span class="line">    constructor(props: CountProps) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        // 刷新页面时，先检查cookie中是否存在这个值，如果有，则读取这个值</span><br><span class="line">        // 此处会出现两种情况，在打开多个标签页的情况，但是登录的还是同一个用户</span><br><span class="line">        // 此时，不需要重新计时，需要从之前的节点计时，也就是说是最终的截止时间（cookie中存在的那个值）</span><br><span class="line">        const spareTime = Cookies.get(&apos;countDeadline&apos;);</span><br><span class="line">        // 当前的时间戳</span><br><span class="line">        var currStamp = new Date().getTime();</span><br><span class="line">        // 最终剩余的整秒数</span><br><span class="line">        let spareSeconds;</span><br><span class="line">        if (spareTime) &#123;</span><br><span class="line">            spareSeconds = Math.ceil((spareTime - currStamp) / 1000);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            spareSeconds = 60;</span><br><span class="line">        &#125;</span><br><span class="line">        this.state = &#123;</span><br><span class="line">            endStamp: spareTime || new Date().getTime() + this.props.seconds,</span><br><span class="line">            text: &apos;重新获取(&apos; + spareSeconds + &apos;)&apos;,</span><br><span class="line">            nodes: []</span><br><span class="line">        &#125;;</span><br><span class="line">        // 将最终终点的时间戳存入到cookie中</span><br><span class="line">        Cookies.set(&apos;countDeadline&apos;, this.state.endStamp);</span><br><span class="line">    &#125;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;span</span><br><span class="line">                className=&quot;count-down-timer&quot;</span><br><span class="line">                onClick=&#123;() =&gt; this.props.retryFetchCode(this.state.text)&#125;</span><br><span class="line">            &gt;</span><br><span class="line">                &#123;this.state.text&#125;</span><br><span class="line">            &lt;/span&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        //通过props接收父组件传来的方法</span><br><span class="line">        this.props.onRefCount(this);</span><br><span class="line">        this.setState(</span><br><span class="line">            &#123;</span><br><span class="line">                nodes: document.querySelectorAll(&apos;.count-down-timer&apos;)[0]</span><br><span class="line">            &#125;,</span><br><span class="line">            () =&gt; &#123;</span><br><span class="line">                console.log(&apos;countdown start&apos;, new Date().getTime());</span><br><span class="line">                this._CountDownLoop();</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">        console.log(&apos;卸载&apos;);</span><br><span class="line">        cancelAnimationFrame(myReq);</span><br><span class="line">        // 清除cookie</span><br><span class="line">        Cookies.remove(&apos;countDeadline&apos;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 重新计入倒计时</span><br><span class="line">     */</span><br><span class="line">    _retryCountDown() &#123;</span><br><span class="line">        this.setState(</span><br><span class="line">            &#123;</span><br><span class="line">                endStamp: new Date().getTime() + this.props.seconds,</span><br><span class="line">                text: &apos;重新获取(60)&apos;,</span><br><span class="line">                nodes: []</span><br><span class="line">            &#125;,</span><br><span class="line">            () =&gt; &#123;</span><br><span class="line">                // 更新最终终点的时间戳，存入到cookie中</span><br><span class="line">                Cookies.set(&apos;countDeadline&apos;, this.state.endStamp);</span><br><span class="line">                console.log(&apos;countdown restart&apos;, new Date().getTime());</span><br><span class="line">                this._CountDownLoop();</span><br><span class="line">            &#125;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 倒计时循环</span><br><span class="line">     * @private</span><br><span class="line">     */</span><br><span class="line">    _CountDownLoop() &#123;</span><br><span class="line">        var currStamp = new Date().getTime();</span><br><span class="line">        let text = &apos;&apos;; // 显示的文本</span><br><span class="line">        var isEnd = false;</span><br><span class="line">        //如果结束时间戳减去当前时间时间戳小于等于0则设置倒计时结束标识为true</span><br><span class="line">        if (this.state.endStamp - currStamp &lt;= -1) &#123;</span><br><span class="line">            isEnd = true;</span><br><span class="line">            text = &apos;重发短信验证码&apos;;</span><br><span class="line">        &#125;</span><br><span class="line">        //如果结束则调用结束回调</span><br><span class="line">        if (isEnd === true) &#123;</span><br><span class="line">            console.log(&apos;countdown end&apos;, new Date().getTime());</span><br><span class="line">            cancelAnimationFrame(myReq);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // console.log(Math.ceil((this.state.endStamp - currStamp) / 1000));</span><br><span class="line">            let remaining = Math.ceil((this.state.endStamp - currStamp) / 1000);</span><br><span class="line">            text = &apos;重新获取(&apos; + remaining + &apos;)&apos;;</span><br><span class="line">            var that = this;</span><br><span class="line">            myReq = requestAnimationFrame(function() &#123;</span><br><span class="line">                that._CountDownLoop();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        const target = this.state.nodes;</span><br><span class="line">        if (target) &#123;</span><br><span class="line">            target.innerHTML = text;</span><br><span class="line">            this.setState(&#123;</span><br><span class="line">                text: text</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            cancelAnimationFrame(myReq);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default CountDown;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>countdown.scss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@import &apos;../../scss/index&apos;;</span><br><span class="line">.count-down-timer &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Verify.tsx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br></pre></td><td class="code"><pre><span class="line">import * as React from &apos;react&apos;;</span><br><span class="line">import Button from &apos;../../../node_modules/antd-mobile/es/button&apos;;</span><br><span class="line">import &apos;../../../node_modules/antd-mobile/es/button/style&apos;;</span><br><span class="line">import &#123; toParams, getQueryString &#125; from &apos;../../utils&apos;;</span><br><span class="line">import &#123; connect &#125; from &apos;react-redux&apos;;</span><br><span class="line">import &#123; navigatorActions, userActions &#125; from &apos;../../redux/actions&apos;;</span><br><span class="line">import &#123; sendVerifyCode &#125; from &apos;../../api/sms&apos;;</span><br><span class="line">import NavBar from &apos;../../components/NavBar/NavBar&apos;;</span><br><span class="line">import GlobalMessage from &apos;../../components/GlobalMessage/GlobalMessage&apos;;</span><br><span class="line">import * as lodash from &apos;awesome-utils-normal&apos;;</span><br><span class="line">import PasswordInput from &apos;../../components/PasswordInput/PasswordInput&apos;;</span><br><span class="line">import CountDown from &apos;../../components/CountDown/CountDown&apos;;</span><br><span class="line">import &apos;./verify.scss&apos;;</span><br><span class="line"></span><br><span class="line">interface Props extends React.Props&lt;Props&gt; &#123;</span><br><span class="line">    history: any;</span><br><span class="line">    match: any;</span><br><span class="line">    register: Function;</span><br><span class="line">    form: any;</span><br><span class="line">    title: string;</span><br><span class="line">    verifyLogin: Function;</span><br><span class="line">    changeNavbarStatus: Function;</span><br><span class="line">    changeBackStatus: Function;</span><br><span class="line">    changeFilterStatus: Function;</span><br><span class="line">    changeTitle: Function;</span><br><span class="line">    changeSidebarStatus: Function;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface State &#123;</span><br><span class="line">    title: string;</span><br><span class="line">    phone: string;</span><br><span class="line">    verifyCode: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export class Verify extends React.Component&lt;Props, State&gt; &#123;</span><br><span class="line">    constructor(props: Props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line"></span><br><span class="line">        this.state = &#123;</span><br><span class="line">            title: &apos;输入验证码&apos;,</span><br><span class="line">            phone: &apos;&apos;,</span><br><span class="line">            verifyCode: &apos;&apos;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 验证码是否正确</span><br><span class="line">    validateCode = () =&gt; &#123;</span><br><span class="line">        if (this.state.verifyCode.length === 4) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 定义一个拿子组件返回值this的函数</span><br><span class="line">    onRef = (ref: Object) =&gt; &#123;</span><br><span class="line">        this.child = ref;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    onRefCount = (ref: Object) =&gt; &#123;</span><br><span class="line">        this.childCount = ref;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 调用错误提示方法</span><br><span class="line">    showError = (message: Object) =&gt; &#123;</span><br><span class="line">        this.child.showMessage(message);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 调用重新倒计时的方法</span><br><span class="line">    retryCountDown = () =&gt; &#123;</span><br><span class="line">        this.childCount._retryCountDown();</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 验证码登录</span><br><span class="line">    onSignup = () =&gt; &#123;</span><br><span class="line">        const &#123; match &#125; = this.props;</span><br><span class="line">        if (this.validateCode()) &#123;</span><br><span class="line">            const userInfo = &#123;</span><br><span class="line">                activity_id: getQueryString(&apos;from&apos;),</span><br><span class="line">                phone: this.state.phone,</span><br><span class="line">                verifyCode: Number(this.state.verifyCode),</span><br><span class="line">                grant_type: &apos;password&apos;,</span><br><span class="line">                from: match.params.from</span><br><span class="line">            &#125;;</span><br><span class="line">            this.props.verifyLogin(toParams(userInfo));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            this.showError(&#123;</span><br><span class="line">                text: &apos;请输入正确的验证码&apos;,</span><br><span class="line">                type: &apos;message-error&apos;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    // 重新获取验证码</span><br><span class="line">    retryFetchCode(text: string) &#123;</span><br><span class="line">        if (text === &apos;重发短信验证码&apos;) &#123;</span><br><span class="line">            // 调用发送验证码的接口</span><br><span class="line">            sendVerifyCode(&#123;</span><br><span class="line">                phone: this.state.phone</span><br><span class="line">            &#125;)</span><br><span class="line">                .then((res: any) =&gt; &#123;</span><br><span class="line">                    console.log(res);</span><br><span class="line">                &#125;)</span><br><span class="line">                .catch((err: any) =&gt; &#123;</span><br><span class="line">                    console.log(err);</span><br><span class="line">                &#125;);</span><br><span class="line">            this.retryCountDown();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    getChildTextData(value: string) &#123;</span><br><span class="line">        if (!value) &#123;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line">        const tempArr = value.split(&apos;&apos;);</span><br><span class="line">        const finalArr = tempArr.map(item =&gt; Number(item));</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            verifyCode: finalArr.join(&apos;&apos;)</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    static getDerivedStateFromProps(props: any) &#123;</span><br><span class="line">        props.changeNavbarStatus(true);</span><br><span class="line">        props.changeBackStatus(true);</span><br><span class="line">        props.changeFilterStatus(false);</span><br><span class="line">        props.changeTitle(&apos;&apos;);</span><br><span class="line">        // this.props.changeSidebarStatus(false);</span><br><span class="line">        const &#123; match &#125; = props;</span><br><span class="line">        return &#123;</span><br><span class="line">            phone: match.params ? match.params.phone : &apos;&apos;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div className=&quot;verify&quot;&gt;</span><br><span class="line">                &lt;NavBar &#123;...this.props&#125; /&gt;</span><br><span class="line">                &lt;GlobalMessage onRef=&#123;this.onRef&#125; _left=&quot;0&quot; /&gt;</span><br><span class="line">                &lt;form className=&quot;verify-form&quot;&gt;</span><br><span class="line">                    &lt;div className=&quot;header&quot;&gt;</span><br><span class="line">                        &lt;h4</span><br><span class="line">                            style=&#123;</span><br><span class="line">                                this.state.title === &apos;输入验证码&apos; ? &#123; paddingBottom: &apos;32px&apos; &#125; : &#123;&#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &gt;</span><br><span class="line">                            &#123;this.state.title&#125;</span><br><span class="line">                        &lt;/h4&gt;</span><br><span class="line">                        &lt;span&gt;</span><br><span class="line">                            已发送4位验证码至 &lt;i&gt;+86 &#123;this.state.phone&#125;&lt;/i&gt;</span><br><span class="line">                        &lt;/span&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div&gt;</span><br><span class="line">                        &lt;PasswordInput</span><br><span class="line">                            length=&#123;4&#125;</span><br><span class="line">                            mask=&#123;false&#125;</span><br><span class="line">                            gutter=&#123;4&#125;</span><br><span class="line">                            focused=&#123;true&#125;</span><br><span class="line">                            getChildTextData=&#123;this.getChildTextData.bind(this)&#125;</span><br><span class="line">                        /&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;btn-warpper&quot;&gt;</span><br><span class="line">                        &lt;Button</span><br><span class="line">                            type=&quot;primary&quot;</span><br><span class="line">                            className=&quot;verify-btn&quot;</span><br><span class="line">                            activeClassName=&quot;verify-btn-active&quot;</span><br><span class="line">                            /* loading=&#123;true&#125; */</span><br><span class="line">                            onClick=&#123;lodash.debounce(&#123;</span><br><span class="line">                                fn: this.onSignup,</span><br><span class="line">                                wait: 1000,</span><br><span class="line">                                immediate: true</span><br><span class="line">                            &#125;)&#125;</span><br><span class="line">                        &gt;</span><br><span class="line">                            确定</span><br><span class="line">                        &lt;/Button&gt;</span><br><span class="line">                        &lt;a className=&quot;text-link&quot;&gt;</span><br><span class="line">                            &lt;CountDown</span><br><span class="line">                                seconds=&#123;60000&#125;</span><br><span class="line">                                retryFetchCode=&#123;this.retryFetchCode.bind(this)&#125;</span><br><span class="line">                                onRefCount=&#123;this.onRefCount&#125;</span><br><span class="line">                            &gt;&lt;/CountDown&gt;</span><br><span class="line">                        &lt;/a&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/form&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function mapState(state: any) &#123;</span><br><span class="line">    const &#123; signIning &#125; = state.authentication;</span><br><span class="line">    const &#123; navbarStatus, backStatus, filterStatus, title, sidebarStatus &#125; = state.navigator;</span><br><span class="line">    return &#123;</span><br><span class="line">        signIning,</span><br><span class="line">        navbarStatus,</span><br><span class="line">        backStatus,</span><br><span class="line">        filterStatus,</span><br><span class="line">        title,</span><br><span class="line">        sidebarStatus</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const actionCreators = &#123;</span><br><span class="line">    verifyLogin: userActions.verifyLogin,</span><br><span class="line">    changeNavbarStatus: navigatorActions.changeNavbarStatus,</span><br><span class="line">    changeBackStatus: navigatorActions.changeBackStatus,</span><br><span class="line">    changeFilterStatus: navigatorActions.changeFilterStatus,</span><br><span class="line">    changeTitle: navigatorActions.changeTitle,</span><br><span class="line">    changeSidebarStatus: navigatorActions.changeSidebarStatus</span><br><span class="line">&#125;;</span><br><span class="line">export default connect(</span><br><span class="line">    mapState,</span><br><span class="line">    actionCreators</span><br><span class="line">)(Verify);</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>Verify.scss<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">@import &apos;../../scss/index&apos;;</span><br><span class="line">.verify &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    padding-top: 50px;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">    z-index: 0;</span><br><span class="line">    height: 100vh;</span><br><span class="line">    background-color: $black;</span><br><span class="line">    &amp;-form &#123;</span><br><span class="line">        width: 80vw;</span><br><span class="line">        background: transparent;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">        margin: 0 auto;</span><br><span class="line">        color: $font-color;</span><br><span class="line">        .header &#123;</span><br><span class="line">            &gt; h4 &#123;</span><br><span class="line">                margin: 0;</span><br><span class="line">                padding: 0 0 16px;</span><br><span class="line">                font-size: 24px;</span><br><span class="line">                font-weight: 400;</span><br><span class="line">            &#125;</span><br><span class="line">            &gt; span &#123;</span><br><span class="line">                display: inline-block;</span><br><span class="line">                padding-bottom: 32px;</span><br><span class="line">                font-size: 14px;</span><br><span class="line">                i &#123;</span><br><span class="line">                    font-style: normal;</span><br><span class="line">                    opacity: 0.6;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    .btn-warpper &#123;</span><br><span class="line">        text-align: center;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;-btn &#123;</span><br><span class="line">        border-radius: 42px !important;</span><br><span class="line">        margin-top: 20px;</span><br><span class="line">        margin-bottom: 24px;</span><br><span class="line">        opacity: 0.9;</span><br><span class="line">        &amp;-active &#123;</span><br><span class="line">            @extend .am-green-active;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<div class="note primary"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2></div>
+<blockquote><p>上面示例中我们可以看到，通过requestAnimationFrame不断的自己调用自己，实现高频度刷新倒计时，从而解决了页面切换窗口等传统setTimeout和setInterval假死问题。</p>
+</blockquote>
+<blockquote><p>倒计时组件以及调用组件的父组件的完整代码在这了，其他关联性不大的组件代码没有粘贴在这。需要这个组件代码的朋友可以随取随用，如果对倒计时组件有优化意见，可以向我发邮件提出建议。</p>
+</blockquote>
+      
+    </div>
+
+    
+
+    
+    
+    
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    <div>
+        
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/requestAnimationFrame/">requestAnimationFrame解决传统定时器的BUG</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
+  <p><span>发布时间:</span>2021年11月07日 - 11:05</p>
+  <p><span>最后更新:</span>2021年11月05日 - 22:17</p>
+  <p><span>原始链接:</span><a href="/requestAnimationFrame/" title="requestAnimationFrame解决传统定时器的BUG">https://www.shengkesi.cn/requestAnimationFrame/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.shengkesi.cn/requestAnimationFrame/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success",
+          buttons: {
+            text: "确定"
+          }
+        });
+	});
+    });  
+</script>
+
+        
+    </div>
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="sanks 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"><i class="fa fa-tag"></i> React</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/The-interview-experience/" rel="next" title="程序员的自我修养">
+                <i class="fa fa-chevron-left"></i> 程序员的自我修养
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="sanks">
+            
+              <p class="site-author-name" itemprop="name">sanks</p>
+              <p class="site-description motion-element" itemprop="description">对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:1270256946@qq.com" title="E-Mail &rarr; mailto:1270256946@qq.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.shenliyang.com" title="http://www.shenliyang.com" rel="external nofollow noopener noreferrer" target="_blank">Shen博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xiaosuda.top" title="https://xiaosuda.top" rel="external nofollow noopener noreferrer" target="_blank">Steven博客</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://blog.naice.me" title="https://blog.naice.me" rel="external nofollow noopener noreferrer" target="_blank">Naice博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并不精确的setInterval"><span class="nav-number">2.</span> <span class="nav-text">并不精确的setInterval</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#具体代码如下："><span class="nav-number">2.1.</span> <span class="nav-text">具体代码如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试结果如下图所示："><span class="nav-number">2.2.</span> <span class="nav-text">测试结果如下图所示：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题很明显"><span class="nav-number">3.</span> <span class="nav-text">问题很明显</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更好的更新策略"><span class="nav-number">4.</span> <span class="nav-text">更好的更新策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#requestAnimationFrame代码实践（React）"><span class="nav-number">4.1.</span> <span class="nav-text">requestAnimationFrame代码实践（React）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体测试结果见下图："><span class="nav-number">4.2.</span> <span class="nav-text">具体测试结果见下图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体代码如下：-1"><span class="nav-number">4.3.</span> <span class="nav-text">具体代码如下：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sanks</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Muse</a> v6.6.0</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共 22.4k 字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+      <div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c7375845249a74d" async="async"></script>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  <script>
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: 'sgCCneH9wY92eX2UEB9Wrl4g-gzGzoHsz',
+        appKey: 'NOA0dKCDe3V0INrgD42m9Muf',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false,
+        avatar_cdn:'https://www.gravatar.com/avatar/'
+    });
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('vsubmit')) {
+          const email = document.querySelector('input[type=email]');
+          const nick = document.querySelector('input[name=nick]');
+          const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+          if (!email.value || !nick.value || !reg.test(email.value)) {
+              const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+              const vmark = document.querySelector('.vmark');
+              vmark.innerHTML = str;
+              vmark.style.display = 'block';
+
+              setTimeout(function() {
+                  vmark.style.display = 'none';
+                  vmark.innerHTML = '';
+              }, 2500);
+          }
+      }
+    });
+  </script>
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.6.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
