@@ -12,5 +12,5 @@ Disallow: /images/
 Disallow: /js/
 Disallow: /lib/
 
-Sitemap: https://www.shengkesi.cn/sitemap.xml
-Sitemap: https://www.shengkesi.cn/baidusitemap.xml
+Sitemap: https://www.sanks-blog.com/sitemap.xml
+Sitemap: https://www.sanks-blog.com/baidusitemap.xml
