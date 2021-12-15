@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.sanks-blog.com/"/>
-  <updated>2021-12-15T16:17:16.388Z</updated>
+  <updated>2021-12-15T16:23:45.000Z</updated>
   <id>https://www.sanks-blog.com/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="https://www.sanks-blog.com/tree-table-component/"/>
     <id>https://www.sanks-blog.com/tree-table-component/</id>
     <published>2021-12-15T15:25:41.000Z</published>
-    <updated>2021-12-15T16:17:16.388Z</updated>
+    <updated>2021-12-15T16:23:45.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;距离上一篇博客有一月有余了吧，对于写博客的目的而言，我其实就是为了抒发自己无处宣泄的技术主张，在编写组件的过程中，很多同事嘲笑我“沉迷于组件”，也有的人让我“拿来主义”，并逼迫产品修改设计的重要显示和功能，但是我认为一个合格的程序员真的不应该是当这样的程序员，我何尝不知道工期紧，任务重，虽说我是修改别人的组件实现的最终效果吧，但是我这起码是当躲不开“造轮子”环节的时候，依然迎难而上。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -107,9 +103,9 @@
       <category term="ES6" scheme="https://www.sanks-blog.com/categories/JavaScript/ES6/"/>
     
     
-      <category term="JavaScript" scheme="https://www.sanks-blog.com/tags/JavaScript/"/>
-    
       <category term="ES6" scheme="https://www.sanks-blog.com/tags/ES6/"/>
+    
+      <category term="JavaScript" scheme="https://www.sanks-blog.com/tags/JavaScript/"/>
     
   </entry>
   
