@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.sanks-blog.com/"/>
-  <updated>2021-11-07T04:05:45.000Z</updated>
+  <updated>2021-12-15T16:17:16.388Z</updated>
   <id>https://www.sanks-blog.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树形表格组件</title>
+    <link href="https://www.sanks-blog.com/tree-table-component/"/>
+    <id>https://www.sanks-blog.com/tree-table-component/</id>
+    <published>2021-12-15T15:25:41.000Z</published>
+    <updated>2021-12-15T16:17:16.388Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;note info&quot;&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="https://www.sanks-blog.com/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="https://www.sanks-blog.com/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>requestAnimationFrame解决传统定时器的BUG</title>
@@ -81,9 +107,9 @@
       <category term="ES6" scheme="https://www.sanks-blog.com/categories/JavaScript/ES6/"/>
     
     
-      <category term="ES6" scheme="https://www.sanks-blog.com/tags/ES6/"/>
-    
       <category term="JavaScript" scheme="https://www.sanks-blog.com/tags/JavaScript/"/>
+    
+      <category term="ES6" scheme="https://www.sanks-blog.com/tags/ES6/"/>
     
   </entry>
   
@@ -519,41 +545,6 @@
     
     
       <category term="vue" scheme="https://www.sanks-blog.com/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Axios 执行多个并发请求(使用Promise解决多层异步调用)</title>
-    <link href="https://www.sanks-blog.com/Axios-%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82-promise/"/>
-    <id>https://www.sanks-blog.com/Axios-执行多个并发请求-promise/</id>
-    <published>2018-12-18T00:21:43.000Z</published>
-    <updated>2020-07-12T09:30:58.607Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;引语&quot;&gt;&lt;a href=&quot;#引语&quot; class=&quot;headerlink&quot; title=&quot;引语&quot;&gt;&lt;/a&gt;引语&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;场景：工作中遇到一个数据接口同时依赖于另外两个接口的情况,&lt;br&gt;需要两个接口返回的数据才能实现进一步操作，下面介绍 3 种方法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;首先普及一下promise的一些冷门知识&quot;&gt;&lt;a href=&quot;#首先普及一下promise的一些冷门知识&quot; class=&quot;headerlink&quot; title=&quot;首先普及一下promise的一些冷门知识&quot;&gt;&lt;/a&gt;首先普及一下promise的一些冷门知识&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;执行 then 和 catch 会返回一个新的 Promise ，该 Promise 最终状态根据 then 和 catch 的回调函数的执行结果决定&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果回调函数最终是 throw ， 该 Promise 是 rejected 状态&lt;/li&gt;
-&lt;li&gt;如果回调函数最终是 return ， 该 Promise 是 resolved 状态&lt;/li&gt;
-&lt;li&gt;但如果回调函数最终 return 了一个 Promise ， 该 Promise 会和回调函数的 reurn 的状态保持一致 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;利用js回调嵌套的方式&quot;&gt;&lt;a href=&quot;#利用js回调嵌套的方式&quot; class=&quot;headerlink&quot; title=&quot;利用js回调嵌套的方式&quot;&gt;&lt;/a&gt;利用js回调嵌套的方式&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 异步接口1: 科室列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getDepartmentsList&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;callback&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//模拟实现&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; departmentList = &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.ceil(&lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random()*&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        callback(departmentList)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random()*&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 异步接口2: 级别列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getLevelList&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;callback&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//模拟实现&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; levelList = &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.ceil(&lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random()*&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;)+&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        callback(levelList)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random()*&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//异步接口，列表中科室和级别码转换成对应的中文，需要前两个接口的数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;registrationList&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;departmentList,levelList,callback&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//模拟实现&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; percent = &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.ceil(departmentList/levelList*&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    setTimeout(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        callback(percent)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random()*&lt;span class=&quot;number&quot;&gt;1000&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Promise" scheme="https://www.sanks-blog.com/categories/Promise/"/>
-    
-    
-      <category term="promise" scheme="https://www.sanks-blog.com/tags/promise/"/>
-    
-      <category term="axios" scheme="https://www.sanks-blog.com/tags/axios/"/>
-    
-      <category term="ES6" scheme="https://www.sanks-blog.com/tags/ES6/"/>
-    
-      <category term="回调地狱" scheme="https://www.sanks-blog.com/tags/%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1/"/>
     
   </entry>
   

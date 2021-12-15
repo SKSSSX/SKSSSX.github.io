@@ -144,17 +144,18 @@
 
 
 
-  <meta name="description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
-<meta name="keywords" content="javascript,hexo,ES6,VUE,axios,promise,permission,回调地狱,Element-UI,NodeJS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sanks的博客">
-<meta property="og:url" content="https://www.sanks-blog.com/categories/Promise/index.html">
+  <meta name="description" content="引言 距离上一篇博客有一月有余了吧，对于写博客的目的而言，我其实就是为了抒发自己无处宣泄的技术主张，在编写组件的过程中，很多同事嘲笑我“沉迷于组件”，也有的人让我“拿来主义”，并逼迫产品修改设计的重要显示和功能，但是我认为一个合格的程序员真的不应该是当这样的程序员，我何尝不知道工期紧，任务重，虽说我是修改别人的组件实现的最终效果吧，但是我这起码是当躲不开“造轮子”环节的时候，依然迎难而上。  说点">
+<meta name="keywords" content="tree table,树形表格组件,Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树形表格组件">
+<meta property="og:url" content="https://www.sanks-blog.com/tree-table-component/index.html">
 <meta property="og:site_name" content="sanks的博客">
-<meta property="og:description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
+<meta property="og:description" content="引言 距离上一篇博客有一月有余了吧，对于写博客的目的而言，我其实就是为了抒发自己无处宣泄的技术主张，在编写组件的过程中，很多同事嘲笑我“沉迷于组件”，也有的人让我“拿来主义”，并逼迫产品修改设计的重要显示和功能，但是我认为一个合格的程序员真的不应该是当这样的程序员，我何尝不知道工期紧，任务重，虽说我是修改别人的组件实现的最终效果吧，但是我这起码是当躲不开“造轮子”环节的时候，依然迎难而上。  说点">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-12-15T16:17:16.388Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sanks的博客">
-<meta name="twitter:description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
+<meta name="twitter:title" content="树形表格组件">
+<meta name="twitter:description" content="引言 距离上一篇博客有一月有余了吧，对于写博客的目的而言，我其实就是为了抒发自己无处宣泄的技术主张，在编写组件的过程中，很多同事嘲笑我“沉迷于组件”，也有的人让我“拿来主义”，并逼迫产品修改设计的重要显示和功能，但是我认为一个合格的程序员真的不应该是当这样的程序员，我何尝不知道工期紧，任务重，虽说我是修改别人的组件实现的最终效果吧，但是我这起码是当躲不开“造轮子”环节的时候，依然迎难而上。  说点">
 
 
 
@@ -163,7 +164,7 @@
 
 
 
-  <link rel="canonical" href="https://www.sanks-blog.com/categories/Promise/">
+  <link rel="canonical" href="https://www.sanks-blog.com/tree-table-component/">
 
 
 
@@ -173,7 +174,7 @@
   };
 </script>
 
-  <title>分类: Promise | sanks的博客</title>
+  <title>树形表格组件 | sanks的博客</title>
   
 
 
@@ -240,7 +241,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
     <!--<a href="https://github.com/SKSSSX" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>-->
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -332,7 +333,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -413,34 +414,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -492,57 +465,337 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Promise<small>分类</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.sanks-blog.com/tree-table-component/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sanks">
+      <meta itemprop="description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sanks的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Axios-执行多个并发请求-promise/" itemprop="url">
-              
-                <span itemprop="name">Axios 执行多个并发请求(使用Promise解决多层异步调用)</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">树形表格组件
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-18T08:21:43+08:00" content="2018-12-18">
-          12-18
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2021-12-15 23:25:41" itemprop="dateCreated datePublished" datetime="2021-12-15T23:25:41+08:00">2021-12-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-12-16 00:17:16" itemprop="dateModified" datetime="2021-12-16T00:17:16+08:00">2021-12-16</time>
+              
+            
+          </span>
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2021-12-16T00:17:16+08:00" content="2021-12-16">
+                2021-12-16
+              </time>
+            </span>
+          
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/tree-table-component/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/tree-table-component/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount">
+              <span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>
+              字数统计： 932 字
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.min2read">
+              <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span>
+              阅读时长：≈ 3 分钟
+            </span>
+          
+
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note info"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2></div>
+<blockquote><p>距离上一篇博客有一月有余了吧，对于写博客的目的而言，我其实就是为了抒发自己无处宣泄的技术主张，在编写组件的过程中，很多同事嘲笑我“沉迷于组件”，也有的人让我“拿来主义”，并逼迫产品修改设计的重要显示和功能，但是我认为一个合格的程序员真的不应该是当这样的程序员，我何尝不知道工期紧，任务重，虽说我是修改别人的组件实现的最终效果吧，但是我这起码是当躲不开“造轮子”环节的时候，依然迎难而上。</p>
+</blockquote>
+<blockquote><p>说点题外话，没有谁是天生的技术大拿，只要你对技术这一行有兴趣，有不懈的动力，你一定会先人一步到达终点，好多人在这条路上半路放弃，或者对自己从事的工作出现疲态、厌倦的态度。<br>对于我自己，自己给自己的压力远胜于比人给的，不逼自己一把就不会有进步，任何人都可以对我失去信心或者加以否定，唯独自己不可以，否定自己那就永远不可能有进步了，就废了。</p>
+</blockquote>
+<blockquote><p>回到正题，写这个博客的目的很简单，“轮子”我造完了，但是自己觉得还有优化的空间，先简要介绍下这个组件，后期把组件放到我自己的github上，而且我还要通知原作者，我要发表了；如果你看到这篇博客，恰巧这是你想要的效果，可以给我发邮件，我看到会及时的回复你，组件虽说有缺陷，但是我一定会优化好给大家用的，在后期大家提的 issues 中慢慢加强组件的健壮性。</p>
+</blockquote>
+<div class="note warning"><h2 id="参照的组件-vue-table-with-tree-grid"><a href="#参照的组件-vue-table-with-tree-grid" class="headerlink" title="参照的组件 - vue-table-with-tree-grid"></a>参照的组件 - vue-table-with-tree-grid</h2></div>
+<blockquote><p>npm 资源库地址：<a href="https://www.npmjs.com/package/vue-table-with-tree-grid" rel="external nofollow noopener noreferrer" target="_blank">https://www.npmjs.com/package/vue-table-with-tree-grid</a><br>github 地址：<a href="https://github.com/MisterTaki/vue-table-with-tree-grid" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/MisterTaki/vue-table-with-tree-grid</a></p>
+</blockquote>
+<blockquote><p>我选择这个组件的原因有以下两点：</p>
+<ol>
+<li>这个组件可以源码下载，自己可以做出调整和修改</li>
+<li>这个组件是从iView 组件库中分离的，与 element-ui 组件库样式极为贴近</li>
+</ol>
+</blockquote>
+<blockquote><p>这个组件缺少我想要的功能点：</p>
+<ol>
+<li>树形结构层级线展示（这正是我们公司产品迫切要求的）</li>
+<li>异步加载扩展行数据的功能，作者提供了很好的插槽，当然也可以自己监听这个展开事件进行异步获取数据并渲染，这也不是什么难事</li>
+<li>没有点击选中树节点的事件，并抛出（emit）给父组件；</li>
+<li>没有类似于 element-UI 中 Tree 组件的 “节点过滤” 功能；</li>
+</ol>
+</blockquote>
+<blockquote><p>基于以上的业务需求点，目前组件唯独缺少的是第 4 点功能，我决定在最近的业余时间给加上</p>
+</blockquote>
+<div class="note success"><h2 id="你可能会想到的大组件-vxe-table"><a href="#你可能会想到的大组件-vxe-table" class="headerlink" title="你可能会想到的大组件 vxe-table"></a>你可能会想到的大组件 vxe-table</h2></div>
+<blockquote><p>组件演示地址：<a href="https://xuliangzhan_admin.gitee.io/vxe-table/#/table/base/basic" rel="external nofollow noopener noreferrer" target="_blank">https://xuliangzhan_admin.gitee.io/vxe-table/#/table/base/basic</a><br>我不建议你们用这个大组件，因为里面的好多功能，并不是业务想得那个样子，<br><span class="sanks-keywords">最主要的（敲黑板）是：</span> 截止本博客发表，它对我来说存在重大缺陷 - “线是断的” ，在 “扩展行” 这一级别，没有画它组件中说到的 “连接线”，而且样式不太美观吧，至于到现在（你看到这篇博客）有没有修补这个问题，请自行检验。</p>
+</blockquote>
+<div class="note success"><h2 id="深夜码字，有些累了，未完待续……"><a href="#深夜码字，有些累了，未完待续……" class="headerlink" title="深夜码字，有些累了，未完待续……"></a>深夜码字，有些累了，未完待续……</h2></div>
+<blockquote><p>后续我会把组件代码传到本人的github上，供大家批评指正和使用，请耐心等待……</p>
+</blockquote>
       
     </div>
 
+    
+
+    
+    
+    
+    
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    <div>
+        
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/tree-table-component/">树形表格组件</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 sanks 的个人博客">sanks</a></p>
+  <p><span>发布时间:</span>2021年12月15日 - 23:25</p>
+  <p><span>最后更新:</span>2021年12月16日 - 00:17</p>
+  <p><span>原始链接:</span><a href="/tree-table-component/" title="树形表格组件">https://www.sanks-blog.com/tree-table-component/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.sanks-blog.com/tree-table-component/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success",
+          buttons: {
+            text: "确定"
+          }
+        });
+	});
+    });  
+</script>
+
+        
+    </div>
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="sanks 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/requestAnimationFrame/" rel="next" title="requestAnimationFrame解决传统定时器的BUG">
+                <i class="fa fa-chevron-left"></i> requestAnimationFrame解决传统定时器的BUG
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -565,8 +818,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -745,6 +1007,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参照的组件-vue-table-with-tree-grid"><span class="nav-number">2.</span> <span class="nav-text">参照的组件 - vue-table-with-tree-grid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#你可能会想到的大组件-vxe-table"><span class="nav-number">3.</span> <span class="nav-text">你可能会想到的大组件 vxe-table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深夜码字，有些累了，未完待续……"><span class="nav-number">4.</span> <span class="nav-text">深夜码字，有些累了，未完待续……</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -909,6 +1187,10 @@
   
 
   
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
 
   
 
