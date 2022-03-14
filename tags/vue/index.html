@@ -148,7 +148,7 @@
 <meta name="keywords" content="javascript,hexo,ES6,VUE,axios,promise,permission,回调地狱,Element-UI,NodeJS">
 <meta property="og:type" content="website">
 <meta property="og:title" content="sanks的博客">
-<meta property="og:url" content="https://www.sanks-blog.com/tags/vue/index.html">
+<meta property="og:url" content="https://www.sanks-blog.com/tags/Vue/index.html">
 <meta property="og:site_name" content="sanks的博客">
 <meta property="og:description" content="对于JavaScript(ES6)、VUE、React、NodeJS、等相关技术的实战经验分享">
 <meta property="og:locale" content="zh-CN">
@@ -163,7 +163,7 @@
 
 
 
-  <link rel="canonical" href="https://www.sanks-blog.com/tags/vue/">
+  <link rel="canonical" href="https://www.sanks-blog.com/tags/Vue/">
 
 
 
@@ -173,7 +173,7 @@
   };
 </script>
 
-  <title>标签: vue | sanks的博客</title>
+  <title>标签: Vue | sanks的博客</title>
   
 
 
@@ -499,7 +499,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>vue<small>标签</small>
+        <h2>Vue<small>标签</small>
         </h2>
       </div>
 
@@ -511,69 +511,17 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）/" itemprop="url">
+            <a class="post-title-link" href="/tree-table-component/" itemprop="url">
               
-                <span itemprop="name">vue指令中寻找元素parentNode为null的问题（指令中钩子函数的运用）</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-23T12:20:59+08:00" content="2019-01-23">
-          01-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/你真的会检查自己系统安装的VUE版本吗？/" itemprop="url">
-              
-                <span itemprop="name">你真的会检查自己系统安装的VUE版本吗？</span>
+                <span itemprop="name">树形表格组件</span>
               
             </a>
         
       </h3>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-17T13:55:52+08:00" content="2018-12-17">
-          12-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/VUE的权限控制/" itemprop="url">
-              
-                <span itemprop="name">VUE的权限控制</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-08-22T15:17:06+08:00" content="2018-08-22">
-          08-22
+        <time class="post-time" itemprop="dateCreated" datetime="2021-12-15T23:25:41+08:00" content="2021-12-15">
+          12-15
         </time>
       </div>
 
@@ -836,7 +784,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共 23.4k 字</span>
+  <span class="post-count">博客全站共 23.5k 字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1009,6 +957,94 @@
         if (e.target.classList.contains('vsubmit')) {
           const email = document.querySelector('input[type=email]');
           const nick = document.querySelector('input[name=nick]');
+          const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+          if (!email.value || !nick.value || !reg.test(email.value)) {
+              const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+              const vmark = document.querySelector('.vmark');
+              vmark.innerHTML = str;
+              vmark.style.display = 'block';
+
+              setTimeout(function() {
+                  vmark.style.display = 'none';
+                  vmark.innerHTML = '';
+              }, 2500);
+          }
+      }
+    });
+  </script>
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.6.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+k = document.querySelector('input[name=nick]');
           const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
           if (!email.value || !nick.value || !reg.test(email.value)) {
               const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
